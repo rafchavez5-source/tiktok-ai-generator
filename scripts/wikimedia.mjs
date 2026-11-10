@@ -5,8 +5,8 @@ const UA = 'FactVideoBot/0.1 (generic client; low volume)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /** fetch con reintentos cuando Wikimedia pide ir más despacio (429) o falla la red. */
-export async function fetchWithRetry(url, options = {}, tries = 6) {
-  let wait = 3000;
+export async function fetchWithRetry(url, options = {}, tries = 7) {
+  let wait = 8000;
   for (let i = 1; ; i += 1) {
     try {
       const res = await fetch(url, { ...options, headers: { 'User-Agent': UA, ...options.headers } });
@@ -40,6 +40,11 @@ export function commonsFileName(filePathUrl) {
 export function originalUrl(fileName) {
   const h = createHash('md5').update(fileName).digest('hex');
   return `https://upload.wikimedia.org/wikipedia/commons/${h[0]}/${h.slice(0, 2)}/${encodeURIComponent(fileName)}`;
+}
+
+/** Miniatura de 1280 px de ancho (menos peso y menos limitada que el original). */
+export function thumbUrl(fileName, width = 1280) {
+  return `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(fileName)}?width=${width}`;
 }
 
 const LICENCIAS = [

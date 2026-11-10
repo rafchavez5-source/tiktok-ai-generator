@@ -4,3 +4,5 @@ dist/
 *.log
 videos/
 datos/imagenes/
+remotion/public/
+voces/*.onnx

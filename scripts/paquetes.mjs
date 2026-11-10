@@ -35,6 +35,7 @@ export const PAQUETES = [
     dato: (e, i) => ({
       onScreenText: `#${i + 1} ${e.nombre}`,
       narration: `Mide ${num(e.valor, 2)} metros sobre el nivel del mar. Está en ${lista(e.paises)}.`,
+      cifra: { valor: e.valor, decimales: 2, unidad: 'm', etiqueta: 'de altura' },
     }),
   },
   {
@@ -59,6 +60,7 @@ export const PAQUETES = [
       return {
         onScreenText: `#${i + 1} ${e.nombre}`,
         narration: `Mide solo ${num(km2, km2 < 10 ? 2 : 0)} km² y viven unas ${num(e.poblacion)} personas.`,
+        cifra: { valor: km2, decimales: km2 < 10 ? 2 : 0, unidad: 'km²', etiqueta: 'de superficie' },
       };
     },
   },
@@ -88,9 +90,14 @@ export const PAQUETES = [
           : veces <= 0.67
             ? `Su tamaño es ${num(veces * 100)} % del de la Tierra.`
             : 'Tiene casi el mismo tamaño que la Tierra.';
+      const anios = dias / 365.25;
       return {
         onScreenText: e.nombre,
         narration: `Un año allí dura ${duracionAnio(dias)}. ${tamano}`,
+        cifra:
+          dias < 730
+            ? { valor: dias, decimales: 0, unidad: 'días', etiqueta: 'dura un año allí' }
+            : { valor: anios, decimales: anios < 100 ? 1 : 0, unidad: 'años', etiqueta: 'dura un año allí' },
       };
     },
   },
@@ -118,28 +125,7 @@ export const PAQUETES = [
       narration:
         `Mide ${num(e.valor)} metros. Está en ${[e.ciudad, e.pais].filter(Boolean).join(', ')}.` +
         (e.anio ? ` Se inauguró en ${e.anio}.` : ''),
-    }),
-  },
-  {
-    id: 'paises-mas-poblados',
-    titulo: 'Los 5 países con más habitantes',
-    gancho: 'Dos de ellos superan los mil millones.',
-    hashtags: '#paises #poblacion #datoscuriosos #geografia',
-    elementos: ['Q668', 'Q148', 'Q30', 'Q252', 'Q843'],
-    // Población preferente y el año del dato.
-    consulta: (values) => `
-      SELECT ?item ?itemLabel ?valor (MAX(YEAR(?fecha)) AS ?anio) (SAMPLE(?img) AS ?imagen) WHERE {
-        VALUES ?item { ${values} }
-        ?item p:P1082 ?st . ?st a wikibase:BestRank; ps:P1082 ?valor .
-        OPTIONAL { ?st pq:P585 ?fecha }
-        OPTIONAL { ?item wdt:P18 ?img }
-        SERVICE wikibase:label { bd:serviceParam wikibase:language "es". }
-      } GROUP BY ?item ?itemLabel ?valor`,
-    ordenar: (a, b) => b.valor - a.valor,
-    validar: (e) => e.valor > 100e6,
-    dato: (e, i) => ({
-      onScreenText: `#${i + 1} ${e.nombre}`,
-      narration: `Tiene unos ${num(e.valor / 1e6)} millones de habitantes${e.anio ? ` (dato de ${e.anio})` : ''}.`,
+      cifra: { valor: e.valor, decimales: Number.isInteger(e.valor) ? 0 : 1, unidad: 'm', etiqueta: 'de altura' },
     }),
   },
 ];

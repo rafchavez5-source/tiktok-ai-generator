@@ -1,7 +1,7 @@
 {
   "id": "montanas-mas-altas",
   "titulo": "Las 5 montañas más altas del mundo",
-  "descargado": "2026-11-10T06:43:20.198Z",
+  "descargado": "2026-11-10T07:16:46.076Z",
   "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
   "referencia": null,
   "elementos": [
@@ -32,15 +32,21 @@
       ],
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Chogori.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q43512",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q43512.jpg",
+        "nombre": "Chogori.jpg",
+        "autor": "Zacharie Grossen",
+        "licencia": "CC BY-SA 4.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Chogori.jpg"
+      }
     },
     {
       "id": "Q82019",
       "nombre": "Kanchenjunga",
       "valor": 8586,
       "paises": [
-        "Nepal",
-        "India"
+        "India",
+        "Nepal"
       ],
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Kangchenjunga%2C%20India.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q82019",
@@ -65,7 +71,7 @@
       "imagen": {
         "archivo": "datos/imagenes/Q168702.jpg",
         "nombre": "LhotseMountain.jos.500pix.jpg",
-        "autor": "Jamie O'Shaughnessy ( talk · contribs )",
+        "autor": "Jamie O'Shaughnessy",
         "licencia": "Dominio público",
         "pagina": "https://commons.wikimedia.org/wiki/File:LhotseMountain.jos.500pix.jpg"
       }

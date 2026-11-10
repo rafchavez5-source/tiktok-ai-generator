@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { PAQUETES } from './paquetes.mjs';
-import { commonsCredit, commonsFileName, fetchWithRetry, originalUrl, sleep, sparql } from './wikimedia.mjs';
+import { commonsCredit, commonsFileName, fetchWithRetry, sleep, sparql, thumbUrl } from './wikimedia.mjs';
 
 const DATOS = 'datos';
 const IMAGENES = join(DATOS, 'imagenes');
@@ -21,13 +21,13 @@ async function descargarImagen(id, imagenUrl) {
   if (!fileName || /\.(svg|tif|tiff|gif|pdf|webm|ogv)$/i.test(fileName)) return null;
   const destino = join(IMAGENES, `${id}.jpg`);
   if (!existsSync(destino)) {
-    const res = await fetchWithRetry(originalUrl(fileName));
+    const res = await fetchWithRetry(thumbUrl(fileName));
     const tmp = join(IMAGENES, `${id}.original`);
     writeFileSync(tmp, Buffer.from(await res.arrayBuffer()));
     // Reduce la imagen a un tamaño adecuado para video vertical.
     execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', tmp, '-vf', "scale='min(1600,iw)':-2", '-q:v', '3', destino]);
     execFileSync('rm', ['-f', tmp]);
-    await sleep(1500);
+    await sleep(3000);
   }
   const credito = await commonsCredit(fileName);
   await sleep(1500);
