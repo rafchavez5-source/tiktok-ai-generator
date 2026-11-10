@@ -1,61 +1,92 @@
 # TikTok AI Generator
 
-Aplicación web para preparar videos verticales (9:16) de datos curiosos para TikTok.
+Herramientas para crear videos verticales (9:16) de datos curiosos para TikTok, en español.
 
-## Qué hace esta primera versión
+El proyecto tiene tres partes:
 
-- Escribes el **tema** del video.
-- Eliges la **cantidad de datos curiosos** (3 a 10) y la **duración** (15, 30, 45, 60 o 90 s).
-- **Generar guion** crea una plantilla con gancho, un bloque por cada dato y cierre, con los segundos repartidos automáticamente.
-- Editas el **guion**: título y narración de cada escena. Se avisa si el texto tarda más en leerse que la duración de la escena (≈ 2,5 palabras por segundo).
-- Organizas las **escenas**: cambiar orden, tipo, segundos y texto en pantalla; añadir o eliminar escenas. Una barra muestra si la suma coincide con la duración elegida.
-- **Vista previa vertical** del texto en pantalla de la escena seleccionada (boceto, no es el video final).
-- **Copiar** el guion o **descargarlo** en `.txt`.
-- **Crear video**: convierte las escenas en un video vertical 1080×1920 con el texto animado y una barra de progreso, y lo descarga (MP4 en Chrome, Edge y Safari recientes; WebM en otros). Se crea en el propio navegador y tarda lo mismo que dura el video.
-- El proyecto se **guarda solo** en el navegador.
+1. **App web** (React + Vite): editor de guiones y escenas, y la pantalla **«Guiones con IA»**.
+2. **Generador de guiones con IA** (`scripts/generar-guiones.mjs`): crea ideas y guiones completos con la API de Claude.
+3. **Generador de videos** (`scripts/crear-videos.mjs`): datos reales de Wikidata, voz, música y animación con Remotion → MP4.
 
-### Lo que todavía no hace
+---
 
-- No escribe los datos curiosos con IA: tú escribes cada dato. No usa servicios de pago ni claves API.
-- El video no lleva voz, música ni imágenes. Puedes añadir música o tu voz desde TikTok al publicarlo.
+## Usarlo desde el iPhone (sin computadora)
 
-## Cómo probarla
+### Una sola vez
 
-Necesitas [Node.js](https://nodejs.org) 20.19 o más reciente.
+1. **Publicar la app**: en GitHub abre el repositorio → **Settings → Pages** → en *Source* elige **GitHub Actions**.
+2. **Guardar la clave de Claude**: **Settings → Secrets and variables → Actions → New repository secret**.
+   - Nombre: `ANTHROPIC_API_KEY`
+   - Valor: tu clave de [console.anthropic.com](https://console.anthropic.com) (sección *API Keys*).
+
+### Cada vez que quieras guiones nuevos
+
+1. En GitHub: **Actions → «Generar guiones» → Run workflow** (puedes cambiar la cantidad; por defecto 20).
+2. Espera unos minutos a que termine (círculo verde). Los guiones se guardan en `public/guiones.json`
+   y la app se vuelve a publicar sola.
+3. Abre la app en `https://<tu-usuario>.github.io/tiktok-ai-generator/` → pestaña **Guiones con IA**.
+
+Costo aproximado: unos centavos de dólar por guion (el flujo muestra el costo estimado al final).
+
+---
+
+## Qué hace la app
+
+**Pestaña «Editor»**
+- Tema, cantidad de datos (3–10) y duración (15–90 s) → plantilla de guion con los tiempos repartidos.
+- Editar título, narración, texto en pantalla, orden y duración de cada escena.
+- Copiar o descargar el guion en `.txt`.
+- Crear un video simple en el navegador (texto animado, sin voz) y descargarlo.
+- Se guarda solo en el navegador.
+
+**Pestaña «Guiones con IA»**
+- Lista de los guiones generados: gancho, 4 datos curiosos y cierre.
+- Cada escena trae su **prompt visual** (en inglés, para generadores de imágenes o video) y su descripción en español.
+- Filtrar por categoría, copiar el guion completo o solo los prompts, y **abrir el guion en el editor**.
+- Aviso: los datos los escribe una IA; verifícalos antes de publicar.
+
+---
+
+## Generador de videos (se ejecuta en un servidor o computadora)
 
 ```bash
-npm install      # instala dependencias (solo la primera vez)
-npm run dev      # abre la app en modo desarrollo
+npm run datos            # descarga datos y fotos de Wikidata / Wikimedia Commons
+npm run clips            # descarga clips de video libres (opcional)
+npm run videos           # crea los MP4 en videos/ (voz, música, efectos, subtítulos)
+npm run videos -- --animado sistema-solar   # versión totalmente animada
+npm run biblioteca       # biblioteca de recursos libres (música, emojis animados, NASA, voces)
 ```
 
-Abre la dirección que aparece en la terminal (normalmente http://localhost:5173).
-Para verla en tu teléfono, conéctalo a la misma red Wi‑Fi y abre la dirección marcada como `Network`.
+- Voz: voces gratuitas de Microsoft Edge (`VOZ_PROVEEDOR=edge`, por defecto `EDGE_VOZ=es-MX-DaliaNeural`),
+  Piper sin conexión (`VOZ_PROVEEDOR=piper`) o ElevenLabs con clave (`VOZ_PROVEEDOR=elevenlabs`).
+- Cada video genera un `.txt` con la descripción para TikTok y los créditos de fotos, clips y música.
+- Requisitos: Node.js 22, Python 3 con `numpy`, `ffmpeg`, Chromium, y `pip install edge-tts piper-tts`.
 
-Otros comandos:
+---
+
+## Desarrollo
 
 ```bash
-npm test         # pruebas automáticas de la lógica del guion
-npm run build    # versión optimizada en la carpeta dist/
-npm run preview  # sirve la versión de dist/
+npm install
+npm run dev      # app en http://localhost:5173
+npm test         # pruebas
+npm run build    # versión de producción en dist/
+npm run guiones  # genera guiones (necesita ANTHROPIC_API_KEY)
 ```
 
-## Estructura
+### Estructura
 
 ```
-index.html                    Página base
-src/main.jsx                  Punto de entrada
-src/App.jsx                   Pantalla principal y estado del proyecto
-src/components/
-  GeneratorForm.jsx           Paso 1: tema, cantidad de datos y duración
-  ScriptEditor.jsx            Paso 2: edición del guion, copiar y descargar
-  SceneBoard.jsx              Paso 3: organización de escenas y línea de tiempo
-  ScenePreview.jsx            Boceto vertical 9:16 de la escena
-  VideoMaker.jsx              Paso 4: vista previa, creación y descarga del video
-src/lib/
-  script.js                   Generación de la plantilla, tiempos y exportación
-  script.test.js              Pruebas
-  storage.js                  Guardado automático en el navegador
-  video.js                    Dibujo de fotogramas y grabación del video
-  video.test.js               Pruebas del video
-src/styles.css                Estilos (adaptables a móvil)
+src/                      App web
+  components/GuionesView.jsx   Pestaña «Guiones con IA»
+  lib/guiones.js               Conversión de guiones de IA al editor
+scripts/
+  generar-guiones.mjs     Guiones con la API de Claude → public/guiones.json
+  guiones-util.mjs        Validación de guiones
+  paquetes.mjs            Temas de los videos con datos de Wikidata
+  crear-videos.mjs        Voz + Remotion → MP4
+remotion/                 Composición del video (efectos, animaciones)
+.github/workflows/
+  generar-guiones.yml     Botón «Generar guiones» en GitHub Actions
+  publicar-app.yml        Publica la app en GitHub Pages
 ```
