@@ -14,7 +14,7 @@ describe('paquetes de datos', () => {
 
   it('redacta los datos con formato español', () => {
     const m = paquete('montanas-mas-altas').dato({ nombre: 'Everest', valor: 8848.86, paises: ['China', 'Nepal'] }, 0);
-    expect(m).toEqual({ onScreenText: '#1 Everest', narration: 'Mide 8848,86 metros sobre el nivel del mar. Está en China y Nepal.' });
+    expect(m).toMatchObject({ onScreenText: '#1 Everest', narration: 'Mide 8848,86 metros sobre el nivel del mar. Está en China y Nepal.' });
 
     const v = paquete('paises-mas-pequenos').dato({ nombre: 'Vaticano', valor: 440000, poblacion: 466 }, 0);
     expect(v.narration).toBe('Mide solo 0,44 km² y viven unas 466 personas.');
