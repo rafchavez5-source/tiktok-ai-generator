@@ -1,0 +1,81 @@
+{
+  "nota": "Voces de Piper. Cada voz tiene su propia licencia en su MODEL_CARD en huggingface.co/rhasspy/piper-voices.",
+  "edge": [
+    "es-AR-ElenaNeural",
+    "es-AR-TomasNeural",
+    "es-MX-DaliaNeural",
+    "es-MX-JorgeNeural",
+    "es-CO-SalomeNeural",
+    "es-CO-GonzaloNeural",
+    "es-ES-ElviraNeural",
+    "es-ES-AlvaroNeural",
+    "es-ES-XimenaNeural",
+    "es-US-PalomaNeural",
+    "es-US-AlonsoNeural"
+  ],
+  "piper": [
+    {
+      "voz": "es_AR-daniela-high",
+      "calidad": "high",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Argentina"
+    },
+    {
+      "voz": "es_ES-carlfm-x_low",
+      "calidad": "x_low",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Spain"
+    },
+    {
+      "voz": "es_ES-davefx-medium",
+      "calidad": "medium",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Spain"
+    },
+    {
+      "voz": "es_ES-mls_10246-low",
+      "calidad": "low",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Spain"
+    },
+    {
+      "voz": "es_ES-mls_9972-low",
+      "calidad": "low",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Spain"
+    },
+    {
+      "voz": "es_ES-sharvard-medium",
+      "calidad": "medium",
+      "hablantes": 2,
+      "idioma": "Español",
+      "pais": "Spain"
+    },
+    {
+      "voz": "es_MX-ald-medium",
+      "calidad": "medium",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Mexico"
+    },
+    {
+      "voz": "es_MX-ald-x_low",
+      "calidad": "x_low",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Mexico"
+    },
+    {
+      "voz": "es_MX-claude-high",
+      "calidad": "high",
+      "hablantes": 1,
+      "idioma": "Español",
+      "pais": "Mexico"
+    }
+  ]
+}

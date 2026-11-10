@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "datos": "node scripts/descargar-datos.mjs",
-    "videos": "node scripts/crear-videos.mjs"
+    "videos": "node scripts/crear-videos.mjs",
+    "biblioteca": "node scripts/descargar-biblioteca.mjs"
   },
   "dependencies": {
     "@remotion/bundler": "^4.0.542",
