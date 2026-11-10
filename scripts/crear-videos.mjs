@@ -174,6 +174,7 @@ for (const paquete of paquetes) {
   const inputProps = { scenes: escenas, whoosh };
   const composition = await selectComposition({ serveUrl: url, id: 'DatoCurioso', inputProps, browserExecutable: CHROMIUM });
   const destino = join(SALIDA, `${paquete.id}.mp4`);
+  let ultimo = -1;
   console.log(`  renderizando ${(composition.durationInFrames / 30).toFixed(1)} s de video…`);
   await renderMedia({
     composition,
@@ -184,7 +185,14 @@ for (const paquete of paquetes) {
     outputLocation: destino,
     inputProps,
     browserExecutable: CHROMIUM,
-    chromiumOptions: { gl: 'swangle' },
+    concurrency: 4,
+    onProgress: ({ progress }) => {
+      const pct = Math.floor(progress * 100);
+      if (pct % 10 === 0 && pct !== ultimo) {
+        ultimo = pct;
+        console.log(`  ${pct} %`);
+      }
+    },
   });
   writeFileSync(join(SALIDA, `${paquete.id}.txt`), descripcion(paquete, escenas, datos));
   console.log(`✓ ${destino} (${((Date.now() - inicio) / 1000).toFixed(0)} s de proceso)`);

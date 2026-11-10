@@ -84,9 +84,7 @@ function Burbujas({ color }) {
             marginLeft: -b.r / 2,
             marginTop: -b.r / 2,
             borderRadius: '50%',
-            background: b.c,
-            opacity: 0.28,
-            filter: 'blur(120px)',
+            background: `radial-gradient(circle, ${b.c}66 0%, ${b.c}00 70%)`,
           }}
         />
       ))}

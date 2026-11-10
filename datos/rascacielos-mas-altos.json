@@ -1,7 +1,7 @@
 {
   "id": "rascacielos-mas-altos",
   "titulo": "Los 5 rascacielos más altos del mundo",
-  "descargado": "2026-11-10T06:56:06.717Z",
+  "descargado": "2026-11-10T07:17:40.943Z",
   "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
   "referencia": null,
   "elementos": [
@@ -31,7 +31,13 @@
       "anio": 2023,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Merdeka%20Tower%2020241022%20-%20full%202.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q7969454",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q7969454.jpg",
+        "nombre": "Merdeka_Tower_20241022_-_full_2.jpg",
+        "autor": "Ahmad Ali Karim",
+        "licencia": "CC0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Merdeka_Tower_20241022_-_full_2.jpg"
+      }
     },
     {
       "id": "Q18547",
@@ -59,7 +65,13 @@
       "anio": 2011,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Abraj-al-Bait-Towers.JPG",
       "fuente": "https://www.wikidata.org/wiki/Q189476",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q189476.jpg",
+        "nombre": "Abraj-al-Bait-Towers.JPG",
+        "autor": "King Eliot",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Abraj-al-Bait-Towers.JPG"
+      }
     },
     {
       "id": "Q1077308",

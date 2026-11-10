@@ -1,7 +1,7 @@
 {
   "id": "sistema-solar",
   "titulo": "5 datos curiosos del sistema solar",
-  "descargado": "2026-11-10T06:51:52.665Z",
+  "descargado": "2026-11-10T07:17:23.084Z",
   "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
   "referencia": {
     "id": "Q2",
@@ -64,7 +64,13 @@
       "periodo": 929468433.6,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/8423%2020181%201saturn2016.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q193",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q193.jpg",
+        "nombre": "8423_20181_1saturn2016.jpg",
+        "autor": "Credit: NASA/JPL-Caltech/SSI",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:8423_20181_1saturn2016.jpg"
+      }
     },
     {
       "id": "Q332",

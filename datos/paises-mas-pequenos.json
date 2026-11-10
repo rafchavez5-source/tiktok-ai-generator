@@ -1,7 +1,7 @@
 {
   "id": "paises-mas-pequenos",
   "titulo": "Los 5 países más pequeños del mundo",
-  "descargado": "2026-11-10T06:49:50.882Z",
+  "descargado": "2026-11-10T07:17:10.637Z",
   "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
   "referencia": null,
   "elementos": [
@@ -12,7 +12,13 @@
       "poblacion": 466,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/0%20Basilique%20Saint-Pierre%20-%20Rome%20%281%29.JPG",
       "fuente": "https://www.wikidata.org/wiki/Q237",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q237.jpg",
+        "nombre": "0_Basilique_Saint-Pierre_-_Rome_(1).JPG",
+        "autor": "Jean-Pol GRANDMONT",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:0_Basilique_Saint-Pierre_-_Rome_(1).JPG"
+      }
     },
     {
       "id": "Q235",
@@ -21,7 +27,13 @@
       "poblacion": 38857,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20von%20Monaco-La%20Turbie.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q235",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q235.jpg",
+        "nombre": "Panorama_von_Monaco-La_Turbie.jpg",
+        "autor": "Tobi 87",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Panorama_von_Monaco-La_Turbie.jpg"
+      }
     },
     {
       "id": "Q697",
@@ -45,7 +57,13 @@
       "poblacion": 10643,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Nui%20atoll.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q672",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q672.jpg",
+        "nombre": "Nui_atoll.jpg",
+        "autor": "NASA",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Nui_atoll.jpg"
+      }
     },
     {
       "id": "Q238",
@@ -54,7 +72,13 @@
       "poblacion": 34167,
       "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Mount%20Titano%20-%20San%20Marino.jpg",
       "fuente": "https://www.wikidata.org/wiki/Q238",
-      "imagen": null
+      "imagen": {
+        "archivo": "datos/imagenes/Q238.jpg",
+        "nombre": "View_of_Mount_Titano_-_San_Marino.jpg",
+        "autor": "Commonists",
+        "licencia": "CC BY-SA 4.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:View_of_Mount_Titano_-_San_Marino.jpg"
+      }
     }
   ]
 }
