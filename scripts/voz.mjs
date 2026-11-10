@@ -115,13 +115,31 @@ export async function sintetizarElevenLabs(texto, destino, { voz, modelo = 'elev
  * Genera la voz con las voces neuronales gratuitas de Microsoft Edge (paquete edge-tts de Python).
  * No es una API oficial: Microsoft puede cambiarla o cortarla.
  */
-export function sintetizarEdge(texto, destino, { voz = 'es-AR-ElenaNeural', velocidad = '+8%' } = {}) {
+export function sintetizarEdge(texto, destino, { voz = 'es-AR-ElenaNeural', velocidad = '+8%', tono = '+0Hz' } = {}) {
   const mp3 = `${destino}.mp3`;
   const proxy = process.env.HTTPS_PROXY ? ['--proxy', process.env.HTTPS_PROXY] : [];
-  execFileSync('edge-tts', [...proxy, '--voice', voz, `--rate=${velocidad}`, '--text', textoParaVoz(texto), '--write-media', mp3], {
+  execFileSync('edge-tts', [...proxy, '--voice', voz, `--rate=${velocidad}`, `--pitch=${tono}`, '--text', textoParaVoz(texto), '--write-media', mp3], {
     stdio: ['ignore', 'ignore', 'pipe'],
   });
   execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', mp3, destino]);
   execFileSync('rm', ['-f', mp3]);
   return duracionAudio(destino);
+}
+
+/**
+ * Reparte el tiempo del audio entre las palabras según lo que tarda en decirse cada una.
+ * Piper no da tiempos por palabra, así que es una estimación.
+ */
+export function tiemposPalabras(texto, duracion) {
+  const palabras = texto.split(/\s+/).filter(Boolean);
+  const pesos = palabras.map((w) => textoParaVoz(w).replace(/[^\p{L}]/gu, '').length + 1 + (/[.,:;?!]$/.test(w) ? 4 : 0));
+  const total = pesos.reduce((a, b) => a + b, 0);
+  const util = Math.max(duracion - 0.15, 0.1);
+  let t = 0.05;
+  return palabras.map((w, i) => {
+    const d = (pesos[i] / total) * util;
+    const item = { w, start: t, end: t + d };
+    t += d;
+    return item;
+  });
 }

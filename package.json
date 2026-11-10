@@ -13,17 +13,21 @@
     "videos": "node scripts/crear-videos.mjs",
     "biblioteca": "node scripts/descargar-biblioteca.mjs",
     "clips": "node scripts/descargar-videos.mjs",
-    "guiones": "node scripts/generar-guiones.mjs"
+    "guiones": "node scripts/generar-guiones.mjs",
+    "venus": "node scripts/crear-venus.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.7.0",
+    "@react-three/fiber": "^9.8.2",
     "@remotion/bundler": "^4.0.542",
     "@remotion/cli": "^4.0.542",
     "@remotion/renderer": "^4.0.542",
+    "@remotion/three": "^4.0.542",
     "@remotion/transitions": "^4.0.542",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "remotion": "^4.0.542",
+    "three": "^0.187.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {

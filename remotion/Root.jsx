@@ -1,5 +1,6 @@
 import { Composition } from 'remotion';
 import { DatoCurioso, duracionTotal, FPS } from './DatoCurioso.jsx';
+import { Venus, duracionVenus } from './Venus.jsx';
 
 const ejemplo = {
   titulo: 'Ejemplo',
@@ -9,6 +10,7 @@ const ejemplo = {
 };
 
 export const Root = () => (
+  <>
   <Composition
     id="DatoCurioso"
     component={DatoCurioso}
@@ -19,4 +21,15 @@ export const Root = () => (
     defaultProps={ejemplo}
     calculateMetadata={({ props }) => ({ durationInFrames: duracionTotal(props.scenes) })}
   />
+  <Composition
+    id="Venus"
+    component={Venus}
+    width={1080}
+    height={1920}
+    fps={FPS}
+    durationInFrames={300}
+    defaultProps={{ tramos: [{ id: 'a', duracion: 10, inicioVoz: 0, audio: null, words: [] }, { id: 'b', duracion: 1, inicioVoz: 0, words: [] }, { id: 'c', duracion: 1, inicioVoz: 0, words: [] }, { id: 'd', duracion: 1, inicioVoz: 0, words: [] }, { id: 'e', duracion: 1, inicioVoz: 0, words: [] }] }}
+    calculateMetadata={({ props }) => ({ durationInFrames: duracionVenus(props.tramos) })}
+  />
+  </>
 );

@@ -180,6 +180,77 @@ def campanitas():
     return total
 
 
+def eco(x, retardo=0.42, ganancia=0.45, repeticiones=5):
+    y = x.copy()
+    d = int(SR * retardo)
+    for k in range(1, repeticiones + 1):
+        if d * k >= x.size:
+            break
+        y[d * k :] += x[: -d * k] * ganancia**k
+    return y
+
+
+def ambiente_espacial(duracion=48):
+    """Música espacial misteriosa: zumbido grave, acordes lentos, destellos con eco y viento."""
+    n = int(SR * duracion)
+    x = np.arange(n) / SR
+    mezcla = np.zeros(n)
+    # Zumbido grave que respira
+    lfo = 0.6 + 0.4 * np.sin(2 * np.pi * x / 9)
+    mezcla += (np.sin(2 * np.pi * 55 * x) * 0.5 + np.sin(2 * np.pi * 82.4 * x) * 0.3 + np.sin(2 * np.pi * 110.3 * x) * 0.15) * lfo * 0.35
+    # Acordes lentos (La menor add9 – Fa maj7 – Do – Mi menor)
+    acordes = [[57, 60, 64, 71], [53, 57, 60, 64], [48, 55, 60, 64], [52, 55, 59, 64]]
+    largo = 8.0
+    for i in range(int(duracion / largo) + 1):
+        xa = t(largo + 2)
+        pad = np.zeros(xa.size)
+        for m in acordes[i % 4]:
+            for det in (-0.15, 0.15):
+                fr = nota(m) * (1 + det / 100)
+                pad += 2 * ((xa * fr) % 1) - 1
+        env = np.minimum(1, xa / 2.5) * np.minimum(1, np.maximum(0, (largo + 2 - xa) / 2.5))
+        pad = lowpass(pad / 8, 700) * env * 0.22
+        ini = int(SR * i * largo)
+        fin = min(n, ini + pad.size)
+        if ini < n:
+            mezcla[ini:fin] += pad[: fin - ini]
+    # Destellos agudos con eco (pentatónica de La menor)
+    destellos = np.zeros(n)
+    escala = [69, 72, 74, 76, 79, 81, 84]
+    momento = 1.5
+    while momento < duracion - 2:
+        m = escala[int(rng.integers(0, len(escala)))]
+        xs = t(1.2)
+        nota_s = np.sin(2 * np.pi * nota(m + 12) * xs) * envolvente(xs.size, 0.005, 0.5) * 0.08
+        i = int(SR * momento)
+        destellos[i : i + nota_s.size] += nota_s[: n - i]
+        momento += float(rng.uniform(1.6, 3.2))
+    mezcla += eco(destellos)
+    # Viento cósmico
+    ruido_v = rng.uniform(-1, 1, n)
+    viento = lowpass(ruido_v, 500) - lowpass(ruido_v, 120)
+    mezcla += viento * (0.5 + 0.5 * np.sin(2 * np.pi * x / 13)) * 0.5
+    fade = int(SR * 2)
+    mezcla[:fade] *= np.linspace(0, 1, fade)
+    mezcla[-fade:] *= np.linspace(1, 0, fade)
+    return mezcla / np.max(np.abs(mezcla)) * 0.8
+
+
+def transicion_orbital():
+    """Barrido que sube y termina en un impacto grave: para cambiar de escena."""
+    x = t(1.6)
+    ruido_b = rng.uniform(-1, 1, x.size)
+    sube = (x / 1.6) ** 2
+    barrido = (ruido_b - lowpass(ruido_b, 200 + 3000 * (x[-1] / 1.6))) * sube * 0.5
+    tono = np.sin(2 * np.pi * np.cumsum(80 + 500 * sube) / SR) * sube * 0.25
+    impacto = np.zeros(int(SR * 2.4))
+    xi = t(0.8)
+    golpe_s = np.sin(2 * np.pi * (35 + 50 * np.exp(-xi * 10)) * xi) * np.exp(-xi * 4) * 0.9
+    impacto[: x.size] += barrido + tono
+    impacto[x.size : x.size + golpe_s.size] += golpe_s
+    return impacto / np.max(np.abs(impacto)) * 0.9
+
+
 if __name__ == "__main__":
     destino = Path(sys.argv[1] if len(sys.argv) > 1 else "remotion/public")
     destino.mkdir(parents=True, exist_ok=True)
@@ -191,4 +262,6 @@ if __name__ == "__main__":
     guardar(destino / "tic.wav", tic())
     guardar(destino / "swoosh.wav", swoosh())
     guardar(destino / "campanitas.wav", campanitas())
+    guardar(destino / "ambiente-espacial.wav", ambiente_espacial())
+    guardar(destino / "transicion-orbital.wav", transicion_orbital())
     print("Música y efectos creados en", destino)

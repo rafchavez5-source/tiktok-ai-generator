@@ -8,7 +8,7 @@ import { join, resolve } from 'node:path';
 import { bundle } from '@remotion/bundler';
 import { renderMedia, renderStill, selectComposition } from '@remotion/renderer';
 import { PAQUETES } from './paquetes.mjs';
-import { duracionAudio, sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
+import { duracionAudio, sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz, tiemposPalabras } from './voz.mjs';
 
 const SALIDA = 'videos';
 const PUBLICO = resolve('remotion/public');
@@ -51,23 +51,6 @@ function creditoFoto(img) {
   return `${img.autor ? `Foto: ${img.autor}` : 'Foto'} · ${img.licencia} · Wikimedia Commons`;
 }
 
-/**
- * Reparte el tiempo del audio entre las palabras según lo que tarda en decirse cada una.
- * Piper no da tiempos por palabra, así que es una estimación.
- */
-export function tiemposPalabras(texto, duracion) {
-  const palabras = texto.split(/\s+/).filter(Boolean);
-  const pesos = palabras.map((w) => textoParaVoz(w).replace(/[^\p{L}]/gu, '').length + 1 + (/[.,:;?!]$/.test(w) ? 4 : 0));
-  const total = pesos.reduce((a, b) => a + b, 0);
-  const util = Math.max(duracion - 0.15, 0.1);
-  let t = 0.05;
-  return palabras.map((w, i) => {
-    const d = (pesos[i] / total) * util;
-    const item = { w, start: t, end: t + d };
-    t += d;
-    return item;
-  });
-}
 
 function especificarAnimacion(paquete, elementos, i, referencia) {
   const tipo = paquete.animacion;
