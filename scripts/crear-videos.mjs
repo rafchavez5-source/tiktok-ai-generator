@@ -8,13 +8,21 @@ import { join, resolve } from 'node:path';
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
 import { PAQUETES } from './paquetes.mjs';
-import { sintetizar, textoParaVoz } from './voz.mjs';
+import { sintetizar, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
 
 const SALIDA = 'videos';
 const PUBLICO = resolve('remotion/public');
 // Voz de Piper (archivo .onnx en voces/) y, si la voz tiene varias, el número de hablante.
 const VOZ = process.env.VOZ ?? 'voces/es_AR-daniela-high.onnx';
 const HABLANTE = process.env.VOZ_HABLANTE ?? null;
+// Con VOZ_PROVEEDOR=elevenlabs se usa ElevenLabs y la voz ELEVENLABS_VOZ (su identificador).
+const PROVEEDOR = process.env.VOZ_PROVEEDOR ?? 'piper';
+const ELEVEN_VOZ = process.env.ELEVENLABS_VOZ ?? null;
+
+async function generarVoz(texto, destino) {
+  if (PROVEEDOR === 'elevenlabs') return sintetizarElevenLabs(texto, destino, { voz: ELEVEN_VOZ });
+  return sintetizar(texto, VOZ, destino, { hablante: HABLANTE });
+}
 const CHROMIUM = ['/opt/pw-browsers/chromium', process.env.CHROME_PATH].find((p) => p && existsSync(p));
 
 // Nombres más cortos para que quepan bien en pantalla.
@@ -48,7 +56,7 @@ export function tiemposPalabras(texto, duracion) {
   });
 }
 
-function prepararEscenas(paquete, datos, carpeta) {
+async function prepararEscenas(paquete, datos) {
   const elementos = datos.elementos.map((e) => ({
     ...e,
     nombre: corto(e.nombre),
@@ -94,9 +102,10 @@ function prepararEscenas(paquete, datos, carpeta) {
     },
   ];
 
-  return base.map((s) => {
+  const escenas = [];
+  for (const s of base) {
     const audio = `${paquete.id}/${s.id}.wav`;
-    const segundos = sintetizar(s.voz, VOZ, join(PUBLICO, audio), { hablante: HABLANTE });
+    const segundos = await generarVoz(s.voz, join(PUBLICO, audio));
     let image = null;
     if (s.img?.archivo && existsSync(s.img.archivo)) {
       image = `${paquete.id}/${s.id}.jpg`;
@@ -111,7 +120,7 @@ function prepararEscenas(paquete, datos, carpeta) {
       start: w.start + desfase,
       end: w.end + desfase,
     }));
-    return {
+    escenas.push({
       id: s.id,
       type: s.type,
       rank: s.rank ?? null,
@@ -126,8 +135,9 @@ function prepararEscenas(paquete, datos, carpeta) {
       fuente: s.fuente,
       licencia: s.img,
       nombre: s.title,
-    };
-  });
+    });
+  }
+  return escenas;
 }
 
 function descripcion(paquete, escenas, datos) {
@@ -138,7 +148,7 @@ function descripcion(paquete, escenas, datos) {
       lineas.push(`  Foto: ${s.licencia.autor ?? 'autor en la página'} · ${s.licencia.licencia} · ${s.licencia.pagina}`);
     }
   }
-  lineas.push('', `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
+  lineas.push('', PROVEEDOR === 'elevenlabs' ? 'Voz: ElevenLabs. Video hecho con Remotion.' : `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
   return `${lineas.join('\n')}\n`;
 }
 
@@ -177,7 +187,7 @@ for (const paquete of paquetes) {
   const inicio = Date.now();
   mkdirSync(join(PUBLICO, paquete.id), { recursive: true });
   console.log(`▶ ${paquete.titulo}: generando voz…`);
-  const escenas = prepararEscenas(paquete, datos, join(PUBLICO, paquete.id));
+  const escenas = await prepararEscenas(paquete, datos);
   const whoosh = crearWhoosh();
 
   // El bundle copia public/ al crearse: se vuelve a crear para incluir los audios nuevos.

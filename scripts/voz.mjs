@@ -77,3 +77,36 @@ export function duracionAudio(archivo) {
   const out = execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', archivo]);
   return Number(String(out).trim());
 }
+
+/**
+ * Genera la voz con ElevenLabs (necesita una clave guardada en el entorno o en ELEVENLABS_API_KEY).
+ * Devuelve la duración en segundos del .wav creado.
+ */
+export async function sintetizarElevenLabs(texto, destino, { voz, modelo = 'eleven_multilingual_v2' } = {}) {
+  if (!voz) throw new Error('Falta el identificador de la voz de ElevenLabs (ELEVENLABS_VOZ).');
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voz)}?output_format=mp3_44100_128`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // En la nube la clave la añade el proxy del entorno; en local se lee de la variable.
+      'xi-api-key': process.env.ELEVENLABS_API_KEY ?? 'clave-en-el-entorno',
+    },
+    body: JSON.stringify({
+      text: textoParaVoz(texto),
+      model_id: modelo,
+      language_code: 'es',
+      voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.3, use_speaker_boost: true },
+    }),
+  });
+  if (!res.ok) {
+    const detalle = await res.text().catch(() => '');
+    throw new Error(`ElevenLabs respondió ${res.status}: ${detalle.slice(0, 200)}`);
+  }
+  const mp3 = `${destino}.mp3`;
+  const { writeFileSync, rmSync } = await import('node:fs');
+  writeFileSync(mp3, Buffer.from(await res.arrayBuffer()));
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', mp3, destino]);
+  rmSync(mp3);
+  return duracionAudio(destino);
+}
