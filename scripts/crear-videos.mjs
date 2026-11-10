@@ -6,7 +6,7 @@ import { execFileSync } from 'node:child_process';
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { bundle } from '@remotion/bundler';
-import { renderMedia, selectComposition } from '@remotion/renderer';
+import { renderMedia, renderStill, selectComposition } from '@remotion/renderer';
 import { PAQUETES } from './paquetes.mjs';
 import { duracionAudio, sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
 
@@ -34,6 +34,13 @@ const NOMBRES_CORTOS = {
   'Torre central de Shanghái': 'Torre de Shanghái',
 };
 const corto = (n) => NOMBRES_CORTOS[n] ?? n;
+// Nombres muy cortos para las etiquetas de las animaciones.
+const ETIQUETAS = { 'Torre de Shanghái': 'Shanghái', 'Ping An Finance Centre': 'Ping An', 'Ciudad del Vaticano': 'Vaticano', 'Abraj Al Bait': 'Abraj' };
+const etiqueta = (n) => ETIQUETAS[n] ?? n;
+
+// Con --animado se crea la versión hecha solo con animaciones (sin fotos ni clips).
+const ANIMADO = process.argv.includes('--animado');
+const carpetaPublica = (paquete) => `${paquete.id}${ANIMADO ? '-animado' : ''}`;
 
 function creditoVideo(v) {
   return `Video: ${v.autor ?? v.nombre} · ${v.licencia}${/NASA/.test(v.licencia) ? '' : ' · Wikimedia Commons'}`;
@@ -62,6 +69,18 @@ export function tiemposPalabras(texto, duracion) {
   });
 }
 
+function especificarAnimacion(paquete, elementos, i, referencia) {
+  const tipo = paquete.animacion;
+  if (!tipo) return null;
+  if (tipo === 'planeta') {
+    const e = elementos[i];
+    return { tipo: 'planeta', id: e.id, nombre: e.nombre, ratio: referencia ? e.valor / referencia.valor : 1 };
+  }
+  const serie = elementos.map((e) => ({ nombre: e.nombre, corto: etiqueta(e.nombre), valor: paquete.dato(e, 0, referencia).cifra?.valor ?? e.valor }));
+  if (tipo === 'superficies') return { tipo: 'superficies', serie, actual: i };
+  return { tipo: 'alturas', forma: tipo === 'alturas-montaña' ? 'montaña' : 'edificio', serie, actual: i };
+}
+
 async function prepararEscenas(paquete, datos) {
   const elementos = datos.elementos.map((e) => ({
     ...e,
@@ -86,6 +105,7 @@ async function prepararEscenas(paquete, datos) {
       const e = elementos[i];
       const d = paquete.dato(e, i, datos.referencia);
       return {
+        animacion: ANIMADO ? especificarAnimacion(paquete, elementos, i, datos.referencia) : null,
         id: e.id,
         type: 'fact',
         rank: ranking ? i + 1 : null,
@@ -111,17 +131,17 @@ async function prepararEscenas(paquete, datos) {
 
   const escenas = [];
   for (const s of base) {
-    const audio = `${paquete.id}/${s.id}.wav`;
+    const audio = `${carpetaPublica(paquete)}/${s.id}.wav`;
     const segundos = await generarVoz(s.voz, join(PUBLICO, audio));
     let video = null;
-    if (s.clip?.archivo && existsSync(s.clip.archivo)) {
-      const ruta = `${paquete.id}/${s.id}.mp4`;
+    if (!ANIMADO && s.clip?.archivo && existsSync(s.clip.archivo)) {
+      const ruta = `${carpetaPublica(paquete)}/${s.id}.mp4`;
       copyFileSync(s.clip.archivo, join(PUBLICO, ruta));
       video = { archivo: ruta, duracion: s.clip.duracion ?? duracionAudio(s.clip.archivo) };
     }
     let image = null;
-    if (s.img?.archivo && existsSync(s.img.archivo)) {
-      image = `${paquete.id}/${s.id}.jpg`;
+    if (!ANIMADO && s.img?.archivo && existsSync(s.img.archivo)) {
+      image = `${carpetaPublica(paquete)}/${s.id}.jpg`;
       copyFileSync(s.img.archivo, join(PUBLICO, image));
     }
     // Los subtítulos solo muestran la parte del dato; se ajustan al final del audio.
@@ -144,7 +164,8 @@ async function prepararEscenas(paquete, datos) {
       audio,
       image,
       video,
-      credit: video ? creditoVideo(s.clip) : creditoFoto(s.img),
+      animacion: s.animacion ?? null,
+      credit: ANIMADO ? 'Datos: Wikidata' : video ? creditoVideo(s.clip) : creditoFoto(s.img),
       duration: Math.max(s.type === 'hook' ? 3.2 : 2.5, segundos + 0.7),
       fuente: s.fuente,
       licencia: s.img,
@@ -188,7 +209,7 @@ function crearWhoosh() {
   return 'whoosh.wav';
 }
 
-const filtro = process.argv.slice(2);
+const filtro = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const paquetes = PAQUETES.filter((p) => !filtro.length || filtro.includes(p.id));
 mkdirSync(SALIDA, { recursive: true });
 
@@ -204,7 +225,7 @@ for (const paquete of paquetes) {
     continue;
   }
   const inicio = Date.now();
-  mkdirSync(join(PUBLICO, paquete.id), { recursive: true });
+  mkdirSync(join(PUBLICO, carpetaPublica(paquete)), { recursive: true });
   console.log(`▶ ${paquete.titulo}: generando voz…`);
   const escenas = await prepararEscenas(paquete, datos);
   const whoosh = crearWhoosh();
@@ -220,7 +241,17 @@ for (const paquete of paquetes) {
     ...crearMusica(),
   };
   const composition = await selectComposition({ serveUrl: url, id: 'DatoCurioso', inputProps, browserExecutable: CHROMIUM });
-  const destino = join(SALIDA, `${paquete.id}.mp4`);
+  const nombreSalida = `${paquete.id}${ANIMADO ? '-animado' : ''}`;
+  const destino = join(SALIDA, `${nombreSalida}.mp4`);
+  // FOTOGRAMAS=100,400 crea solo esas imágenes (para revisar el diseño rápido).
+  if (process.env.FOTOGRAMAS) {
+    for (const f of process.env.FOTOGRAMAS.split(',').map(Number)) {
+      const png = join(SALIDA, `${nombreSalida}-f${f}.png`);
+      await renderStill({ composition, serveUrl: url, frame: Math.min(f, composition.durationInFrames - 1), output: png, inputProps, browserExecutable: CHROMIUM });
+      console.log(`  imagen ${png}`);
+    }
+    continue;
+  }
   let ultimo = -1;
   console.log(`  renderizando ${(composition.durationInFrames / 30).toFixed(1)} s de video…`);
   await renderMedia({
@@ -241,6 +272,6 @@ for (const paquete of paquetes) {
       }
     },
   });
-  writeFileSync(join(SALIDA, `${paquete.id}.txt`), descripcion(paquete, escenas, datos));
+  writeFileSync(join(SALIDA, `${nombreSalida}.txt`), descripcion(paquete, escenas, datos));
   console.log(`✓ ${destino} (${((Date.now() - inicio) / 1000).toFixed(0)} s de proceso)`);
 }

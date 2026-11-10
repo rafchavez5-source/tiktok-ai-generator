@@ -20,6 +20,7 @@ export const PAQUETES = [
     titulo: 'Las 5 montañas más altas del mundo',
     encabezado: 'TOP 5 · Montañas más altas',
     tema: 'nieve',
+    animacion: 'alturas-montaña',
     emojis: ['🏔️', '⛰️', '🧗', '❄️'],
     gancho: '¿Sabes cuál es la más alta del planeta?',
     hashtags: '#montañas #everest #datoscuriosos #geografia',
@@ -46,6 +47,7 @@ export const PAQUETES = [
     titulo: 'Los 5 países más pequeños del mundo',
     encabezado: 'TOP 5 · Países más pequeños',
     tema: 'destellos',
+    animacion: 'superficies',
     emojis: ['🌍', '🗺️', '📍', '🏝️'],
     gancho: 'Algunos caben dentro de una ciudad.',
     hashtags: '#paises #vaticano #datoscuriosos #geografia',
@@ -75,6 +77,7 @@ export const PAQUETES = [
     titulo: '5 datos curiosos del sistema solar',
     encabezado: 'Datos del sistema solar',
     tema: 'estrellas',
+    animacion: 'planeta',
     emojis: ['🪐', '🚀', '☄️', '🌌'],
     gancho: 'La Tierra es más pequeña de lo que crees.',
     hashtags: '#espacio #planetas #sistemasolar #datoscuriosos',
@@ -115,6 +118,7 @@ export const PAQUETES = [
     titulo: 'Los 5 rascacielos más altos del mundo',
     encabezado: 'TOP 5 · Rascacielos más altos',
     tema: 'luces',
+    animacion: 'alturas-edificio',
     emojis: ['🏙️', '🏗️', '🌆', '🏢'],
     gancho: 'El número uno supera los 800 metros.',
     hashtags: '#rascacielos #burjkhalifa #arquitectura #datoscuriosos',
@@ -135,7 +139,7 @@ export const PAQUETES = [
     dato: (e, i) => ({
       onScreenText: `#${i + 1} ${e.nombre}`,
       narration:
-        `Mide ${num(e.valor)} metros. Está en ${[e.ciudad, e.pais].filter(Boolean).join(', ')}.` +
+        `Mide ${num(e.valor, 1)} metros. Está en ${[e.ciudad, e.pais].filter((x) => x && !/^Q\d+$/.test(x)).join(', ')}.` +
         (e.anio ? ` Se inauguró en ${e.anio}.` : ''),
       cifra: { valor: e.valor, decimales: Number.isInteger(e.valor) ? 0 : 1, unidad: 'm', etiqueta: 'de altura' },
     }),

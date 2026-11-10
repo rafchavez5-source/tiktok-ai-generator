@@ -22,6 +22,7 @@ import { cube } from '@remotion/transitions/cube';
 import { iris } from '@remotion/transitions/iris';
 import { clockWipe } from '@remotion/transitions/clock-wipe';
 import { Confeti, Particulas, Stickers, usePulso } from './Efectos.jsx';
+import { Animacion } from './Animado.jsx';
 
 export const FPS = 30;
 export const TRANSICION = 14; // fotogramas que dura cada transición
@@ -198,7 +199,7 @@ function Contador({ cifra, delay = 10 }) {
 }
 
 /** Subtítulos estilo TikTok: grupos de pocas palabras, la palabra que se dice resaltada. */
-function Subtitulos({ words, inicio }) {
+function Subtitulos({ words, inicio, top = 1180 }) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = (frame - inicio) / fps;
@@ -226,7 +227,7 @@ function Subtitulos({ words, inicio }) {
         position: 'absolute',
         left: 60,
         right: 60,
-        top: 1180,
+        top,
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
@@ -311,7 +312,8 @@ function Escena({ scene, frames, sfx, tema, emojis }) {
         {scene.type === 'fact' && <ContenidoDato scene={scene} color={color} />}
         {scene.type === 'outro' && <ContenidoCierre scene={scene} color={color} />}
       </AbsoluteFill>
-      {scene.type !== 'hook' && <Subtitulos words={scene.words} inicio={inicioVoz} />}
+      {scene.animacion && <Animacion animacion={scene.animacion} color={color} />}
+      {scene.type !== 'hook' && <Subtitulos words={scene.words} inicio={inicioVoz} top={scene.animacion ? 1400 : 1180} />}
       <Credito texto={scene.credit} />
     </AbsoluteFill>
   );
