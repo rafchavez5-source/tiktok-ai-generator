@@ -35,7 +35,7 @@ export const PAQUETES = [
     dato: (e, i) => ({
       onScreenText: `#${i + 1} ${e.nombre}`,
       narration: `Mide ${num(e.valor, 2)} metros sobre el nivel del mar. Está en ${lista(e.paises)}.`,
-      cifra: { valor: e.valor, decimales: 2, unidad: 'm', etiqueta: 'de altura' },
+      cifra: { valor: e.valor, decimales: Number.isInteger(e.valor) ? 0 : 2, unidad: 'm', etiqueta: 'de altura' },
     }),
   },
   {
