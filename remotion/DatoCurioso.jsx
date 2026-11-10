@@ -14,9 +14,15 @@ import {
 } from 'remotion';
 import { TransitionSeries, linearTiming } from '@remotion/transitions';
 import { slide } from '@remotion/transitions/slide';
+import { wipe } from '@remotion/transitions/wipe';
+import { flip } from '@remotion/transitions/flip';
+import { cube } from '@remotion/transitions/cube';
+import { iris } from '@remotion/transitions/iris';
+import { clockWipe } from '@remotion/transitions/clock-wipe';
+import { Confeti, Particulas, Stickers, usePulso } from './Efectos.jsx';
 
 export const FPS = 30;
-export const TRANSICION = 12; // fotogramas que dura cada transición
+export const TRANSICION = 14; // fotogramas que dura cada transición
 
 const COLORES = { hook: '#fe2c55', fact: '#25f4ee', outro: '#ffc94d' };
 const AMARILLO = '#ffe14d';
@@ -33,7 +39,8 @@ const formatear = (n, decimales) =>
 
 function Fondo({ image, color, frames }) {
   const frame = useCurrentFrame();
-  const zoom = interpolate(frame, [0, frames], [1.08, 1.24]);
+  const pulso = usePulso();
+  const zoom = interpolate(frame, [0, frames], [1.08, 1.24]) * pulso;
   const panX = interpolate(frame, [0, frames], [-20, 20]);
   return (
     <AbsoluteFill style={{ backgroundColor: '#07070b', overflow: 'hidden' }}>
@@ -264,7 +271,7 @@ function Credito({ texto }) {
 
 // ---------- Escenas ----------
 
-function Escena({ scene, frames, sfx }) {
+function Escena({ scene, frames, sfx, tema, emojis }) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const color = COLORES[scene.type] ?? COLORES.fact;
@@ -277,14 +284,12 @@ function Escena({ scene, frames, sfx }) {
   return (
     <AbsoluteFill style={{ fontFamily: FUENTE, transform: `scale(${1.12 - 0.12 * punch}) translateX(${sac}px)` }}>
       <Fondo image={scene.image} color={color} frames={frames} />
+      <Particulas tema={tema} />
       <Vineta />
-      {sfx && scene.type === 'hook' && <Audio src={staticFile(sfx.golpe)} volume={0.9} />}
-      {sfx && scene.type === 'fact' && (
-        <>
-          <Sequence from={3}><Audio src={staticFile(sfx.ding)} volume={0.35} /></Sequence>
-          {scene.cifra && <Sequence from={14 + 36}><Audio src={staticFile(sfx.pop)} volume={0.6} /></Sequence>}
-        </>
-      )}
+      <Stickers emojis={emojis} semilla={scene.id} />
+      {scene.rank === 1 && <Confeti desde={6} />}
+      {scene.type === 'outro' && <Confeti desde={10} piezas={70} />}
+      {sfx && <Sonidos scene={scene} sfx={sfx} />}
       <AbsoluteFill style={{ backgroundColor: 'white', opacity: destello, pointerEvents: 'none' }} />
       {scene.audio && (
         <Sequence from={inicioVoz}>
@@ -300,6 +305,60 @@ function Escena({ scene, frames, sfx }) {
       <Credito texto={scene.credit} />
     </AbsoluteFill>
   );
+}
+
+/** Efectos de sonido de cada escena. */
+function Sonidos({ scene, sfx }) {
+  const tics = [];
+  if (scene.type === 'fact' && scene.cifra) {
+    // Tic-tac mientras el número cuenta (de 14 a 50 fotogramas).
+    for (let f = 14; f < 50; f += 3) {
+      tics.push(
+        <Sequence key={f} from={f} durationInFrames={3}>
+          <Audio src={staticFile(sfx.tic)} volume={0.22} />
+        </Sequence>,
+      );
+    }
+  }
+  return (
+    <>
+      {scene.type === 'hook' && (
+        <>
+          <Audio src={staticFile(sfx.golpe)} volume={0.9} />
+          <Sequence from={6}><Audio src={staticFile(sfx.swoosh)} volume={0.5} /></Sequence>
+        </>
+      )}
+      {scene.type === 'fact' && scene.rank === 1 && (
+        <>
+          <Sequence from={2}><Audio src={staticFile(sfx.golpe)} volume={1} /></Sequence>
+          <Sequence from={6}><Audio src={staticFile(sfx.campanitas)} volume={0.5} /></Sequence>
+        </>
+      )}
+      {scene.type === 'fact' && scene.rank !== 1 && (
+        <Sequence from={3}><Audio src={staticFile(sfx.ding)} volume={0.35} /></Sequence>
+      )}
+      {scene.type === 'fact' && (
+        <Sequence from={8}><Audio src={staticFile(sfx.swoosh)} volume={0.35} /></Sequence>
+      )}
+      {tics}
+      {scene.cifra && <Sequence from={50}><Audio src={staticFile(sfx.pop)} volume={0.6} /></Sequence>}
+      {scene.type === 'outro' && <Sequence from={10}><Audio src={staticFile(sfx.campanitas)} volume={0.45} /></Sequence>}
+    </>
+  );
+}
+
+/** Transiciones variadas; el número 1 entra con un círculo que se abre. */
+function transicionPara(i, siguiente) {
+  if (siguiente?.rank === 1) return iris({ width: 1080, height: 1920 });
+  const lista = [
+    () => cube({ direction: 'from-right' }),
+    () => wipe({ direction: 'from-top-left' }),
+    () => flip({ direction: 'from-right' }),
+    () => clockWipe({ width: 1080, height: 1920 }),
+    () => slide({ direction: 'from-bottom' }),
+    () => cube({ direction: 'from-bottom' }),
+  ];
+  return lista[i % lista.length]();
 }
 
 function Vineta() {
@@ -419,6 +478,7 @@ function ContenidoDato({ scene, color }) {
         {scene.title}
       </div>
       {scene.cifra && <Contador cifra={scene.cifra} delay={14} />}
+      {scene.rank === 1 && <Etiqueta texto="¡El número 1!" color="#fe2c55" delay={4} />}
     </>
   );
 }
@@ -463,7 +523,7 @@ function BarraProgreso({ total }) {
   );
 }
 
-export function DatoCurioso({ scenes, whoosh, musica, sfx, encabezado }) {
+export function DatoCurioso({ scenes, whoosh, musica, sfx, encabezado, tema, emojis }) {
   const total = duracionTotal(scenes);
   let inicio = 0;
   const inicios = scenes.map((s) => {
@@ -478,14 +538,14 @@ export function DatoCurioso({ scenes, whoosh, musica, sfx, encabezado }) {
         {scenes.flatMap((scene, i) => {
           const items = [
             <TransitionSeries.Sequence key={scene.id} durationInFrames={framesEscena(scene)}>
-              <Escena scene={scene} frames={framesEscena(scene)} sfx={sfx} />
+              <Escena scene={scene} frames={framesEscena(scene)} sfx={sfx} tema={tema} emojis={emojis} />
             </TransitionSeries.Sequence>,
           ];
           if (i < scenes.length - 1) {
             items.push(
               <TransitionSeries.Transition
                 key={`${scene.id}-t`}
-                presentation={slide({ direction: i % 2 === 0 ? 'from-right' : 'from-bottom' })}
+                presentation={transicionPara(i, scenes[i + 1])}
                 timing={linearTiming({ durationInFrames: TRANSICION })}
               />,
             );
@@ -499,6 +559,14 @@ export function DatoCurioso({ scenes, whoosh, musica, sfx, encabezado }) {
             <Audio src={staticFile(whoosh)} volume={0.35} />
           </Sequence>
         ))}
+      {sfx &&
+        scenes.map((s, i) =>
+          s.rank === 1 && i > 0 ? (
+            <Sequence key={`subida-${i}`} from={Math.max(0, inicios[i] - 40)} durationInFrames={50}>
+              <Audio src={staticFile(sfx.subida)} volume={0.55} />
+            </Sequence>
+          ) : null,
+        )}
       {musica && (
         <Audio
           src={staticFile(musica)}

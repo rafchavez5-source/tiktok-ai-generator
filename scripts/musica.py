@@ -145,6 +145,41 @@ def golpe():
     return (sub * 0.9 + ruido * 0.5) * 0.9
 
 
+def subida():
+    """Riser: ruido y tono que suben durante 1,6 s para crear tensión."""
+    x = t(1.6)
+    f = 200 * (8 ** (x / 1.6))
+    tono = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.35
+    ruido = rng.uniform(-1, 1, x.size)
+    ruido = ruido - lowpass(ruido, 300 + 6000 * (x[-1] / 1.6))
+    env = (x / 1.6) ** 2
+    return (tono + ruido * 0.5) * env * 0.9
+
+
+def tic():
+    x = t(0.03)
+    return np.sin(2 * np.pi * 2400 * x) * np.exp(-x * 220) * 0.6
+
+
+def swoosh():
+    x = t(0.45)
+    ruido = rng.uniform(-1, 1, x.size)
+    corte = lowpass(ruido, 2500) - lowpass(ruido, 400)
+    env = np.sin(np.pi * np.minimum(x / 0.45, 1)) ** 2
+    return corte * env * 1.4
+
+
+def campanitas():
+    """Arpegio brillante para celebrar (número 1 y cierre)."""
+    total = np.zeros(int(SR * 1.2))
+    for i, m in enumerate([72, 76, 79, 84, 88]):
+        x = t(0.7)
+        s = (np.sin(2 * np.pi * nota(m) * x) + 0.4 * np.sin(2 * np.pi * nota(m + 12) * x)) * envolvente(x.size, 0.002, 0.18)
+        ini = int(SR * 0.07 * i)
+        total[ini : ini + s.size] += s[: total.size - ini] * 0.35
+    return total
+
+
 if __name__ == "__main__":
     destino = Path(sys.argv[1] if len(sys.argv) > 1 else "remotion/public")
     destino.mkdir(parents=True, exist_ok=True)
@@ -152,4 +187,8 @@ if __name__ == "__main__":
     guardar(destino / "pop.wav", pop())
     guardar(destino / "ding.wav", ding())
     guardar(destino / "golpe.wav", golpe())
+    guardar(destino / "subida.wav", subida())
+    guardar(destino / "tic.wav", tic())
+    guardar(destino / "swoosh.wav", swoosh())
+    guardar(destino / "campanitas.wav", campanitas())
     print("Música y efectos creados en", destino)

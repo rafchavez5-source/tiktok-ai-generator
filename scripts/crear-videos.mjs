@@ -155,10 +155,11 @@ function descripcion(paquete, escenas, datos) {
 }
 
 function crearMusica() {
-  if (!existsSync(join(PUBLICO, 'musica.wav'))) {
+  if (!existsSync(join(PUBLICO, 'campanitas.wav'))) {
     execFileSync('python3', ['scripts/musica.py', PUBLICO], { stdio: 'inherit' });
   }
-  return { musica: 'musica.wav', sfx: { pop: 'pop.wav', ding: 'ding.wav', golpe: 'golpe.wav' } };
+  const sfx = Object.fromEntries(['pop', 'ding', 'golpe', 'subida', 'tic', 'swoosh', 'campanitas'].map((n) => [n, `${n}.wav`]));
+  return { musica: 'musica.wav', sfx };
 }
 
 function crearWhoosh() {
@@ -194,7 +195,14 @@ for (const paquete of paquetes) {
 
   // El bundle copia public/ al crearse: se vuelve a crear para incluir los audios nuevos.
   const url = await bundle({ entryPoint: resolve('remotion/index.jsx'), publicDir: PUBLICO });
-  const inputProps = { scenes: escenas, whoosh, encabezado: paquete.encabezado, ...crearMusica() };
+  const inputProps = {
+    scenes: escenas,
+    whoosh,
+    encabezado: paquete.encabezado,
+    tema: paquete.tema,
+    emojis: paquete.emojis,
+    ...crearMusica(),
+  };
   const composition = await selectComposition({ serveUrl: url, id: 'DatoCurioso', inputProps, browserExecutable: CHROMIUM });
   const destino = join(SALIDA, `${paquete.id}.mp4`);
   let ultimo = -1;
