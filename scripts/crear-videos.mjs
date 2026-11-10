@@ -12,7 +12,9 @@ import { sintetizar, textoParaVoz } from './voz.mjs';
 
 const SALIDA = 'videos';
 const PUBLICO = resolve('remotion/public');
-const VOZ = process.env.VOZ ?? 'voces/es_MX-claude-high.onnx';
+// Voz de Piper (archivo .onnx en voces/) y, si la voz tiene varias, el número de hablante.
+const VOZ = process.env.VOZ ?? 'voces/es_AR-daniela-high.onnx';
+const HABLANTE = process.env.VOZ_HABLANTE ?? null;
 const CHROMIUM = ['/opt/pw-browsers/chromium', process.env.CHROME_PATH].find((p) => p && existsSync(p));
 
 // Nombres más cortos para que quepan bien en pantalla.
@@ -92,7 +94,7 @@ function prepararEscenas(paquete, datos, carpeta) {
 
   return base.map((s) => {
     const audio = `${paquete.id}/${s.id}.wav`;
-    const segundos = sintetizar(s.voz, VOZ, join(PUBLICO, audio));
+    const segundos = sintetizar(s.voz, VOZ, join(PUBLICO, audio), { hablante: HABLANTE });
     let image = null;
     if (s.img?.archivo && existsSync(s.img.archivo)) {
       image = `${paquete.id}/${s.id}.jpg`;
@@ -134,7 +136,7 @@ function descripcion(paquete, escenas, datos) {
       lineas.push(`  Foto: ${s.licencia.autor ?? 'autor en la página'} · ${s.licencia.licencia} · ${s.licencia.pagina}`);
     }
   }
-  lineas.push('', 'Voz sintética: Piper (es_MX). Video hecho con Remotion.');
+  lineas.push('', `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
   return `${lineas.join('\n')}\n`;
 }
 

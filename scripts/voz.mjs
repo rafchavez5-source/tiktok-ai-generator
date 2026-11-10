@@ -64,8 +64,9 @@ export function textoParaVoz(texto) {
 }
 
 /** Genera un .wav con Piper y devuelve su duración en segundos. */
-export function sintetizar(texto, modelo, destino, { velocidad = 0.9 } = {}) {
-  execFileSync('python3', ['-m', 'piper', '-m', modelo, '--length-scale', String(velocidad), '--sentence-silence', '0.15', '-f', destino], {
+export function sintetizar(texto, modelo, destino, { velocidad = 0.9, hablante = null } = {}) {
+  const extra = hablante != null ? ['-s', String(hablante)] : [];
+  execFileSync('python3', ['-m', 'piper', '-m', modelo, ...extra, '--length-scale', String(velocidad), '--sentence-silence', '0.15', '-f', destino], {
     input: textoParaVoz(texto),
     stdio: ['pipe', 'ignore', 'pipe'],
   });
