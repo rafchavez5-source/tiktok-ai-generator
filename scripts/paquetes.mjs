@@ -18,6 +18,7 @@ export const PAQUETES = [
   {
     id: 'montanas-mas-altas',
     titulo: 'Las 5 montañas más altas del mundo',
+    encabezado: 'TOP 5 · Montañas más altas',
     gancho: '¿Sabes cuál es la más alta del planeta?',
     hashtags: '#montañas #everest #datoscuriosos #geografia',
     elementos: ['Q513', 'Q43512', 'Q82019', 'Q168702', 'Q169986'],
@@ -41,6 +42,7 @@ export const PAQUETES = [
   {
     id: 'paises-mas-pequenos',
     titulo: 'Los 5 países más pequeños del mundo',
+    encabezado: 'TOP 5 · Países más pequeños',
     gancho: 'Algunos caben dentro de una ciudad.',
     hashtags: '#paises #vaticano #datoscuriosos #geografia',
     elementos: ['Q237', 'Q235', 'Q697', 'Q672', 'Q238'],
@@ -67,6 +69,7 @@ export const PAQUETES = [
   {
     id: 'sistema-solar',
     titulo: '5 datos curiosos del sistema solar',
+    encabezado: 'Datos del sistema solar',
     gancho: 'La Tierra es más pequeña de lo que crees.',
     hashtags: '#espacio #planetas #sistemasolar #datoscuriosos',
     elementos: ['Q308', 'Q313', 'Q319', 'Q193', 'Q332'],
@@ -104,7 +107,8 @@ export const PAQUETES = [
   {
     id: 'rascacielos-mas-altos',
     titulo: 'Los 5 rascacielos más altos del mundo',
-    gancho: 'El primero supera los 800 metros.',
+    encabezado: 'TOP 5 · Rascacielos más altos',
+    gancho: 'El número uno supera los 800 metros.',
     hashtags: '#rascacielos #burjkhalifa #arquitectura #datoscuriosos',
     elementos: ['Q12495', 'Q7969454', 'Q18547', 'Q189476', 'Q1077308'],
     // Altura en metros, ciudad, país y año de inauguración.

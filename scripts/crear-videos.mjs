@@ -67,7 +67,9 @@ function prepararEscenas(paquete, datos, carpeta) {
       voz: `${paquete.titulo}. ${paquete.gancho}`,
       img: elementos[0]?.imagen,
     },
-    ...elementos.map((e, i) => {
+    // En los «top», cuenta regresiva: del #5 al #1 para mantener la intriga.
+    ...(ranking ? [...elementos.keys()].reverse() : [...elementos.keys()]).map((i) => {
+      const e = elementos[i];
       const d = paquete.dato(e, i, datos.referencia);
       return {
         id: e.id,
@@ -140,6 +142,13 @@ function descripcion(paquete, escenas, datos) {
   return `${lineas.join('\n')}\n`;
 }
 
+function crearMusica() {
+  if (!existsSync(join(PUBLICO, 'musica.wav'))) {
+    execFileSync('python3', ['scripts/musica.py', PUBLICO], { stdio: 'inherit' });
+  }
+  return { musica: 'musica.wav', sfx: { pop: 'pop.wav', ding: 'ding.wav', golpe: 'golpe.wav' } };
+}
+
 function crearWhoosh() {
   const archivo = join(PUBLICO, 'whoosh.wav');
   if (!existsSync(archivo)) {
@@ -173,7 +182,7 @@ for (const paquete of paquetes) {
 
   // El bundle copia public/ al crearse: se vuelve a crear para incluir los audios nuevos.
   const url = await bundle({ entryPoint: resolve('remotion/index.jsx'), publicDir: PUBLICO });
-  const inputProps = { scenes: escenas, whoosh };
+  const inputProps = { scenes: escenas, whoosh, encabezado: paquete.encabezado, ...crearMusica() };
   const composition = await selectComposition({ serveUrl: url, id: 'DatoCurioso', inputProps, browserExecutable: CHROMIUM });
   const destino = join(SALIDA, `${paquete.id}.mp4`);
   let ultimo = -1;

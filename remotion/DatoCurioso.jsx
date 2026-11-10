@@ -264,18 +264,34 @@ function Credito({ texto }) {
 
 // ---------- Escenas ----------
 
-function Escena({ scene, frames }) {
+function Escena({ scene, frames, sfx }) {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
   const color = COLORES[scene.type] ?? COLORES.fact;
   const inicioVoz = Math.round(TRANSICION / 2);
+  // Golpe de zoom al entrar y destello blanco.
+  const punch = spring({ frame, fps, config: { damping: 16, mass: 0.6 } });
+  const destello = interpolate(frame, [0, 3, 10], [0, 0.55, 0], { extrapolateRight: 'clamp' });
+  // Sacudida cuando aparece el puesto.
+  const sac = scene.type === 'fact' ? interpolate(frame, [4, 7, 10, 13, 16], [0, 14, -10, 6, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) : 0;
   return (
-    <AbsoluteFill style={{ fontFamily: FUENTE }}>
+    <AbsoluteFill style={{ fontFamily: FUENTE, transform: `scale(${1.12 - 0.12 * punch}) translateX(${sac}px)` }}>
       <Fondo image={scene.image} color={color} frames={frames} />
+      <Vineta />
+      {sfx && scene.type === 'hook' && <Audio src={staticFile(sfx.golpe)} volume={0.9} />}
+      {sfx && scene.type === 'fact' && (
+        <>
+          <Sequence from={3}><Audio src={staticFile(sfx.ding)} volume={0.35} /></Sequence>
+          {scene.cifra && <Sequence from={14 + 36}><Audio src={staticFile(sfx.pop)} volume={0.6} /></Sequence>}
+        </>
+      )}
+      <AbsoluteFill style={{ backgroundColor: 'white', opacity: destello, pointerEvents: 'none' }} />
       {scene.audio && (
         <Sequence from={inicioVoz}>
           <Audio src={staticFile(scene.audio)} />
         </Sequence>
       )}
-      <AbsoluteFill style={{ padding: '230px 70px 0', display: 'flex', flexDirection: 'column', gap: 40 }}>
+      <AbsoluteFill style={{ padding: '250px 70px 0', display: 'flex', flexDirection: 'column', gap: 40 }}>
         {scene.type === 'hook' && <ContenidoGancho scene={scene} color={color} />}
         {scene.type === 'fact' && <ContenidoDato scene={scene} color={color} />}
         {scene.type === 'outro' && <ContenidoCierre scene={scene} color={color} />}
@@ -283,6 +299,54 @@ function Escena({ scene, frames }) {
       {scene.type !== 'hook' && <Subtitulos words={scene.words} inicio={inicioVoz} />}
       <Credito texto={scene.credit} />
     </AbsoluteFill>
+  );
+}
+
+function Vineta() {
+  return (
+    <AbsoluteFill
+      style={{ background: 'radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%)', pointerEvents: 'none' }}
+    />
+  );
+}
+
+/** Encabezado fijo durante los datos, para quien llega a mitad del video. */
+function Encabezado({ texto, escenas, inicios }) {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const primerDato = inicios[escenas.findIndex((s) => s.type === 'fact')] ?? 0;
+  const cierre = inicios[escenas.findIndex((s) => s.type === 'outro')] ?? Infinity;
+  if (!texto || frame < primerDato || frame >= cierre) return null;
+  const entrada = spring({ frame: frame - primerDato, fps, config: { damping: 14 } });
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top: 96,
+        left: 0,
+        right: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        transform: `translateY(${(1 - entrada) * -80}px)`,
+        opacity: entrada,
+        fontFamily: FUENTE,
+      }}
+    >
+      <div
+        style={{
+          background: 'rgba(10,10,16,0.72)',
+          border: '2px solid rgba(255,255,255,0.18)',
+          color: 'white',
+          fontSize: 34,
+          fontWeight: 800,
+          padding: '10px 26px',
+          borderRadius: 999,
+          letterSpacing: 0.5,
+        }}
+      >
+        {texto}
+      </div>
+    </div>
   );
 }
 
@@ -399,7 +463,7 @@ function BarraProgreso({ total }) {
   );
 }
 
-export function DatoCurioso({ scenes, whoosh }) {
+export function DatoCurioso({ scenes, whoosh, musica, sfx, encabezado }) {
   const total = duracionTotal(scenes);
   let inicio = 0;
   const inicios = scenes.map((s) => {
@@ -414,7 +478,7 @@ export function DatoCurioso({ scenes, whoosh }) {
         {scenes.flatMap((scene, i) => {
           const items = [
             <TransitionSeries.Sequence key={scene.id} durationInFrames={framesEscena(scene)}>
-              <Escena scene={scene} frames={framesEscena(scene)} />
+              <Escena scene={scene} frames={framesEscena(scene)} sfx={sfx} />
             </TransitionSeries.Sequence>,
           ];
           if (i < scenes.length - 1) {
@@ -435,6 +499,13 @@ export function DatoCurioso({ scenes, whoosh }) {
             <Audio src={staticFile(whoosh)} volume={0.35} />
           </Sequence>
         ))}
+      {musica && (
+        <Audio
+          src={staticFile(musica)}
+          volume={(f) => interpolate(f, [0, 15, total - 30, total], [0, 0.13, 0.13, 0], { extrapolateRight: 'clamp' })}
+        />
+      )}
+      <Encabezado texto={encabezado} escenas={scenes} inicios={inicios} />
       <BarraProgreso total={total} />
     </AbsoluteFill>
   );
