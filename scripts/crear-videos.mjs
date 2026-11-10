@@ -8,19 +8,21 @@ import { join, resolve } from 'node:path';
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
 import { PAQUETES } from './paquetes.mjs';
-import { sintetizar, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
+import { sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
 
 const SALIDA = 'videos';
 const PUBLICO = resolve('remotion/public');
 // Voz de Piper (archivo .onnx en voces/) y, si la voz tiene varias, el número de hablante.
 const VOZ = process.env.VOZ ?? 'voces/es_AR-daniela-high.onnx';
 const HABLANTE = process.env.VOZ_HABLANTE ?? null;
-// Con VOZ_PROVEEDOR=elevenlabs se usa ElevenLabs y la voz ELEVENLABS_VOZ (su identificador).
+// VOZ_PROVEEDOR: piper (sin conexión), edge (voces de Microsoft Edge, EDGE_VOZ)
+// o elevenlabs (necesita clave; voz ELEVENLABS_VOZ).
 const PROVEEDOR = process.env.VOZ_PROVEEDOR ?? 'piper';
 const ELEVEN_VOZ = process.env.ELEVENLABS_VOZ ?? null;
 
 async function generarVoz(texto, destino) {
   if (PROVEEDOR === 'elevenlabs') return sintetizarElevenLabs(texto, destino, { voz: ELEVEN_VOZ });
+  if (PROVEEDOR === 'edge') return sintetizarEdge(texto, destino, { voz: process.env.EDGE_VOZ ?? 'es-AR-ElenaNeural' });
   return sintetizar(texto, VOZ, destino, { hablante: HABLANTE });
 }
 const CHROMIUM = ['/opt/pw-browsers/chromium', process.env.CHROME_PATH].find((p) => p && existsSync(p));
@@ -148,7 +150,7 @@ function descripcion(paquete, escenas, datos) {
       lineas.push(`  Foto: ${s.licencia.autor ?? 'autor en la página'} · ${s.licencia.licencia} · ${s.licencia.pagina}`);
     }
   }
-  lineas.push('', PROVEEDOR === 'elevenlabs' ? 'Voz: ElevenLabs. Video hecho con Remotion.' : `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
+  lineas.push('', PROVEEDOR === 'elevenlabs' ? 'Voz: ElevenLabs. Video hecho con Remotion.' : PROVEEDOR === 'edge' ? `Voz: ${process.env.EDGE_VOZ ?? 'es-AR-ElenaNeural'} (Microsoft Edge). Video hecho con Remotion.` : `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
   return `${lineas.join('\n')}\n`;
 }
 

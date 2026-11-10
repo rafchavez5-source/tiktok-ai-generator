@@ -110,3 +110,18 @@ export async function sintetizarElevenLabs(texto, destino, { voz, modelo = 'elev
   rmSync(mp3);
   return duracionAudio(destino);
 }
+
+/**
+ * Genera la voz con las voces neuronales gratuitas de Microsoft Edge (paquete edge-tts de Python).
+ * No es una API oficial: Microsoft puede cambiarla o cortarla.
+ */
+export function sintetizarEdge(texto, destino, { voz = 'es-AR-ElenaNeural', velocidad = '+8%' } = {}) {
+  const mp3 = `${destino}.mp3`;
+  const proxy = process.env.HTTPS_PROXY ? ['--proxy', process.env.HTTPS_PROXY] : [];
+  execFileSync('edge-tts', [...proxy, '--voice', voz, `--rate=${velocidad}`, '--text', textoParaVoz(texto), '--write-media', mp3], {
+    stdio: ['ignore', 'ignore', 'pipe'],
+  });
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', mp3, destino]);
+  execFileSync('rm', ['-f', mp3]);
+  return duracionAudio(destino);
+}
