@@ -6,6 +6,8 @@ import {
   Easing,
   Img,
   interpolate,
+  Loop,
+  OffthreadVideo,
   Sequence,
   spring,
   staticFile,
@@ -37,14 +39,22 @@ const formatear = (n, decimales) =>
 
 // ---------- Fondo ----------
 
-function Fondo({ image, color, frames }) {
+function Fondo({ image, video, color, frames }) {
   const frame = useCurrentFrame();
   const pulso = usePulso();
   const zoom = interpolate(frame, [0, frames], [1.08, 1.24]) * pulso;
   const panX = interpolate(frame, [0, frames], [-20, 20]);
   return (
     <AbsoluteFill style={{ backgroundColor: '#07070b', overflow: 'hidden' }}>
-      {image ? (
+      {video ? (
+        <Loop durationInFrames={Math.max(30, Math.floor(video.duracion * 30))}>
+          <OffthreadVideo
+            src={staticFile(video.archivo)}
+            muted
+            style={{ width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${1.05 * pulso})` }}
+          />
+        </Loop>
+      ) : image ? (
         <Img
           src={staticFile(image)}
           style={{
@@ -283,7 +293,7 @@ function Escena({ scene, frames, sfx, tema, emojis }) {
   const sac = scene.type === 'fact' ? interpolate(frame, [4, 7, 10, 13, 16], [0, 14, -10, 6, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) : 0;
   return (
     <AbsoluteFill style={{ fontFamily: FUENTE, transform: `scale(${1.12 - 0.12 * punch}) translateX(${sac}px)` }}>
-      <Fondo image={scene.image} color={color} frames={frames} />
+      <Fondo image={scene.image} video={scene.video} color={color} frames={frames} />
       <Particulas tema={tema} />
       <Vineta />
       <Stickers emojis={emojis} semilla={scene.id} />

@@ -1,0 +1,1366 @@
+{
+  "licencia": "Material de la NASA: en general sin derechos de autor; no usar logos de la NASA ni sugerir que la NASA respalda el video",
+  "fuente": "https://images.nasa.gov/",
+  "elementos": [
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Jupiter Plume",
+      "descripcion": "Jupiter Plume",
+      "centro": "JPL",
+      "fecha": "1999-03-13",
+      "archivo": "biblioteca/nasa/imagenes/PIA01518.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01518"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Jupiter Ahoy!",
+      "descripcion": "Jupiter Ahoy!",
+      "centro": "JPL",
+      "fecha": "2007-04-02",
+      "archivo": "biblioteca/nasa/imagenes/PIA09231.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA09231"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Time Series of Jupiter Aurora",
+      "descripcion": "Time Series of Jupiter Aurora",
+      "centro": "JPL",
+      "fecha": "1998-06-10",
+      "archivo": "biblioteca/nasa/imagenes/PIA01601.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01601"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Jupiter Great Red Spot",
+      "descripcion": "Jupiter Great Red Spot",
+      "centro": "JPL",
+      "fecha": "1998-12-05",
+      "archivo": "biblioteca/nasa/imagenes/PIA01370.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01370"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Historic Merger of Storms on Jupiter",
+      "descripcion": "Historic Merger of Storms on Jupiter",
+      "centro": "JPL",
+      "fecha": "1998-12-07",
+      "archivo": "biblioteca/nasa/imagenes/PIA01650.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01650"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Jupiter System Montage",
+      "descripcion": "Jupiter System Montage",
+      "centro": "JPL",
+      "fecha": "1998-10-30",
+      "archivo": "biblioteca/nasa/imagenes/PIA01481.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01481"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Time Series of Jupiter Aurora",
+      "descripcion": "Time Series of Jupiter Aurora",
+      "centro": "JPL",
+      "fecha": "1998-06-10",
+      "archivo": "biblioteca/nasa/imagenes/PIA01603.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01603"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "jupiter",
+      "titulo": "Jupiter from Voyager 2",
+      "descripcion": "Jupiter from Voyager 2",
+      "centro": "JPL",
+      "fecha": "1998-12-05",
+      "archivo": "biblioteca/nasa/imagenes/PIA01369.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01369"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Saturn Rings",
+      "descripcion": "Saturn Rings",
+      "centro": "JPL",
+      "fecha": "2000-02-07",
+      "archivo": "biblioteca/nasa/imagenes/PIA02241.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02241"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Saturn A-ring",
+      "descripcion": "Saturn A-ring",
+      "centro": "JPL",
+      "fecha": "1999-04-11",
+      "archivo": "biblioteca/nasa/imagenes/PIA01952.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01952"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Saturn A-Ring",
+      "descripcion": "Saturn A-Ring",
+      "centro": "JPL",
+      "fecha": "1999-07-23",
+      "archivo": "biblioteca/nasa/imagenes/PIA01988.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01988"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Gored Clump in Saturn F Ring",
+      "descripcion": "Saturn's dynamic F ring contains many different types of features to keep scientists perplexed. In this image we see features ring scientists call \"gores,\" to the right of the bright clump, and a \"jet,\" to the left of the bright spot.  Thanks to the ring's interaction with the moons Prometheus and P",
+      "centro": "JPL",
+      "fecha": "2015-10-19",
+      "archivo": "biblioteca/nasa/imagenes/PIA18337.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA18337"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Saturn and its Rings",
+      "descripcion": "Saturn and its Rings",
+      "centro": "JPL",
+      "fecha": "1999-05-21",
+      "archivo": "biblioteca/nasa/imagenes/PIA01969.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01969"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Saturn Ring System",
+      "descripcion": "Saturn Ring System",
+      "centro": "JPL",
+      "fecha": "2000-05-23",
+      "archivo": "biblioteca/nasa/imagenes/PIA02269.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02269"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Saturn Ring Rhythm #2",
+      "descripcion": "Saturn Ring Rhythm #2",
+      "centro": "JPL",
+      "fecha": "2008-01-31",
+      "archivo": "biblioteca/nasa/imagenes/PIA10233.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA10233"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "saturn rings",
+      "titulo": "Catching Saturn Ring Waves",
+      "descripcion": "Catching Saturn Ring Waves",
+      "centro": "JPL",
+      "fecha": "2004-11-09",
+      "archivo": "biblioteca/nasa/imagenes/PIA06994.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA06994"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "Opportunity Slices into the Surface of Mars",
+      "descripcion": "Opportunity Slices into the Surface of Mars",
+      "centro": "JPL",
+      "fecha": "2004-02-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA05445.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA05445"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "Mars Surface Beneath Phoenix",
+      "descripcion": "Mars Surface Beneath Phoenix",
+      "centro": "JPL",
+      "fecha": "2008-05-30",
+      "archivo": "biblioteca/nasa/imagenes/PIA10739.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA10739"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "Surface Stereo Imager on Mars, Face-On",
+      "descripcion": "Surface Stereo Imager on Mars, Face-On",
+      "centro": "JPL",
+      "fecha": "2008-10-03",
+      "archivo": "biblioteca/nasa/imagenes/PIA11223.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA11223"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "Mars Surface Layers in Infrared",
+      "descripcion": "This image from NASA Mars Odyssey spacecraft shows signs of layering exposed at the surface in a region of Mars called Terra Meridiani. The brightness levels show daytime surface temperatures.",
+      "centro": "JPL",
+      "fecha": "2002-06-17",
+      "archivo": "biblioteca/nasa/imagenes/PIA03817.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA03817"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "InSight on the Surface of Mars",
+      "descripcion": "An artist's rendition of the InSight lander operating on the surface of Mars.  InSight, short for Interior Exploration using Seismic Investigations, Geodesy and Heat Transport, is a lander designed to give Mars its first thorough check up since it formed 4.5 billion years ago. It is scheduled to lau",
+      "centro": "JPL",
+      "fecha": "2018-01-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA22228.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA22228"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "Mars Surface Layers in Infrared",
+      "descripcion": "Infrared imaging from NASA Mars Odyssey spacecraft shows signs of layering exposed at the surface in a region of Mars called Terra Meridiani.",
+      "centro": "JPL",
+      "fecha": "2002-05-29",
+      "archivo": "biblioteca/nasa/imagenes/PIA03806.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA03806"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "Surface Stereo Imager on Mars, Side View",
+      "descripcion": "Surface Stereo Imager on Mars, Side View",
+      "centro": "JPL",
+      "fecha": "2008-10-03",
+      "archivo": "biblioteca/nasa/imagenes/PIA11222.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA11222"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mars surface",
+      "titulo": "MOLA Global Map of Surface Gradients on Mars",
+      "descripcion": "MOLA Global Map of Surface Gradients on Mars",
+      "centro": "JPL",
+      "fecha": "2000-10-06",
+      "archivo": "biblioteca/nasa/imagenes/PIA02809.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02809"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "View of Skylab space station cluster in Earth orbit from CSM",
+      "descripcion": "SL4-143-4707 (8 Feb. 1974) --- An overhead view of the Skylab space station cluster in Earth orbit as photographed from the Skylab 4 Command and Service Modules (CSM) during the final fly-around by the CSM before returning home. The space station is contrasted against a cloud-covered Earth. Note the",
+      "centro": "JSC",
+      "fecha": "1974-02-08",
+      "archivo": "biblioteca/nasa/imagenes/sl4-143-4707.jpg",
+      "fuente": "https://images.nasa.gov/details/sl4-143-4707"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "View of Skylab space station cluster in Earth orbit from CSM",
+      "descripcion": "SL4-143-4706 (8 Feb. 1974) --- An overhead view of the Skylab space station cluster in Earth orbit as photographed from the Skylab 4 Command and Service Modules (CSM) during the final fly-around by the CSM before returning home. The space station is contrasted against a cloud-covered Earth. Note the",
+      "centro": "JSC",
+      "fecha": "2008-08-18",
+      "archivo": "biblioteca/nasa/imagenes/sl4-143-4706.jpg",
+      "fuente": "https://images.nasa.gov/details/sl4-143-4706"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "NASA Google+ Hangout: 'Earthrise' A New Visualization - 45th Anniversary of Apollo 8 Viewing Earth from Space",
+      "descripcion": "<b>Join NASA's Google+ Hangout on Friday, December 20th 2:00 - 3:00 PM (EST) at <a href=\"http://go.nasa.gov/18S2TbC\" rel=\"nofollow\">go.nasa.gov/18S2TbC</a> </b>  It was 45 years ago, on December 24, 1968 when Apollo 8 astronauts captured 'Earthrise' – the first color photograph of Earth taken by a p",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001282.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001282"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "Earth Observation from the International Space Station",
+      "descripcion": "Night Earth Observation from the International Space Station",
+      "centro": "JSC",
+      "fecha": "2015-09-17",
+      "archivo": "biblioteca/nasa/imagenes/iss045e013851.jpg",
+      "fuente": "https://images.nasa.gov/details/iss045e013851"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "Earth observations taken during STS-75",
+      "descripcion": "Earth observations taken during the STS-75 mission from the space shuttle Columbia.",
+      "centro": "JSC",
+      "fecha": "1996-02-26",
+      "archivo": "biblioteca/nasa/imagenes/sts075-722-013.jpg",
+      "fuente": "https://images.nasa.gov/details/sts075-722-013"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "Aurora Australis, Sinuous Loop",
+      "descripcion": "STS039-23-020 (28 April-6 May 1991) --- A 35mm frame of the Aurora Australis, also known as the Southern Lights, photographed from Space Shuttle Discovery's flight deck by one of its seven crew members.  One of the mission objectives was to measure the spectral and spatial characteristics of auroral",
+      "centro": "JSC",
+      "fecha": "1991-05-06",
+      "archivo": "biblioteca/nasa/imagenes/S39-23-020.jpg",
+      "fuente": "https://images.nasa.gov/details/S39-23-020"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "Aurora Australis, Red Crown",
+      "descripcion": "STS039-23-036 (28 April-6 May 1991) --- A 35mm frame of the Aurora Australis, also known as the Southern Lights, photographed from the Space Shuttle Discovery's flight deck by one of its seven crew members. One of the mission objectives was to measure the spectral and spatial characteristics of auro",
+      "centro": "JSC",
+      "fecha": "1991-05-06",
+      "archivo": "biblioteca/nasa/imagenes/S39-23-036.jpg",
+      "fuente": "https://images.nasa.gov/details/S39-23-036"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "earth from space",
+      "titulo": "Aurora Australis, Spiked, Sinuous Green Airglow",
+      "descripcion": "STS039-25-006 (28 April-6 May 1991) --- A 35mm frame of the Aurora Australis, also known as the Southern Lights, photographed from the Space Shuttle Discovery's flight deck by one of its seven crew members. One of the mission objectives was to measure the spectral and spatial characteristics of auro",
+      "centro": "JSC",
+      "fecha": "1991-05-06",
+      "archivo": "biblioteca/nasa/imagenes/S39-25-006.jpg",
+      "fuente": "https://images.nasa.gov/details/S39-25-006"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "Weighing in on the Dumbbell Nebula",
+      "descripcion": "The Dumbbell nebula, also known as Messier 27, pumps out infrared light in this image from NASA Spitzer Space Telescope. Planetary nebulae are now known to be the remains of stars that once looked a lot like our sun.",
+      "centro": "JPL",
+      "fecha": "2011-08-10",
+      "archivo": "biblioteca/nasa/imagenes/PIA14417.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA14417"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "Ant Nebula",
+      "descripcion": "This image from NASA Hubble Space Telescope image of a celestial object called the Ant Nebula may shed new light on the future demise of our Sun. ",
+      "centro": "JPL",
+      "fecha": "1999-12-10",
+      "archivo": "biblioteca/nasa/imagenes/PIA04216.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04216"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "Planetary Nebula",
+      "descripcion": "This planetary nebula's simple, graceful appearance is thought to be due to perspective: our view from Earth looking straight into what is actually a barrel-shaped cloud of gas shrugged off by a dying central star. Hot blue gas near the energizing central star gives way to progressively cooler green",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001465.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001465"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "Trifid Nebula",
+      "descripcion": "Atlas Image mosaic, covering 14.8 x 20.0 on the sky, of the Trifid Nebula, aka Messier 20 and NGC 6514. The Trifid is only about 1.5 degrees northwest on the sky of the larger Lagoon Nebula Messier 8 in the constellation Sagittarius",
+      "centro": "JPL",
+      "fecha": "1999-12-02",
+      "archivo": "biblioteca/nasa/imagenes/PIA04220.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04220"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "N44C nebula",
+      "descripcion": "Resembling the hair in Botticelli famous portrait of the birth of Venus, an image from NASA Hubble Space Telescope has captured softly glowing filaments streaming from hot young stars in a nearby nebula.",
+      "centro": "JPL",
+      "fecha": "1999-12-03",
+      "archivo": "biblioteca/nasa/imagenes/PIA04225.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04225"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "Planetary Nebula NGC 7293 also Known as the Helix Nebula",
+      "descripcion": "This ultraviolet image from NASA Galaxy Evolution Explorer is of the planetary nebula NGC 7293 also known as the Helix Nebula. It is the nearest example of what happens to a star, like our own Sun, as it approaches the end of its life when it runs out of fuel, expels gas outward and evolves into a m",
+      "centro": "JPL",
+      "fecha": "2005-05-05",
+      "archivo": "biblioteca/nasa/imagenes/PIA07902.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA07902"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "NGC 7293, the Helix Nebula",
+      "descripcion": "NGC 7293, better known as the Helix nebula, displays its ultraviolet glow courtesy of NASA GALEX. The Helix is the nearest example of a planetary nebula, which is the eventual fate of a star, like our own Sun, as it approaches the end of its life.",
+      "centro": "JPL",
+      "fecha": "2012-05-16",
+      "archivo": "biblioteca/nasa/imagenes/PIA15658.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA15658"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "nebula",
+      "titulo": "The Twin Jet Nebula",
+      "descripcion": "The Twin Jet Nebula, or PN M2-9, is a striking example of a bipolar planetary nebula. Bipolar planetary nebulae are formed when the central object is not a single star, but a binary system, Studies have shown that the nebula’s size increases with time, and measurements of this rate of increase sugge",
+      "centro": "GSFC",
+      "fecha": "2015-08-26",
+      "archivo": "biblioteca/nasa/imagenes/hubble-sees-the-wings-of-a-butterfly-the-twin-jet-nebula_20283986193_o.jpg",
+      "fuente": "https://images.nasa.gov/details/hubble-sees-the-wings-of-a-butterfly-the-twin-jet-nebula_20283986193_o"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Andromeda Galaxy",
+      "descripcion": "This image is from NASA Galaxy Evolution Explorer is an observation of the large galaxy in Andromeda, Messier 31. The Andromeda galaxy is the most massive in the local group of galaxies that includes our Milky Way.",
+      "centro": "JPL",
+      "fecha": "2003-12-10",
+      "archivo": "biblioteca/nasa/imagenes/PIA04921.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04921"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Galaxy NGC5474",
+      "descripcion": "NASA Galaxy Evolution Explorer took this ultraviolet color image of the galaxy NGC5474 on June 7, 2003. NGC5474 is located 20 million light-years from Earth and is within a group of galaxies dominated by the Messier 101 galaxy. Star formation in this galaxy shows some evidence of a disturbed spiral ",
+      "centro": "JPL",
+      "fecha": "2003-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA04634.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04634"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Virgo Galaxy Cluster",
+      "descripcion": "This ultraviolet image from NASA Galaxy Evolution Explorer is of a small area of the Virgo Cluster of galaxies.  http://photojournal.jpl.nasa.gov/catalog/PIA07906",
+      "centro": "JPL",
+      "fecha": "2005-05-05",
+      "archivo": "biblioteca/nasa/imagenes/PIA07906.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA07906"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Galaxy UGC10445",
+      "descripcion": "This ultraviolet color image of the galaxy UGC10445 was taken by NASA Galaxy Evolution Explorer on June 7 and June 14, 2003. UGC10445 is a spiral galaxy located 40 million light-years from Earth.  http://photojournal.jpl.nasa.gov/catalog/PIA04623",
+      "centro": "JPL",
+      "fecha": "2003-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA04623.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04623"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Galaxy NGC5962",
+      "descripcion": "NASA Galaxy Evolution Explorer took this ultraviolet color image of the galaxy NGC5962 on June 7, 2003. This spiral galaxy is located 90 million light-years from Earth.  http://photojournal.jpl.nasa.gov/catalog/PIA04635",
+      "centro": "JPL",
+      "fecha": "2003-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA04635.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04635"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Galaxy NGC5398",
+      "descripcion": "This is an ultraviolet color image of the galaxy NGC5398 taken by NASA Galaxy Evolution Explorer on June 7, 2003. NGC5398 is a barred spiral galaxy located 60 million light-years from Earth. The star formation is concentrated in the two bright regions of the image.  http://photojournal.jpl.nasa.gov/",
+      "centro": "JPL",
+      "fecha": "2003-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA04633.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04633"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Portrait of a Galaxy Life",
+      "descripcion": "Evidence from NASA Galaxy Evolution Explorer supports the long-held notion that many galaxies begin life as smaller spirals before transforming into larger, elliptical-shaped galaxies.",
+      "centro": "JPL",
+      "fecha": "2007-11-14",
+      "archivo": "biblioteca/nasa/imagenes/PIA15656.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA15656"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "galaxy",
+      "titulo": "Galaxy Messier 83",
+      "descripcion": "This image of the spiral galaxy Messier 83 was taken by NASA's Galaxy Evolution Explorer on June 7, 2003. Located 15 million light years from Earth and known as the Southern Pinwheel Galaxy, Messier 83 displays significant amounts of ultraviolet emissions far from the optically bright portion of the",
+      "centro": "JPL",
+      "fecha": "2003-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA04629.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA04629"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "Flag of the U.S. deployed on surface of the Moon",
+      "descripcion": "AS11-37-5545 (20 July 1969) --- The flag of the United States, deployed on the surface of the moon, dominates this photograph taken from inside the Lunar Module (LM). The footprints of astronauts Neil A. Armstrong and Edwin E. Aldrin Jr. stand out very clearly. In the far background is the deployed ",
+      "centro": "JSC",
+      "fecha": "1969-07-20",
+      "archivo": "biblioteca/nasa/imagenes/as11-37-5545.jpg",
+      "fuente": "https://images.nasa.gov/details/as11-37-5545"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "High-oblique view of Moon's surface showing earth rising above horizon",
+      "descripcion": "AS8-14-2392 (21-27 Dec. 1968) --- High-oblique view of the moon's surface showing Earth rising above the lunar horizon, looking west-southwest, as photographed from the Apollo 8 spacecraft as it orbited the moon. The center of the picture is located at about 105 degrees east longitude and 13 degrees",
+      "centro": "JSC",
+      "fecha": "1968-12-22",
+      "archivo": "biblioteca/nasa/imagenes/as8-14-2392.jpg",
+      "fuente": "https://images.nasa.gov/details/as8-14-2392"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "Shadow of the Apollo 11 Lunar module silhouetted against Moon's surface",
+      "descripcion": "AS11-37-5505 (20 July 1969) --- This photograph shows in fine detail the impressions in the lunar soil made by astronauts Neil A. Armstrong and Edwin E. Aldrin Jr. during their lunar surface extravehicular activity (EVA). While astronauts Armstrong, commander, and Aldrin, lunar module pilot, descend",
+      "centro": "JSC",
+      "fecha": "1969-07-20",
+      "archivo": "biblioteca/nasa/imagenes/as11-37-5505.jpg",
+      "fuente": "https://images.nasa.gov/details/as11-37-5505"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "Fission Surface Power",
+      "descripcion": "Detail of the Fission Surface Power Structure that part of the research in providing power on the moon.",
+      "centro": "GRC",
+      "fecha": "2023-11-17",
+      "archivo": "biblioteca/nasa/imagenes/GRC-2023-C-10425.jpg",
+      "fuente": "https://images.nasa.gov/details/GRC-2023-C-10425"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "KSC-2011-6868",
+      "descripcion": "CAPE CANAVERAL, Fla. – Bathed in light against an early morning sky, the United Launch Alliance Delta II Heavy rocket sits on Space Launch Complex 17B on Cape Canaveral Air Force Station in Florida as it waits to launch NASA’s twin Gravity Recovery and Interior Laboratory (GRAIL) mission to the moon",
+      "centro": "KSC",
+      "fecha": "2011-09-10",
+      "archivo": "biblioteca/nasa/imagenes/KSC-2011-6868.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-2011-6868"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "KSC-2011-6869",
+      "descripcion": "CAPE CANAVERAL, Fla. – Surrounded by an early morning sky, the United Launch Alliance Delta II Heavy rocket sits on Space Launch Complex 17B on Cape Canaveral Air Force Station in Florida as it waits to launch NASA’s twin Gravity Recovery and Interior Laboratory (GRAIL) mission to the moon.    GRAIL",
+      "centro": "KSC",
+      "fecha": "2011-09-10",
+      "archivo": "biblioteca/nasa/imagenes/KSC-2011-6869.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-2011-6869"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "KSC-2011-6870",
+      "descripcion": "CAPE CANAVERAL, Fla. – A U.S. Air Force helicopter flies overhead as the United Launch Alliance Delta II Heavy rocket sits on Space Launch Complex 17B on Cape Canaveral Air Force Station in Florida waiting to launch NASA’s twin Gravity Recovery and Interior Laboratory (GRAIL) mission to the moon.   ",
+      "centro": "KSC",
+      "fecha": "2011-09-10",
+      "archivo": "biblioteca/nasa/imagenes/KSC-2011-6870.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-2011-6870"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "moon surface",
+      "titulo": "KSC-2011-6867",
+      "descripcion": "CAPE CANAVERAL, Fla. – Surrounded by an early morning sky, the United Launch Alliance Delta II Heavy rocket sits on Space Launch Complex 17B on Cape Canaveral Air Force Station in Florida as it waits to launch NASA’s twin Gravity Recovery and Interior Laboratory (GRAIL) mission to the moon.    GRAIL",
+      "centro": "KSC",
+      "fecha": "2011-09-10",
+      "archivo": "biblioteca/nasa/imagenes/KSC-2011-6867.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-2011-6867"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "A Rocket Lab Electron rocket lifts off from Launch Complex 1 in Māhia, New Zealand at 7:41 p.m. NZST (3:41 a.m. EDT) Saturday, May 25, 2024, on the first of two launches which Rocket Lab named “Ready, Aim, PREFIRE,” for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission. Th",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240525-PH-RKL01_0005.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0005"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "Rocket Lab’s Electron rocket is vertical on the pad Saturday, May 25, 2024, at Launch Complex 1 in Mahia, New Zealand, loaded with the first of two identical 6U CubeSats for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission to help close a gap in our understanding of how m",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240525-PH-RKL01_0001.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0001"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "A Rocket Lab Electron rocket lifts off from Launch Complex 1 in Māhia, New Zealand at 7:41 p.m. NZST (3:41 a.m. EDT) Saturday, May 25, 2024, on the first of two launches which Rocket Lab named “Ready, Aim, PREFIRE,” for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission. Th",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240525-PH-RKL01_0006.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0006"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "Rocket Lab’s Electron rocket is vertical on the pad Saturday, May 25, 2024, at Launch Complex 1 in Mahia, New Zealand, loaded with the first of two identical 6U CubeSats for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission to help close a gap in our understanding of how m",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240525-PH-RKL01_0002.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0002"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "Rocket Lab’s Electron rocket is vertical on the pad Saturday, May 25, 2024, at Launch Complex 1 in Mahia, New Zealand, loaded with the first of two identical 6U CubeSats for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission to help close a gap in our understanding of how m",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240525-PH-RKL01_0004.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0004"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "Rocket Lab’s Electron rocket is vertical on the pad Saturday, May 25, 2024, at Launch Complex 1 in Mahia, New Zealand, loaded with the first of two identical 6U CubeSats for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission to help close a gap in our understanding of how m",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240525-PH-RKL01_0003.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-PH-RKL01_0003"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "NASA Launches Rocket Into Active Auroras",
+      "descripcion": "A test rocket is launched the night of Feb. 17 from the Poker Flat Research Range in Alaska.  Test rockets are launched as part of the countdown to test out the radar tracking systems. NASA is launching five sounding rockets from the Poker Range into active auroras to explore the Earth's magnetic en",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e000127.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000127"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE and Ice Ready for Launch",
+      "descripcion": "Rocket Lab’s Electron rocket is vertical on the pad at Launch Complex 1 in Mahia, New Zealand, loaded with the second of two identical 6U CubeSats for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission to help close a gap in our understanding of how much of Earth’s heat is ",
+      "centro": "KSC",
+      "fecha": "2024-05-30",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20240530-PH-RKL01_0002.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20240530-PH-RKL01_0002"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "CCP Astronauts Practice Spacewalking",
+      "descripcion": "The Virtual Reality Lab at Johnson Space Center in Houston provides real-time graphics and motion simulators to replicate the space environment. Commercial Crew Astronaut Suni Williams practices spacewalking in preparation for a mission to the International Space Station in 2019. Williams is assigne",
+      "centro": "KSC",
+      "fecha": "2018-10-18",
+      "archivo": "biblioteca/nasa/imagenes/jsc2018e087573.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2018e087573"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "CCP Astronauts Practice Spacewalking",
+      "descripcion": "The Virtual Reality Lab at Johnson Space Center in Houston provides real-time graphics and motion simulators to replicate the space environment. Commercial Crew Astronaut Mike Hopkins practices spacewalking in preparation for a mission to the International Space Station. Hopkins is assigned to Space",
+      "centro": "KSC",
+      "fecha": "2018-09-04",
+      "archivo": "biblioteca/nasa/imagenes/jsc2018e078340.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2018e078340"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "CCP Astronauts Practice Spacewalking",
+      "descripcion": "Commercial Crew Astronaut Suni Williams practices spacewalking in the Virtual Reality Lab at Johnson Space Center in Houston. The training provides real-time graphics and motion simulators to replicate the space environment. NASA’s Commercial Crew Program is working with Boeing and SpaceX to return ",
+      "centro": "KSC",
+      "fecha": "2018-10-18",
+      "archivo": "biblioteca/nasa/imagenes/jsc2018e087572.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2018e087572"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "CCP Astronauts Practice Spacewalking",
+      "descripcion": "Commercial Crew Astronaut Mike Hopkins practices spacewalking in the Virtual Reality Lab at Johnson Space Center in Houston. The training provides real-time graphics and motion simulators to replicate the space environment. NASA’s Commercial Crew Program is working with Boeing and SpaceX to return h",
+      "centro": "KSC",
+      "fecha": "2018-09-04",
+      "archivo": "biblioteca/nasa/imagenes/jsc2018e078337.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2018e078337"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "NASA astronaut Chris Williams participates in spacewalk training",
+      "descripcion": "jsc2024e055570 (Aug. 13, 2024) --- NASA astronaut Chris Williams participates in spacewalk training at the Neutral Buoyancy Lab at NASA’s Johnson Space Center in Houston, Texas.",
+      "centro": "JSC",
+      "fecha": "2024-08-13",
+      "archivo": "biblioteca/nasa/imagenes/jsc2024e055570.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2024e055570"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "NASA astronaut Chris Williams participates in spacewalk training",
+      "descripcion": "jsc2024e055545 (Aug. 13, 2024) --- NASA astronaut Chris Williams participates in spacewalk training at the Neutral Buoyancy Lab at NASA’s Johnson Space Center in Houston, Texas.",
+      "centro": "JSC",
+      "fecha": "2024-08-13",
+      "archivo": "biblioteca/nasa/imagenes/jsc2024e055545.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2024e055545"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "NASA astronaut Chris Williams participates in spacewalk training",
+      "descripcion": "jsc2024e055523 (Aug. 13, 2024) --- NASA astronaut Chris Williams participates in spacewalk training at the Neutral Buoyancy Lab at NASA’s Johnson Space Center in Houston, Texas. ",
+      "centro": "JSC",
+      "fecha": "2024-08-13",
+      "archivo": "biblioteca/nasa/imagenes/jsc2024e055523.jpg",
+      "fuente": "https://images.nasa.gov/details/jsc2024e055523"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "astronaut spacewalk",
+      "titulo": "NASA astronaut Scott Tingle is pictured during a spacewalk",
+      "descripcion": "iss054e022823 (Jan. 23, 2018) --- NASA astronaut Scott Tingle is pictured during a spacewalk to swap out a degraded robotic hand, or Latching End Effector, on the Canadarm2.",
+      "centro": "JSC",
+      "fecha": "2018-01-22",
+      "archivo": "biblioteca/nasa/imagenes/iss054e022823.jpg",
+      "fuente": "https://images.nasa.gov/details/iss054e022823"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "Major Solar Flare",
+      "descripcion": "The Sun erupted with an X8 solar flare, one of the largest of the current solar cycle (Sept. 10, 2017). Its source was the same sunspot region that produced an X9 flare last week. This is shown in two wavelengths of extreme ultraviolet light at the same time and each reveals different features. Both",
+      "centro": "JPL",
+      "fecha": "2017-09-18",
+      "archivo": "biblioteca/nasa/imagenes/PIA21958.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA21958"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "Major Solar Flare",
+      "descripcion": "A large sunspot was the source of a powerful solar flare (an X 9.3) and a coronal mass ejection (Sept. 6, 2017). The flare was the largest solar flare of the last decade. For one thing, it created a strong shortwave radio blackout over Europe, Africa and the Atlantic Ocean. Sunspot 2673 has been als",
+      "centro": "JPL",
+      "fecha": "2017-09-11",
+      "archivo": "biblioteca/nasa/imagenes/PIA21949.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA21949"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "Mid-level Solar Flare",
+      "descripcion": "SDO View of M7.3 Class Solar Flare on Oct. 2, 2014  NASA's Solar Dynamics Observatory captured this image of an M7.3 class solar flare on Oct. 2, 2014.  The solar flare is the bright flash of light on the right limb of the sun. A burst of solar material erupting out into space can be seen just below",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e000963.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000963"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "Mid-level Solar Flare",
+      "descripcion": "NASA's Solar Dynamics Observatory captured these images of a solar flare on Oct. 2, 2014. The solar flare is the bright flash of light on the right limb of the sun. A burst of solar material erupting out into space can be seen just below it.  Read more: <a href=\"http://1.usa.gov/1mW8rel\" rel=\"nofoll",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e000962.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000962"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "NASA's SDO Shows Images of Significant Solar Flare",
+      "descripcion": "Caption: These SDO images from 7:25 p.m. EST on Feb. 24, 2014, show the first moments of an X-class flare in different wavelengths of light -- seen as the bright spot that appears on the left limb of the sun. Hot solar material can be seen hovering above the active region in the sun's atmosphere, th",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001210.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001210"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "NASA's SDO Shows Images of Significant Solar Flare",
+      "descripcion": "Caption: An X-class solar flare erupted on the left side of the sun on the evening of Feb. 24, 2014. This composite image, captured at 7:59 p.m. EST, shows the sun in X-ray light with wavelengths of both 131 and 171 angstroms.  Credit: NASA/SDO  More info: The sun emitted a significant solar flare, ",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001209.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001209"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "NASA's SDO Shows Images of Significant Solar Flare",
+      "descripcion": "Caption: These SDO images from 7:25 p.m. EST on Feb. 24, 2014, show the first moments of an X-class flare in different wavelengths of light -- seen as the bright spot that appears on the left limb of the sun. Hot solar material can be seen hovering above the active region in the sun's atmosphere, th",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001208.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001208"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "solar flare",
+      "titulo": "NASA's SDO Sees Solar Flares",
+      "descripcion": "A solar flare bursts off the left limb of the sun in this image captured by NASA's Solar Dynamics Observatory on June 10, 2014, at 7:41 a.m. EDT. This is classified as an X2.2 flare, shown in a blend of two wavelengths of light: 171 and 131 angstroms, colorized in gold and red, respectively.  Credit",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001057.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001057"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune Rings",
+      "descripcion": "In Neptune outermost ring, 39,000 miles out, material mysteriously clumps into three arcs. Voyager 2 acquired this image as it encountered Neptune in August of 1989.  ",
+      "centro": "JPL",
+      "fecha": "1998-10-30",
+      "archivo": "biblioteca/nasa/imagenes/PIA01493.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01493"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune",
+      "descripcion": "This contrast enhanced color picture of Neptune was acquired by NASA Voyager 2 on Aug. 14, 1989. As Voyager 2 approached Neptune, rapidly increasing image resolution is revealed striking new details. Bright, wispy clouds are seen overlying the Great Dar",
+      "centro": "JPL",
+      "fecha": "1999-08-19",
+      "archivo": "biblioteca/nasa/imagenes/PIA02210.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02210"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune Shadows",
+      "descripcion": "This image of Neptune shows the discovery of shadows in Neptune atmosphere, shadows cast onto a deep cloud band by small elevated clouds. They are the first cloud shadows ever seen by NASA Voyager on any planet.",
+      "centro": "JPL",
+      "fecha": "1999-10-15",
+      "archivo": "biblioteca/nasa/imagenes/PIA02220.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02220"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune - Two Images",
+      "descripcion": "These two images of Neptune were taken by NASA Voyager 2 narrow angle camera when the spacecraft was about 12 million km 7.5 million miles from Neptune.",
+      "centro": "JPL",
+      "fecha": "1999-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA01993.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01993"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Crescents of Neptune and Triton",
+      "descripcion": "This dramatic view of the crescents of Neptune and Triton was acquired by Voyager 2 approximately 3 days, 6 and one-half hours after its closest approach to Neptune north is to the right.",
+      "centro": "JPL",
+      "fecha": "1999-08-23",
+      "archivo": "biblioteca/nasa/imagenes/PIA02215.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02215"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune - Closest Approach",
+      "descripcion": "This image of Neptune south polar region was obtained by NASA Voyager on Aug. 23, 1989. The image shows the discovery of shadows in Neptune atmosphere, shadows cast onto a deep cloud bank by small elevated clouds.  ",
+      "centro": "JPL",
+      "fecha": "1999-07-25",
+      "archivo": "biblioteca/nasa/imagenes/PIA01996.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01996"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune",
+      "descripcion": "These pictures of Neptune were obtained by NASA Voyager 2 on Apr. 26,1989. The picture on the right was taken five hours after that at left, during which time the planet rotated 100 degrees. ",
+      "centro": "JPL",
+      "fecha": "1999-08-18",
+      "archivo": "biblioteca/nasa/imagenes/PIA02209.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02209"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "neptune",
+      "titulo": "Neptune",
+      "descripcion": "This photograph of Neptune shows three of the features that NASA Voyager 2 has been photographing during recent weeks. At the north is the Great Dark Spot, accompanied by bright, white clouds that undergo rapid changes in appearance.",
+      "centro": "JPL",
+      "fecha": "1999-10-14",
+      "archivo": "biblioteca/nasa/imagenes/PIA02219.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA02219"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Surface Warmth on a Venus Volcano",
+      "descripcion": "This figure shows the volcanic peak Idunn Mons in the Imdr Regio area of Venus. The topographic backbone brown color was derived from data obtained by NASA Magellan spacecraft and the overlay was derived from data from ESA Venus Express Spacecraft.",
+      "centro": "JPL",
+      "fecha": "2010-04-08",
+      "archivo": "biblioteca/nasa/imagenes/PIA13001.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA13001"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Venus Transit Event",
+      "descripcion": "Beautiful skies prevailed on the evening of the Venus Transit when NASA Glenn brought telescopes to Edgewater Park on Lake Erie for a view of the event.",
+      "centro": "GRC",
+      "fecha": "2012-06-05",
+      "archivo": "biblioteca/nasa/imagenes/GRC-2012-C-02176.jpg",
+      "fuente": "https://images.nasa.gov/details/GRC-2012-C-02176"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Venus - Aphrodite Terra",
+      "descripcion": "Landslides on Venus! The image on the left was taken in late November of 1990 during Magellan first trip around Venus. The image on the right was taken July 23, as the Magellan spacecraft passed over the region for the second time.  http://photojournal.jpl.nasa.gov/catalog/PIA00248",
+      "centro": "JPL",
+      "fecha": "1996-03-14",
+      "archivo": "biblioteca/nasa/imagenes/PIA00248.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA00248"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Venus - Stereoscopic Images of Volcanic Domes",
+      "descripcion": "This Magellan image depicts a stereoscopic pair of an area on Venus with small volcanic domes. Stereoscopic images of Venus offer exciting new possibilities for scientific analysis of Venusian landforms.  http://photojournal.jpl.nasa.gov/catalog/PIA00251",
+      "centro": "JPL",
+      "fecha": "1996-03-14",
+      "archivo": "biblioteca/nasa/imagenes/PIA00251.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA00251"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Venus Cloud Tops Viewed by Hubble",
+      "descripcion": "Venus Cloud Tops Viewed by Hubble. This is a NASA Hubble Space Telescope ultraviolet-light image of the planet Venus, taken on January 24 1995, when Venus was at a distance of 70.6 million miles 113.6 million kilometers from Earth.",
+      "centro": "JPL",
+      "fecha": "1999-05-18",
+      "archivo": "biblioteca/nasa/imagenes/PIA01544.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA01544"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Approaching Venus",
+      "descripcion": "On Oct. 24, 2006, NASA MESSENGER spacecraft came within 2,990 kilometers 1,860 miles of Venus during its second planetary encounter.",
+      "centro": "JPL",
+      "fecha": "2006-11-24",
+      "archivo": "biblioteca/nasa/imagenes/PIA10123.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA10123"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Venus - Lada Terra Region",
+      "descripcion": "This NASA Magellan radar image mosaic is of part of Venus, centered at 51 degrees south latitude, 21 degrees east longitude. Running from west to east across the center of the image is part of a wide lava channel in the Lada Terra region of Venus.  http://photojournal.jpl.nasa.gov/catalog/PIA00219",
+      "centro": "JPL",
+      "fecha": "1996-02-01",
+      "archivo": "biblioteca/nasa/imagenes/PIA00219.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA00219"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "venus",
+      "titulo": "Venus - Eistla Region",
+      "descripcion": "This image from NASA Magellan spacecraft is of an area located in the Eistla Region of Venus in the southern hemisphere.  http://photojournal.jpl.nasa.gov/catalog/PIA00089",
+      "centro": "JPL",
+      "fecha": "1996-01-29",
+      "archivo": "biblioteca/nasa/imagenes/PIA00089.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA00089"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "Long Scarps on Mercury Tell of the Planet Unique History",
+      "descripcion": "Long Scarps on Mercury Tell of the Planet Unique History",
+      "centro": "JPL",
+      "fecha": "2010-09-28",
+      "archivo": "biblioteca/nasa/imagenes/PIA13477.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA13477"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "On the Edge of Mercury",
+      "descripcion": "In this image, Mercury's horizon cuts a striking edge against the stark blackness of space. On the right, sunlight harshly brings the landscape into relief while on the left, the surface is shrouded in the darkness of night.  This image was acquired as part of MDIS's limb imaging campaign. Once per ",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e000797.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000797"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "Happy Little Crater on Mercury",
+      "descripcion": "It looks like even the craters on Mercury have heard of Bob Ross! The central peaks of this complex crater have formed in such a way that it resembles a smiling face. This image is oriented so north is toward the bottom.  This image was acquired as a high-resolution targeted observation. Targeted ob",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001625.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001625"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "Peaking Into the Dark",
+      "descripcion": "In this dramatic scene, an unnamed crater in Mercury's northern volcanic plains is bathed in darkness as the sun sits low on the horizon. Rising from the floor of the crater is its central peak, a small mountain resulting from the crater's formation. A central peak is a type of crater morphology tha",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001365.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001365"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "Enhanced Color Mercury Map",
+      "descripcion": "This colorful view of Mercury was produced by using images from the color base map imaging campaign during MESSENGER's primary mission. These colors are not what Mercury would look like to the human eye, but rather the colors enhance the chemical, mineralogical, and physical differences between the ",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001425.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001425"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "A Terminator View from Mercury Flyby 2",
+      "descripcion": "This high-resolution NAC image shows a view of Mercury dawn terminator, the division between the sunlit dayside and dark nightside of the planet, as seen as the MESSENGER spacecraft departed the planet during the mission second Mercury flyby.",
+      "centro": "JPL",
+      "fecha": "2009-04-21",
+      "archivo": "biblioteca/nasa/imagenes/PIA12045.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA12045"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "Mickey Mouse Spotted on Mercury!",
+      "descripcion": "NASA image acquired: June 03, 2012  This scene is to the northwest of the recently named crater Magritte, in Mercury's south. The image is not map projected; the larger crater actually sits to the north of the two smaller ones. The shadowing helps define the striking &quot;Mickey Mouse&quot; resembl",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001693.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001693"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "mercury planet",
+      "titulo": "Spectacular Color . . . with Better Yet to Come",
+      "descripcion": "This spectacular color mosaic shows the eastern limb of Mercury as seen by NASA MESSENGER as the spacecraft departed the planet following the mission first Mercury flyby in January 2008.",
+      "centro": "JPL",
+      "fecha": "2010-02-17",
+      "archivo": "biblioteca/nasa/imagenes/PIA12842.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA12842"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "International Space Station mockup training",
+      "descripcion": "Expedition 68 trains for their upcoming International Space Station mission inside a mockup that models the real orbiting lab at NASA's Johnson Space Center in Houston, Texas. Credit: NASA/James Blair",
+      "centro": "JSC",
+      "fecha": "2022-05-13",
+      "archivo": "biblioteca/nasa/imagenes/international-space-station-mockup-training_52233924879_o.jpg",
+      "fuente": "https://images.nasa.gov/details/international-space-station-mockup-training_52233924879_o"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "2020 International Space Station Configuration",
+      "descripcion": "2020 International Space Station Configuration",
+      "centro": "JSC",
+      "fecha": "2020-06-24",
+      "archivo": "biblioteca/nasa/imagenes/200623_ISS_1.jpg",
+      "fuente": "https://images.nasa.gov/details/200623_ISS_1"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "Veg-03D Experiment Onboard the International Space Station",
+      "descripcion": "Veg-03D Experiment Onboard the International Space Station. First time three different plant varieties are being grown simultaneously in the Veggie chamber -- Mizuna mustard, Waldmann's green lettuce and Outredgeous Red Romaine lettuce.",
+      "centro": "KSC",
+      "fecha": "2017-10-17",
+      "archivo": "biblioteca/nasa/imagenes/KSC-20171017-PH_ISS01_0001.jpg",
+      "fuente": "https://images.nasa.gov/details/KSC-20171017-PH_ISS01_0001"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "International Space Station (ISS)",
+      "descripcion": "Boeing Company technicians assemble the S-1 truss (starboard side truss) for the International Space Station at the Marshall Space Flight Center.",
+      "centro": "MSFC",
+      "fecha": "1999-09-01",
+      "archivo": "biblioteca/nasa/imagenes/9905998.jpg",
+      "fuente": "https://images.nasa.gov/details/9905998"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "International Space Station (ISS)",
+      "descripcion": "This artist's concept depicts the completely assembled International Space Station (ISS) passing over Florida and the Bahamas. As a gateway to permanent human presence in space, the Space Station Program is to expand knowledge benefiting all people and nations. The ISS is a multidisciplinary laborat",
+      "centro": "MSFC",
+      "fecha": "1998-01-01",
+      "archivo": "biblioteca/nasa/imagenes/9802667.jpg",
+      "fuente": "https://images.nasa.gov/details/9802667"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "International Space Station (ISS)",
+      "descripcion": "This artist's digital concept depicts the completely assembled International Space Station (ISS) passing over Florida. As a gateway to permanent human presence in space, the Space Station Program is to expand knowledge benefiting all people and nations. The ISS is a multidisciplinary laboratory, tec",
+      "centro": "MSFC",
+      "fecha": "1998-01-01",
+      "archivo": "biblioteca/nasa/imagenes/9802669.jpg",
+      "fuente": "https://images.nasa.gov/details/9802669"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "International Space Station (ISS)",
+      "descripcion": "An artist's concept of Phase III of the International Space Station (ISS) with the Shuttle approaching.",
+      "centro": "MSFC",
+      "fecha": "1995-07-11",
+      "archivo": "biblioteca/nasa/imagenes/9510834.jpg",
+      "fuente": "https://images.nasa.gov/details/9510834"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "international space station",
+      "titulo": "International Space Station (ISS)",
+      "descripcion": "This artist's concept depicts the completely assembled International Space Station (ISS) passing over the Straits of Gibraltar and the Mediterranean Sea. As a gateway to permanent human presence in space, the Space Station Program is to expand knowledge benefiting all people and nations. The ISS is ",
+      "centro": "MSFC",
+      "fecha": "1998-01-01",
+      "archivo": "biblioteca/nasa/imagenes/9802668.jpg",
+      "fuente": "https://images.nasa.gov/details/9802668"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "Auroras over North America as Seen from Space",
+      "descripcion": "Overnight on October 4-5, 2012, a mass of energetic particles from the atmosphere of the Sun were flung out into space, a phenomenon known as a coronal mass ejection. Three days later, the storm from the Sun stirred up the magnetic field around Earth and produced gorgeous displays of northern lights",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001646.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001646"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "NASA's IMAGE Spacecraft View of Aurora Australis from Space",
+      "descripcion": "NASA file image acquired September 11, 2005  <b>To view a video of this event go here: <a href=\"http://www.flickr.com/photos/gsfc/6257608714\">www.flickr.com/photos/gsfc/6257608714</a></b>  From space, the aurora is a crown of light that circles each of Earth’s poles. The IMAGE satellite captured thi",
+      "centro": "GSFC",
+      "fecha": "2017-12-08",
+      "archivo": "biblioteca/nasa/imagenes/GSFC_20171208_Archive_e001871.jpg",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001871"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "STS-47 view of the Aurora Australis",
+      "descripcion": "STS047-20-015 (12-20 Sept. 1992) --- This 35mm frame represents one of the more spectacular views of Aurora Australis, photographed by the crew. The crew observed and photographed a great deal of auroral activity from the Earth-orbiting Space Shuttle Endeavour during the eight-day Spacelab-J mission",
+      "centro": "JSC",
+      "fecha": "1992-09-20",
+      "archivo": "biblioteca/nasa/imagenes/STS047-20-015.jpg",
+      "fuente": "https://images.nasa.gov/details/STS047-20-015"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "Aurora Australis, Sinuous Loop",
+      "descripcion": "STS039-23-020 (28 April-6 May 1991) --- A 35mm frame of the Aurora Australis, also known as the Southern Lights, photographed from Space Shuttle Discovery's flight deck by one of its seven crew members.  One of the mission objectives was to measure the spectral and spatial characteristics of auroral",
+      "centro": "JSC",
+      "fecha": "1991-05-06",
+      "archivo": "biblioteca/nasa/imagenes/S39-23-020.jpg",
+      "fuente": "https://images.nasa.gov/details/S39-23-020"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "Aurora Australis, Red Crown",
+      "descripcion": "STS039-23-036 (28 April-6 May 1991) --- A 35mm frame of the Aurora Australis, also known as the Southern Lights, photographed from the Space Shuttle Discovery's flight deck by one of its seven crew members. One of the mission objectives was to measure the spectral and spatial characteristics of auro",
+      "centro": "JSC",
+      "fecha": "1991-05-06",
+      "archivo": "biblioteca/nasa/imagenes/S39-23-036.jpg",
+      "fuente": "https://images.nasa.gov/details/S39-23-036"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "Aurora Australis, Spiked, Sinuous Green Airglow",
+      "descripcion": "STS039-25-006 (28 April-6 May 1991) --- A 35mm frame of the Aurora Australis, also known as the Southern Lights, photographed from the Space Shuttle Discovery's flight deck by one of its seven crew members. One of the mission objectives was to measure the spectral and spatial characteristics of auro",
+      "centro": "JSC",
+      "fecha": "1991-05-06",
+      "archivo": "biblioteca/nasa/imagenes/S39-25-006.jpg",
+      "fuente": "https://images.nasa.gov/details/S39-25-006"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "View of the southern aurora, luminous bands or streamers of light",
+      "descripcion": "SL3-130-3130 (July-September 1973) --- An excellent view of the southern aurora, luminous bands or streamer of light, in the Southern Hemisphere, as photographed from the Skylab space station in Earth orbit. The space station was moving into the sunlight when this picture was taken. This view is nea",
+      "centro": "JSC",
+      "fecha": "1973-08-01",
+      "archivo": "biblioteca/nasa/imagenes/sl3-130-3130.jpg",
+      "fuente": "https://images.nasa.gov/details/sl3-130-3130"
+    },
+    {
+      "tipo": "image",
+      "busqueda": "aurora from space",
+      "titulo": "Dance of Saturn Auroras",
+      "descripcion": "Ultraviolet and infrared images from NASA Cassini spacecraft and Hubble Space Telescope show active and quiet auroras at Saturn north and south poles.",
+      "centro": "JPL",
+      "fecha": "2014-02-11",
+      "archivo": "biblioteca/nasa/imagenes/PIA17900.jpg",
+      "fuente": "https://images.nasa.gov/details/PIA17900"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "rocket launch",
+      "titulo": "TROPICS Rocket Launch",
+      "descripcion": "TROPICS Rocket Launch",
+      "centro": "KSC",
+      "fecha": "2023-05-07",
+      "archivo": "biblioteca/nasa/videos/KSC-20230507-MH-RLS01-TROPICS_Rocket_Launch-Rocket_Lab-WON_3330130.mp4",
+      "fuente": "https://images.nasa.gov/details/KSC-20230507-MH-RLS01-TROPICS_Rocket_Launch-Rocket_Lab-WON_3330130"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE-1 Launch",
+      "descripcion": "A Rocket Lab Electron rocket lifts off from Launch Complex 1 in Māhia, New Zealand at 7:41 p.m. NZST (3:41 a.m. EDT) Saturday, May 25, 2024, on the first of two launches which Rocket Lab named “Ready, Aim, PREFIRE,” for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) mission. Th",
+      "centro": "KSC",
+      "fecha": "2024-05-25",
+      "archivo": "biblioteca/nasa/videos/KSC-20240525-MH-RKL01-0001-Rocket_Lab_PREFIRE_1_Launch_1080p-M6988.mp4",
+      "fuente": "https://images.nasa.gov/details/KSC-20240525-MH-RKL01-0001-Rocket_Lab_PREFIRE_1_Launch_1080p-M6988"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket Lab PREFIRE and Ice Launch",
+      "descripcion": "Rocket Lab’s Electron rocket called “PREFIRE and Ice,” lifts off from Launch Complex 1 in Māhia, New Zealand at 3:15 p.m. NZST Wednesday, June 5, 2024 (11:15 p.m. EDT, Tuesday, June 4), on the second of two launches for NASA’s PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment). The PREFIR",
+      "centro": "KSC",
+      "fecha": "2024-06-05",
+      "archivo": "biblioteca/nasa/videos/KSC-20240605-MH-RKL01-0001-Rocket_Lab_PREFIRE_and_Ice_Launch_1080p-M6988.mp4",
+      "fuente": "https://images.nasa.gov/details/KSC-20240605-MH-RKL01-0001-Rocket_Lab_PREFIRE_and_Ice_Launch_1080p-M6988"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "rocket launch",
+      "titulo": "Rocket-Lovers Watch OSIRIS-REx Launch",
+      "descripcion": "OSIRIS-REx launched Thursday, September 8 at 7:05PM on an Atlas V rocket on a journey to study asteroid Bennu and return a sample to Earth. Thousands of visitors watched the launch, some of whom were part of a NASA Social event.",
+      "centro": "GSFC",
+      "fecha": "2016-09-09",
+      "archivo": "biblioteca/nasa/videos/GSFC_20160909_M12368_OSIRIS_launch.mp4",
+      "fuente": "https://images.nasa.gov/details/GSFC_20160909_M12368_OSIRIS_launch"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "earth from space station",
+      "titulo": "Earth Views from the International Space Station",
+      "descripcion": "The International Space Station’s High Definition Earth Viewing (HDEV) experiment is an external camera platform located on the Columbus module of the space station. In addition to providing beautiful views of Earth, one of the goals of HDEV is to monitor the longevity and quality of its image senso",
+      "centro": "HQ",
+      "fecha": "2019-04-30",
+      "archivo": "biblioteca/nasa/videos/Earth_Views_from_the_International_Space_Station.mp4",
+      "fuente": "https://images.nasa.gov/details/Earth Views from the International Space Station"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "earth from space station",
+      "titulo": "Safe Return to Earth from the Space Station on This Week @NASA – April 17, 2021",
+      "descripcion": "A safe return to Earth from the space station, greeting the astronauts of the next Commercial Crew flight, and an update on the development of a human lunar landing system … a few of the stories to tell you about – This Week at NASA!",
+      "centro": "HQ",
+      "fecha": "2021-04-17",
+      "archivo": "biblioteca/nasa/videos/Safe_Return_to_Earth_from_the_Space_Station_on_This_Week__NASA___April_17__2021.mp4",
+      "fuente": "https://images.nasa.gov/details/Safe Return to Earth from the Space Station on This Week @NASA – April 17, 2021"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "earth from space station",
+      "titulo": "U.S. Astronaut, Crewmates Return to Earth from the International Space Station",
+      "descripcion": "NASA astronaut Tracy C. Dyson and Roscosmos cosmonauts Oleg Kononenko and Nikolai Chub returned to Earth aboard the Soyuz MS-25 spacecraft on Sept. 23 completing long-duration missions on the International Space Station. Following hatch closure, the spacecraft undocked from the station’s Prichal mod",
+      "centro": "JSC",
+      "fecha": "2024-09-23",
+      "archivo": "biblioteca/nasa/videos/jsc2024m000163_Soyuz_MS-25_Landing_Highlights.mp4",
+      "fuente": "https://images.nasa.gov/details/jsc2024m000163_Soyuz_MS-25_Landing_Highlights"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "earth from space station",
+      "titulo": "Earth Views from the ISS",
+      "descripcion": "Earth Views from the ISS",
+      "centro": "HQ",
+      "fecha": "2019-06-26",
+      "archivo": "biblioteca/nasa/videos/NHQ_2019_0626_Earth_Views_from_the_ISS.mp4",
+      "fuente": "https://images.nasa.gov/details/NHQ_2019_0626_Earth Views from the ISS"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "solar flare",
+      "titulo": "April 2017 Solar Flare Trio",
+      "descripcion": "The sun emitted a trio of mid-level solar flares on April 2-3, 2017. NASA’s Solar Dynamics Observatory, which watches the sun constantly, captured images of the three events.",
+      "centro": "GSFC",
+      "fecha": "2017-04-03",
+      "archivo": "biblioteca/nasa/videos/GSFC_20170403_Trio_m12563_SolarFlares.mp4",
+      "fuente": "https://images.nasa.gov/details/GSFC_20170403_Trio_m12563_SolarFlares"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "solar flare",
+      "titulo": "NASA’s SDO Captures Stunning View of April 17 Solar Flare",
+      "descripcion": "On April 17, 2016, an active region on the sun’s right side released a mid-level solar flare, captured here by NASA’s Solar Dynamics Observatory. This solar flare caused moderate radio blackouts, according to NOAA’s Space Weather Prediction Center. Scientists study active regions – which are areas o",
+      "centro": "GSFC",
+      "fecha": "2016-04-26",
+      "archivo": "biblioteca/nasa/videos/GSFC_20160426_SDO_m12224_SolarFlare.mp4",
+      "fuente": "https://images.nasa.gov/details/GSFC_20160426_SDO_m12224_SolarFlare"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "solar flare",
+      "titulo": "NASA’s SDO Captures Stunning 4K View of April 17 Solar Flare",
+      "descripcion": "On April 17, 2016, an active region on the sun’s right side released a mid-level solar flare, captured here by NASA’s Solar Dynamics Observatory. This solar flare caused moderate radio blackouts, according to NOAA’s Space Weather Prediction Center. Scientists study active regions – which are areas o",
+      "centro": "GSFC",
+      "fecha": "2016-04-26",
+      "archivo": "biblioteca/nasa/videos/GSFC_20160426_SDO_m12224_SolarFlare_4K.mp4",
+      "fuente": "https://images.nasa.gov/details/GSFC_20160426_SDO_m12224_SolarFlare_4K"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "solar flare",
+      "titulo": "How Solar Flares Affect Earth",
+      "descripcion": "A team of scientists —led by Laura Hayes, a solar physicist who splits her time between NASA Goddard and Trinity College in Dublin, Ireland— investigated a connection between solar flares and Earth’s atmosphere. They discovered pulses in the electrified layer of the atmosphere—called the ionosphere—",
+      "centro": "GSFC",
+      "fecha": "2017-11-16",
+      "archivo": "biblioteca/nasa/videos/GSFC_20171116_Flare_m12640_Flux.mp4",
+      "fuente": "https://images.nasa.gov/details/GSFC_20171116_Flare_m12640_Flux"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "spacewalk",
+      "titulo": "Spacesuits Prepped for Upcoming Spacewalks",
+      "descripcion": "Explanation of the spacesuit or Extravehicular Mobility Unit, or EMU, used in upcoming spacewalks. About the components of the spacesuit, how they are changed and the spacesuits used by astronauts in the next planned spacewalks.",
+      "centro": "JSC",
+      "fecha": "2019-10-04",
+      "archivo": "biblioteca/nasa/videos/Spacesuits_Prepped_for_Upcoming_Spacewalks.mp4",
+      "fuente": "https://images.nasa.gov/details/Spacesuits Prepped for Upcoming Spacewalks"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "spacewalk",
+      "titulo": "First All-Woman Spacewalk",
+      "descripcion": "On Oct 18, NASA astronauts Jessica Meir and Christina Koch performed the first all-woman spacewalk. Koch & Meir replaced a faulty battery charge/discharge unit that failed to activate after a previous spacewalk. This was the fourth spacewalk for Christina Koch and the first for Jessica Meir.",
+      "centro": "HQ",
+      "fecha": "2019-10-24",
+      "archivo": "biblioteca/nasa/videos/NHQ_2019_1018_all_woman_spacewalk.mp4",
+      "fuente": "https://images.nasa.gov/details/NHQ_2019_1018_all woman spacewalk"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "spacewalk",
+      "titulo": "Spacewalk 101",
+      "descripcion": "NASA flight director Mike Lammers provides an overview of spacewalks, also known as extravehicular activities. A spacewalk is any excursion outside a spacecraft. Aboard the International Space Station, astronauts perform spacewalks wearing the Extravehicular Mobility Unit, or spacesuit, to complete ",
+      "centro": "JSC",
+      "fecha": "2026-10-01",
+      "archivo": "biblioteca/nasa/videos/jsc2026m000932_Spacewalk_101_AVAIL1080p.mp4",
+      "fuente": "https://images.nasa.gov/details/jsc2026m000932_Spacewalk_101_AVAIL1080p"
+    },
+    {
+      "tipo": "video",
+      "busqueda": "spacewalk",
+      "titulo": "U.S. Spacewalk 83 Animation - Dec. 21, 2022",
+      "descripcion": "On Wednesday, Dec. 21, NASA astronauts Josh Cassada and Frank Rubio will exit the station’s Quest airlock to install an iROSA on the 4A power channel on the port truss. This will be the fourth iROSA installed on station out of a total six planned for installation. Live coverage of the spacewalk will",
+      "centro": "JSC",
+      "fecha": "2022-12-20",
+      "archivo": "biblioteca/nasa/videos/jsc2022m000290_U_S__Spacewalk_83_Animation_221221.mp4",
+      "fuente": "https://images.nasa.gov/details/jsc2022m000290_U.S._Spacewalk_83_Animation_221221"
+    }
+  ]
+}

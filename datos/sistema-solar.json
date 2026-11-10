@@ -25,7 +25,8 @@
         "autor": "NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institutio",
         "licencia": "Dominio público",
         "pagina": "https://commons.wikimedia.org/wiki/File:Mercury_in_color_-_Prockter07_centered.jpg"
-      }
+      },
+      "video": null
     },
     {
       "id": "Q313",
@@ -40,6 +41,14 @@
         "autor": "NASA/JPL-Caltech",
         "licencia": "Dominio público",
         "pagina": "https://commons.wikimedia.org/wiki/File:PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg"
+      },
+      "video": {
+        "archivo": "datos/videos/Q313.mp4",
+        "duracion": 3.2,
+        "nombre": "2004_Venus_transit_UV.ogv",
+        "autor": "NASA/LMSAL",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:2004_Venus_transit_UV.ogv"
       }
     },
     {
@@ -55,7 +64,8 @@
         "autor": "NASA/STSCI (S.T.A.R.S)",
         "licencia": "Dominio público",
         "pagina": "https://commons.wikimedia.org/wiki/File:Jupiter_OPAL_2024.png"
-      }
+      },
+      "video": null
     },
     {
       "id": "Q193",
@@ -70,6 +80,14 @@
         "autor": "Credit: NASA/JPL-Caltech/SSI",
         "licencia": "Dominio público",
         "pagina": "https://commons.wikimedia.org/wiki/File:8423_20181_1saturn2016.jpg"
+      },
+      "video": {
+        "archivo": "datos/videos/Q193.mp4",
+        "duracion": 2.833333,
+        "nombre": "Looking_saturn_in_the_eye.ogv",
+        "autor": "NASA",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Looking_saturn_in_the_eye.ogv"
       }
     },
     {
@@ -85,7 +103,8 @@
         "autor": "NASA / Voyager 2 / PDS / OPUS / Ardenau4",
         "licencia": "CC0",
         "pagina": "https://commons.wikimedia.org/wiki/File:Neptune_Voyager2_color_calibrated.png"
-      }
+      },
+      "video": null
     }
   ]
 }

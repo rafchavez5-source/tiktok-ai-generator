@@ -8,7 +8,7 @@ import { join, resolve } from 'node:path';
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
 import { PAQUETES } from './paquetes.mjs';
-import { sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
+import { duracionAudio, sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz } from './voz.mjs';
 
 const SALIDA = 'videos';
 const PUBLICO = resolve('remotion/public');
@@ -34,6 +34,10 @@ const NOMBRES_CORTOS = {
   'Torre central de Shanghái': 'Torre de Shanghái',
 };
 const corto = (n) => NOMBRES_CORTOS[n] ?? n;
+
+function creditoVideo(v) {
+  return `Video: ${v.autor ?? v.nombre} · ${v.licencia}${/NASA/.test(v.licencia) ? '' : ' · Wikimedia Commons'}`;
+}
 
 function creditoFoto(img) {
   if (!img) return 'Datos: Wikidata';
@@ -91,6 +95,7 @@ async function prepararEscenas(paquete, datos) {
         voz: `${ranking ? `Número ${i + 1}: ` : ''}${e.nombre}. ${d.narration}`,
         subtitulos: d.narration,
         img: e.imagen,
+        clip: e.video,
         fuente: e.fuente,
       };
     }),
@@ -108,6 +113,12 @@ async function prepararEscenas(paquete, datos) {
   for (const s of base) {
     const audio = `${paquete.id}/${s.id}.wav`;
     const segundos = await generarVoz(s.voz, join(PUBLICO, audio));
+    let video = null;
+    if (s.clip?.archivo && existsSync(s.clip.archivo)) {
+      const ruta = `${paquete.id}/${s.id}.mp4`;
+      copyFileSync(s.clip.archivo, join(PUBLICO, ruta));
+      video = { archivo: ruta, duracion: s.clip.duracion ?? duracionAudio(s.clip.archivo) };
+    }
     let image = null;
     if (s.img?.archivo && existsSync(s.img.archivo)) {
       image = `${paquete.id}/${s.id}.jpg`;
@@ -132,10 +143,12 @@ async function prepararEscenas(paquete, datos) {
       words,
       audio,
       image,
-      credit: creditoFoto(s.img),
+      video,
+      credit: video ? creditoVideo(s.clip) : creditoFoto(s.img),
       duration: Math.max(s.type === 'hook' ? 3.2 : 2.5, segundos + 0.7),
       fuente: s.fuente,
       licencia: s.img,
+      clipInfo: video ? s.clip : null,
       nombre: s.title,
     });
   }
@@ -148,6 +161,9 @@ function descripcion(paquete, escenas, datos) {
     lineas.push(`- ${s.nombre}: ${s.fuente}`);
     if (s.licencia) {
       lineas.push(`  Foto: ${s.licencia.autor ?? 'autor en la página'} · ${s.licencia.licencia} · ${s.licencia.pagina}`);
+    }
+    if (s.clipInfo) {
+      lineas.push(`  Video: ${s.clipInfo.autor ?? 'autor en la página'} · ${s.clipInfo.licencia} · ${s.clipInfo.pagina}`);
     }
   }
   lineas.push('', PROVEEDOR === 'elevenlabs' ? 'Voz: ElevenLabs. Video hecho con Remotion.' : PROVEEDOR === 'edge' ? `Voz: ${process.env.EDGE_VOZ ?? 'es-MX-DaliaNeural'} (Microsoft Edge). Video hecho con Remotion.` : `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
