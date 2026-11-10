@@ -11,12 +11,13 @@ Aplicación web para preparar videos verticales (9:16) de datos curiosos para Ti
 - Organizas las **escenas**: cambiar orden, tipo, segundos y texto en pantalla; añadir o eliminar escenas. Una barra muestra si la suma coincide con la duración elegida.
 - **Vista previa vertical** del texto en pantalla de la escena seleccionada (boceto, no es el video final).
 - **Copiar** el guion o **descargarlo** en `.txt`.
+- **Crear video**: convierte las escenas en un video vertical 1080×1920 con el texto animado y una barra de progreso, y lo descarga (MP4 en Chrome, Edge y Safari recientes; WebM en otros). Se crea en el propio navegador y tarda lo mismo que dura el video.
 - El proyecto se **guarda solo** en el navegador.
 
 ### Lo que todavía no hace
 
 - No escribe los datos curiosos con IA: tú escribes cada dato. No usa servicios de pago ni claves API.
-- No genera ni exporta el video.
+- El video no lleva voz, música ni imágenes. Puedes añadir música o tu voz desde TikTok al publicarlo.
 
 ## Cómo probarla
 
@@ -49,9 +50,12 @@ src/components/
   ScriptEditor.jsx            Paso 2: edición del guion, copiar y descargar
   SceneBoard.jsx              Paso 3: organización de escenas y línea de tiempo
   ScenePreview.jsx            Boceto vertical 9:16 de la escena
+  VideoMaker.jsx              Paso 4: vista previa, creación y descarga del video
 src/lib/
   script.js                   Generación de la plantilla, tiempos y exportación
   script.test.js              Pruebas
   storage.js                  Guardado automático en el navegador
+  video.js                    Dibujo de fotogramas y grabación del video
+  video.test.js               Pruebas del video
 src/styles.css                Estilos (adaptables a móvil)
 ```

@@ -4,6 +4,7 @@ import {
   FACT_COUNT_OPTIONS,
   distributeDurations,
   estimateReadingSeconds,
+  fileSafeName,
   generateScript,
   moveItem,
   scriptToText,
@@ -50,6 +51,11 @@ describe('utilidades', () => {
   it('estima el tiempo de lectura', () => {
     expect(estimateReadingSeconds('')).toBe(0);
     expect(estimateReadingSeconds('uno dos tres cuatro cinco')).toBe(2);
+  });
+
+  it('crea nombres de archivo sin tildes', () => {
+    expect(fileSafeName('El Océano: ¡Niños!', 'x')).toBe('el-oceano-ninos');
+    expect(fileSafeName('¿¿??', 'x')).toBe('x');
   });
 
   it('mueve elementos dentro de la lista', () => {

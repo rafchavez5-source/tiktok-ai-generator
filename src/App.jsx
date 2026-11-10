@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import GeneratorForm from './components/GeneratorForm.jsx';
 import ScriptEditor from './components/ScriptEditor.jsx';
 import SceneBoard from './components/SceneBoard.jsx';
+import VideoMaker from './components/VideoMaker.jsx';
 import { generateScript } from './lib/script.js';
 import { loadProject, saveProject } from './lib/storage.js';
 
@@ -60,6 +61,7 @@ export default function App() {
               onScenesChange={updateScenes}
             />
             <SceneBoard project={project} onScenesChange={updateScenes} />
+            <VideoMaker project={project} />
           </>
         ) : (
           <section className="card empty-state">
