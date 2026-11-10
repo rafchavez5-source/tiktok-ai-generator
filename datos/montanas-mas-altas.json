@@ -1,0 +1,92 @@
+{
+  "id": "montanas-mas-altas",
+  "titulo": "Las 5 montañas más altas del mundo",
+  "descargado": "2026-11-10T06:43:20.198Z",
+  "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
+  "referencia": null,
+  "elementos": [
+    {
+      "id": "Q513",
+      "nombre": "Everest",
+      "valor": 8848.86,
+      "paises": [
+        "República Popular China",
+        "Nepal"
+      ],
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Everest%20as%20seen%20from%20Drukair2%20PLW%20edit.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q513",
+      "imagen": {
+        "archivo": "datos/imagenes/Q513.jpg",
+        "nombre": "Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg",
+        "autor": "Mount_Everest_as_seen_from_Drukair2.jpg : shrimpo1967 derivative work: Papa Lima",
+        "licencia": "CC BY-SA 2.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg"
+      }
+    },
+    {
+      "id": "Q43512",
+      "nombre": "K2",
+      "valor": 8611,
+      "paises": [
+        "Pakistán"
+      ],
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Chogori.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q43512",
+      "imagen": null
+    },
+    {
+      "id": "Q82019",
+      "nombre": "Kanchenjunga",
+      "valor": 8586,
+      "paises": [
+        "Nepal",
+        "India"
+      ],
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Kangchenjunga%2C%20India.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q82019",
+      "imagen": {
+        "archivo": "datos/imagenes/Q82019.jpg",
+        "nombre": "Kangchenjunga,_India.jpg",
+        "autor": "My Discovery",
+        "licencia": "CC BY 2.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Kangchenjunga%2C_India.jpg"
+      }
+    },
+    {
+      "id": "Q168702",
+      "nombre": "Lhotse",
+      "valor": 8516,
+      "paises": [
+        "República Popular China",
+        "Nepal"
+      ],
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/LhotseMountain.jos.500pix.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q168702",
+      "imagen": {
+        "archivo": "datos/imagenes/Q168702.jpg",
+        "nombre": "LhotseMountain.jos.500pix.jpg",
+        "autor": "Jamie O'Shaughnessy ( talk · contribs )",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:LhotseMountain.jos.500pix.jpg"
+      }
+    },
+    {
+      "id": "Q169986",
+      "nombre": "Makalu",
+      "valor": 8485,
+      "paises": [
+        "República Popular China",
+        "Nepal"
+      ],
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Makalu.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q169986",
+      "imagen": {
+        "archivo": "datos/imagenes/Q169986.jpg",
+        "nombre": "Makalu.jpg",
+        "autor": "Ben Tubby",
+        "licencia": "CC BY 2.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Makalu.jpg"
+      }
+    }
+  ]
+}

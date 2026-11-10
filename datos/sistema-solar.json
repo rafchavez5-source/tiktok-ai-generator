@@ -1,0 +1,85 @@
+{
+  "id": "sistema-solar",
+  "titulo": "5 datos curiosos del sistema solar",
+  "descargado": "2026-11-10T06:51:52.665Z",
+  "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
+  "referencia": {
+    "id": "Q2",
+    "nombre": "Tierra",
+    "valor": 6378137,
+    "periodo": 31558149.7635456,
+    "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Meteosat-12-fci-march-equinox-2025-noon.jpg",
+    "fuente": "https://www.wikidata.org/wiki/Q2"
+  },
+  "elementos": [
+    {
+      "id": "Q308",
+      "nombre": "Mercurio",
+      "valor": 2440000,
+      "periodo": 7600521.6,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Mercury%20in%20color%20-%20Prockter07%20centered.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q308",
+      "imagen": {
+        "archivo": "datos/imagenes/Q308.jpg",
+        "nombre": "Mercury_in_color_-_Prockter07_centered.jpg",
+        "autor": "NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institutio",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Mercury_in_color_-_Prockter07_centered.jpg"
+      }
+    },
+    {
+      "id": "Q313",
+      "nombre": "Venus",
+      "valor": 6052000,
+      "periodo": 19414148,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/PIA23791-Venus-RealAndEnhancedContrastViews-20200608%20%28cropped%29.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q313",
+      "imagen": {
+        "archivo": "datos/imagenes/Q313.jpg",
+        "nombre": "PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg",
+        "autor": "NASA/JPL-Caltech",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg"
+      }
+    },
+    {
+      "id": "Q319",
+      "nombre": "Júpiter",
+      "valor": 69911000,
+      "periodo": 374335689.6,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20OPAL%202024.png",
+      "fuente": "https://www.wikidata.org/wiki/Q319",
+      "imagen": {
+        "archivo": "datos/imagenes/Q319.jpg",
+        "nombre": "Jupiter_OPAL_2024.png",
+        "autor": "NASA/STSCI (S.T.A.R.S)",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Jupiter_OPAL_2024.png"
+      }
+    },
+    {
+      "id": "Q193",
+      "nombre": "Saturno",
+      "valor": 54360000,
+      "periodo": 929468433.6,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/8423%2020181%201saturn2016.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q193",
+      "imagen": null
+    },
+    {
+      "id": "Q332",
+      "nombre": "Neptuno",
+      "valor": 24340000,
+      "periodo": 5200692480,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Neptune%20Voyager2%20color%20calibrated.png",
+      "fuente": "https://www.wikidata.org/wiki/Q332",
+      "imagen": {
+        "archivo": "datos/imagenes/Q332.jpg",
+        "nombre": "Neptune_Voyager2_color_calibrated.png",
+        "autor": "NASA / Voyager 2 / PDS / OPUS / Ardenau4",
+        "licencia": "CC0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Neptune_Voyager2_color_calibrated.png"
+      }
+    }
+  ]
+}

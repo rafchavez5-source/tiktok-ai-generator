@@ -77,8 +77,28 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-/** Dibuja el fotograma del segundo `t` del proyecto. */
-export function drawFrame(ctx, project, t) {
+/** Dibuja una imagen cubriendo todo el lienzo, con un zoom lento según `progress` (0–1). */
+function drawCover(ctx, img, progress) {
+  const W = VIDEO_WIDTH;
+  const H = VIDEO_HEIGHT;
+  const scale = Math.max(W / img.width, H / img.height) * (1.04 + 0.08 * progress);
+  const w = img.width * scale;
+  const h = img.height * scale;
+  ctx.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+  // Oscurece la foto para que el texto se lea bien.
+  const shade = ctx.createLinearGradient(0, 0, 0, H);
+  shade.addColorStop(0, 'rgba(7,7,11,0.70)');
+  shade.addColorStop(0.45, 'rgba(7,7,11,0.55)');
+  shade.addColorStop(1, 'rgba(7,7,11,0.85)');
+  ctx.fillStyle = shade;
+  ctx.fillRect(0, 0, W, H);
+}
+
+/**
+ * Dibuja el fotograma del segundo `t` del proyecto.
+ * `images` (opcional) es un Map de `scene.image` → imagen ya cargada.
+ */
+export function drawFrame(ctx, project, t, images = null) {
   const W = VIDEO_WIDTH;
   const H = VIDEO_HEIGHT;
   const info = sceneAt(project.scenes, t);
@@ -100,6 +120,9 @@ export function drawFrame(ctx, project, t) {
 
   const { scene, index, count, local, duration } = info;
   const color = COLORS[scene.type] ?? COLORS.fact;
+
+  const img = scene.image && images?.get(scene.image);
+  if (img) drawCover(ctx, img, local / duration);
 
   // Brillo de color que se mueve despacio
   const gx = W * (0.75 - 0.15 * Math.sin(t * 0.6));
@@ -181,6 +204,15 @@ export function drawFrame(ctx, project, t) {
       y += bodyLH;
       ctx.fillText(line, W / 2, y - body.size * 0.3);
     }
+  }
+
+  // Crédito de la imagen o de la fuente (abajo, por encima de los botones de TikTok).
+  if (scene.credit) {
+    ctx.shadowBlur = 0;
+    ctx.font = `500 26px ${FONT}`;
+    ctx.fillStyle = 'rgba(255,255,255,0.7)';
+    const lines = wrapText(scene.credit, W - 200, (str) => ctx.measureText(str).width).slice(0, 2);
+    lines.forEach((line, i) => ctx.fillText(line, W / 2, H - 340 + i * 34));
   }
   ctx.restore();
 }
