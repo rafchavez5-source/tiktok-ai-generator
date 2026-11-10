@@ -60,7 +60,7 @@ function Fondo({ image, color, frames }) {
       <AbsoluteFill
         style={{
           background:
-            'linear-gradient(180deg, rgba(5,5,9,0.78) 0%, rgba(5,5,9,0.35) 38%, rgba(5,5,9,0.45) 60%, rgba(5,5,9,0.92) 100%)',
+            'linear-gradient(180deg, rgba(5,5,9,0.55) 0%, rgba(5,5,9,0.12) 30%, rgba(5,5,9,0.12) 55%, rgba(5,5,9,0.7) 100%)',
         }}
       />
       <AbsoluteFill
@@ -364,7 +364,7 @@ function transicionPara(i, siguiente) {
 function Vineta() {
   return (
     <AbsoluteFill
-      style={{ background: 'radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%)', pointerEvents: 'none' }}
+      style={{ background: 'radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.35) 100%)', pointerEvents: 'none' }}
     />
   );
 }

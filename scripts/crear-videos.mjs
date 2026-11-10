@@ -100,7 +100,7 @@ async function prepararEscenas(paquete, datos) {
       title: 'Sígueme para más datos curiosos',
       text: '¿Cuál te sorprendió más? Cuéntamelo en los comentarios.',
       voz: '¿Cuál te sorprendió más? Cuéntamelo en los comentarios, y sígueme para más datos curiosos.',
-      img: null,
+      img: elementos[0]?.imagen,
     },
   ];
 
@@ -132,7 +132,7 @@ async function prepararEscenas(paquete, datos) {
       words,
       audio,
       image,
-      credit: s.type === 'outro' ? 'Datos: Wikidata · Fotos: Wikimedia Commons' : creditoFoto(s.img),
+      credit: creditoFoto(s.img),
       duration: Math.max(s.type === 'hook' ? 3.2 : 2.5, segundos + 0.7),
       fuente: s.fuente,
       licencia: s.img,
