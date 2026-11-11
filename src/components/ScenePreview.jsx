@@ -12,7 +12,7 @@ export default function ScenePreview({ scene, index, total }) {
         <span className="phone-time">{scene.duration || 0} s</span>
       </div>
       <p className="hint preview-note">
-        Boceto vertical 9:16 del texto en pantalla. Todavía no se genera el video.
+        Boceto del texto en pantalla. El video se crea en el paso 4.
       </p>
     </aside>
   );

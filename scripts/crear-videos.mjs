@@ -1,0 +1,260 @@
+// Crea un video MP4 vertical con voz por cada paquete descargado en datos/.
+// Pasos: escenas a partir de los datos → voz con Piper → render con Remotion.
+// Uso: npm run videos                (todos)
+//      npm run videos -- sistema-solar
+import { execFileSync } from 'node:child_process';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { bundle } from '@remotion/bundler';
+import { renderMedia, renderStill, selectComposition } from '@remotion/renderer';
+import { PAQUETES } from './paquetes.mjs';
+import { duracionAudio, sintetizar, sintetizarEdge, sintetizarElevenLabs, textoParaVoz, tiemposPalabras } from './voz.mjs';
+
+const SALIDA = 'videos';
+const PUBLICO = resolve('remotion/public');
+// Voz de Piper (archivo .onnx en voces/) y, si la voz tiene varias, el número de hablante.
+const VOZ = process.env.VOZ ?? 'voces/es_AR-daniela-high.onnx';
+const HABLANTE = process.env.VOZ_HABLANTE ?? null;
+// VOZ_PROVEEDOR: piper (sin conexión), edge (voces de Microsoft Edge, EDGE_VOZ)
+// o elevenlabs (necesita clave; voz ELEVENLABS_VOZ).
+const PROVEEDOR = process.env.VOZ_PROVEEDOR ?? 'edge';
+const ELEVEN_VOZ = process.env.ELEVENLABS_VOZ ?? null;
+
+async function generarVoz(texto, destino) {
+  if (PROVEEDOR === 'elevenlabs') return sintetizarElevenLabs(texto, destino, { voz: ELEVEN_VOZ });
+  if (PROVEEDOR === 'edge') return sintetizarEdge(texto, destino, { voz: process.env.EDGE_VOZ ?? 'es-MX-DaliaNeural' });
+  return sintetizar(texto, VOZ, destino, { hablante: HABLANTE });
+}
+const CHROMIUM = ['/opt/pw-browsers/chromium', process.env.CHROME_PATH].find((p) => p && existsSync(p));
+
+// Nombres más cortos para que quepan bien en pantalla.
+const NOMBRES_CORTOS = {
+  'República Popular China': 'China',
+  'Torres Abraj Al Bait': 'Abraj Al Bait',
+  'Torre central de Shanghái': 'Torre de Shanghái',
+};
+const corto = (n) => NOMBRES_CORTOS[n] ?? n;
+// Nombres muy cortos para las etiquetas de las animaciones.
+const ETIQUETAS = { 'Torre de Shanghái': 'Shanghái', 'Ping An Finance Centre': 'Ping An', 'Ciudad del Vaticano': 'Vaticano', 'Abraj Al Bait': 'Abraj' };
+const etiqueta = (n) => ETIQUETAS[n] ?? n;
+
+// Con --animado se crea la versión hecha solo con animaciones (sin fotos ni clips).
+const ANIMADO = process.argv.includes('--animado');
+const carpetaPublica = (paquete) => `${paquete.id}${ANIMADO ? '-animado' : ''}`;
+
+function creditoVideo(v) {
+  return `Video: ${v.autor ?? v.nombre} · ${v.licencia}${/NASA/.test(v.licencia) ? '' : ' · Wikimedia Commons'}`;
+}
+
+function creditoFoto(img) {
+  if (!img) return 'Datos: Wikidata';
+  return `${img.autor ? `Foto: ${img.autor}` : 'Foto'} · ${img.licencia} · Wikimedia Commons`;
+}
+
+
+function especificarAnimacion(paquete, elementos, i, referencia) {
+  const tipo = paquete.animacion;
+  if (!tipo) return null;
+  if (tipo === 'planeta') {
+    const e = elementos[i];
+    return { tipo: 'planeta', id: e.id, nombre: e.nombre, ratio: referencia ? e.valor / referencia.valor : 1 };
+  }
+  const serie = elementos.map((e) => ({ nombre: e.nombre, corto: etiqueta(e.nombre), valor: paquete.dato(e, 0, referencia).cifra?.valor ?? e.valor }));
+  if (tipo === 'superficies') return { tipo: 'superficies', serie, actual: i };
+  return { tipo: 'alturas', forma: tipo === 'alturas-montaña' ? 'montaña' : 'edificio', serie, actual: i };
+}
+
+async function prepararEscenas(paquete, datos) {
+  const elementos = datos.elementos.map((e) => ({
+    ...e,
+    nombre: corto(e.nombre),
+    paises: e.paises?.map(corto),
+    pais: e.pais && corto(e.pais),
+  }));
+  if (paquete.ordenar) elementos.sort(paquete.ordenar);
+  const ranking = Boolean(paquete.ordenar);
+
+  const base = [
+    {
+      id: 'gancho',
+      type: 'hook',
+      title: paquete.titulo,
+      text: paquete.gancho,
+      voz: `${paquete.titulo}. ${paquete.gancho}`,
+      img: elementos[0]?.imagen,
+    },
+    // En los «top», cuenta regresiva: del #5 al #1 para mantener la intriga.
+    ...(ranking ? [...elementos.keys()].reverse() : [...elementos.keys()]).map((i) => {
+      const e = elementos[i];
+      const d = paquete.dato(e, i, datos.referencia);
+      return {
+        animacion: ANIMADO ? especificarAnimacion(paquete, elementos, i, datos.referencia) : null,
+        id: e.id,
+        type: 'fact',
+        rank: ranking ? i + 1 : null,
+        title: e.nombre,
+        text: d.narration,
+        cifra: d.cifra,
+        voz: `${ranking ? `Número ${i + 1}: ` : ''}${e.nombre}. ${d.narration}`,
+        subtitulos: d.narration,
+        img: e.imagen,
+        clip: e.video,
+        fuente: e.fuente,
+      };
+    }),
+    {
+      id: 'cierre',
+      type: 'outro',
+      title: 'Sígueme para más datos curiosos',
+      text: '¿Cuál te sorprendió más? Cuéntamelo en los comentarios.',
+      voz: '¿Cuál te sorprendió más? Cuéntamelo en los comentarios, y sígueme para más datos curiosos.',
+      img: elementos[0]?.imagen,
+    },
+  ];
+
+  const escenas = [];
+  for (const s of base) {
+    const audio = `${carpetaPublica(paquete)}/${s.id}.wav`;
+    const segundos = await generarVoz(s.voz, join(PUBLICO, audio));
+    let video = null;
+    if (!ANIMADO && s.clip?.archivo && existsSync(s.clip.archivo)) {
+      const ruta = `${carpetaPublica(paquete)}/${s.id}.mp4`;
+      copyFileSync(s.clip.archivo, join(PUBLICO, ruta));
+      video = { archivo: ruta, duracion: s.clip.duracion ?? duracionAudio(s.clip.archivo) };
+    }
+    let image = null;
+    if (!ANIMADO && s.img?.archivo && existsSync(s.img.archivo)) {
+      image = `${carpetaPublica(paquete)}/${s.id}.jpg`;
+      copyFileSync(s.img.archivo, join(PUBLICO, image));
+    }
+    // Los subtítulos solo muestran la parte del dato; se ajustan al final del audio.
+    const textoSub = s.subtitulos ?? s.voz;
+    const proporcion = s.subtitulos ? textoParaVoz(s.subtitulos).length / textoParaVoz(s.voz).length : 1;
+    const desfase = segundos * (1 - proporcion);
+    const words = tiemposPalabras(textoSub, segundos * proporcion).map((w) => ({
+      ...w,
+      start: w.start + desfase,
+      end: w.end + desfase,
+    }));
+    escenas.push({
+      id: s.id,
+      type: s.type,
+      rank: s.rank ?? null,
+      title: s.title,
+      text: s.text,
+      cifra: s.cifra ?? null,
+      words,
+      audio,
+      image,
+      video,
+      animacion: s.animacion ?? null,
+      credit: ANIMADO ? 'Datos: Wikidata' : video ? creditoVideo(s.clip) : creditoFoto(s.img),
+      duration: Math.max(s.type === 'hook' ? 3.2 : 2.5, segundos + 0.7),
+      fuente: s.fuente,
+      licencia: s.img,
+      clipInfo: video ? s.clip : null,
+      nombre: s.title,
+    });
+  }
+  return escenas;
+}
+
+function descripcion(paquete, escenas, datos) {
+  const lineas = [paquete.titulo, '', paquete.hashtags, '', 'Fuentes:', `Datos: Wikidata (CC0), descargados el ${datos.descargado.slice(0, 10)}`];
+  for (const s of escenas.filter((x) => x.type === 'fact')) {
+    lineas.push(`- ${s.nombre}: ${s.fuente}`);
+    if (s.licencia) {
+      lineas.push(`  Foto: ${s.licencia.autor ?? 'autor en la página'} · ${s.licencia.licencia} · ${s.licencia.pagina}`);
+    }
+    if (s.clipInfo) {
+      lineas.push(`  Video: ${s.clipInfo.autor ?? 'autor en la página'} · ${s.clipInfo.licencia} · ${s.clipInfo.pagina}`);
+    }
+  }
+  lineas.push('', PROVEEDOR === 'elevenlabs' ? 'Voz: ElevenLabs. Video hecho con Remotion.' : PROVEEDOR === 'edge' ? `Voz: ${process.env.EDGE_VOZ ?? 'es-MX-DaliaNeural'} (Microsoft Edge). Video hecho con Remotion.` : `Voz sintética: Piper (${VOZ.split('/').pop().replace('.onnx', '')}). Video hecho con Remotion.`);
+  return `${lineas.join('\n')}\n`;
+}
+
+function crearMusica() {
+  if (!existsSync(join(PUBLICO, 'campanitas.wav'))) {
+    execFileSync('python3', ['scripts/musica.py', PUBLICO], { stdio: 'inherit' });
+  }
+  const sfx = Object.fromEntries(['pop', 'ding', 'golpe', 'subida', 'tic', 'swoosh', 'campanitas'].map((n) => [n, `${n}.wav`]));
+  return { musica: 'musica.wav', sfx };
+}
+
+function crearWhoosh() {
+  const archivo = join(PUBLICO, 'whoosh.wav');
+  if (!existsSync(archivo)) {
+    // Barrido de ruido filtrado: efecto de transición creado localmente.
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'anoisesrc=d=0.5:c=pink:a=0.6',
+      '-af', 'highpass=f=400,lowpass=f=5000,afade=t=in:d=0.18,afade=t=out:st=0.22:d=0.28,volume=0.8', archivo]);
+  }
+  return 'whoosh.wav';
+}
+
+const filtro = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+const paquetes = PAQUETES.filter((p) => !filtro.length || filtro.includes(p.id));
+mkdirSync(SALIDA, { recursive: true });
+
+for (const paquete of paquetes) {
+  const archivo = join('datos', `${paquete.id}.json`);
+  if (!existsSync(archivo)) {
+    console.warn(`✗ ${paquete.id}: faltan datos. Ejecuta primero: npm run datos`);
+    continue;
+  }
+  const datos = JSON.parse(readFileSync(archivo, 'utf8'));
+  if (datos.elementos.length < 3) {
+    console.warn(`✗ ${paquete.id}: muy pocos datos válidos (${datos.elementos.length})`);
+    continue;
+  }
+  const inicio = Date.now();
+  mkdirSync(join(PUBLICO, carpetaPublica(paquete)), { recursive: true });
+  console.log(`▶ ${paquete.titulo}: generando voz…`);
+  const escenas = await prepararEscenas(paquete, datos);
+  const whoosh = crearWhoosh();
+
+  // El bundle copia public/ al crearse: se vuelve a crear para incluir los audios nuevos.
+  const url = await bundle({ entryPoint: resolve('remotion/index.jsx'), publicDir: PUBLICO });
+  const inputProps = {
+    scenes: escenas,
+    whoosh,
+    encabezado: paquete.encabezado,
+    tema: paquete.tema,
+    emojis: paquete.emojis,
+    ...crearMusica(),
+  };
+  const composition = await selectComposition({ serveUrl: url, id: 'DatoCurioso', inputProps, browserExecutable: CHROMIUM });
+  const nombreSalida = `${paquete.id}${ANIMADO ? '-animado' : ''}`;
+  const destino = join(SALIDA, `${nombreSalida}.mp4`);
+  // FOTOGRAMAS=100,400 crea solo esas imágenes (para revisar el diseño rápido).
+  if (process.env.FOTOGRAMAS) {
+    for (const f of process.env.FOTOGRAMAS.split(',').map(Number)) {
+      const png = join(SALIDA, `${nombreSalida}-f${f}.png`);
+      await renderStill({ composition, serveUrl: url, frame: Math.min(f, composition.durationInFrames - 1), output: png, inputProps, browserExecutable: CHROMIUM });
+      console.log(`  imagen ${png}`);
+    }
+    continue;
+  }
+  let ultimo = -1;
+  console.log(`  renderizando ${(composition.durationInFrames / 30).toFixed(1)} s de video…`);
+  await renderMedia({
+    composition,
+    serveUrl: url,
+    codec: 'h264',
+    crf: 20,
+    audioCodec: 'aac',
+    outputLocation: destino,
+    inputProps,
+    browserExecutable: CHROMIUM,
+    concurrency: 4,
+    onProgress: ({ progress }) => {
+      const pct = Math.floor(progress * 100);
+      if (pct % 10 === 0 && pct !== ultimo) {
+        ultimo = pct;
+        console.log(`  ${pct} %`);
+      }
+    },
+  });
+  writeFileSync(join(SALIDA, `${nombreSalida}.txt`), descripcion(paquete, escenas, datos));
+  console.log(`✓ ${destino} (${((Date.now() - inicio) / 1000).toFixed(0)} s de proceso)`);
+}

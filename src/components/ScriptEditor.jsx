@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SCENE_TYPES, estimateReadingSeconds, scriptToText } from '../lib/script.js';
+import { SCENE_TYPES, estimateReadingSeconds, fileSafeName, scriptToText } from '../lib/script.js';
 
 export default function ScriptEditor({ project, onTitleChange, onScenesChange }) {
   const [message, setMessage] = useState('');
@@ -26,7 +26,7 @@ export default function ScriptEditor({ project, onTitleChange, onScenesChange })
     const blob = new Blob([scriptToText(project)], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    const safeName = project.topic.toLowerCase().replace(/[^a-z0-9áéíóúñü]+/gi, '-') || 'guion';
+    const safeName = fileSafeName(project.topic, 'guion');
     link.href = url;
     link.download = `guion-${safeName}.txt`;
     link.click();

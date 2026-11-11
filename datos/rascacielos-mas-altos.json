@@ -1,0 +1,99 @@
+{
+  "id": "rascacielos-mas-altos",
+  "titulo": "Los 5 rascacielos más altos del mundo",
+  "descargado": "2026-11-10T07:17:40.943Z",
+  "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
+  "referencia": null,
+  "elementos": [
+    {
+      "id": "Q12495",
+      "nombre": "Burj Khalifa",
+      "valor": 828,
+      "ciudad": "Dubái",
+      "pais": "Emiratos Árabes Unidos",
+      "anio": 2010,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Dubai%20skyline%202015%20%28crop%29.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q12495",
+      "imagen": {
+        "archivo": "datos/imagenes/Q12495.jpg",
+        "nombre": "Dubai_skyline_2015_(crop).jpg",
+        "autor": "Tim.Reckmann",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Dubai_skyline_2015_(crop).jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q7969454",
+      "nombre": "Merdeka 118",
+      "valor": 678.9,
+      "ciudad": "Kuala Lumpur",
+      "pais": "Malasia",
+      "anio": 2023,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Merdeka%20Tower%2020241022%20-%20full%202.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q7969454",
+      "imagen": {
+        "archivo": "datos/imagenes/Q7969454.jpg",
+        "nombre": "Merdeka_Tower_20241022_-_full_2.jpg",
+        "autor": "Ahmad Ali Karim",
+        "licencia": "CC0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Merdeka_Tower_20241022_-_full_2.jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q18547",
+      "nombre": "Torre central de Shanghái",
+      "valor": 632,
+      "ciudad": "Shanghái",
+      "pais": "República Popular China",
+      "anio": 2014,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Shanghai%20Tower%20in%202015%20%282%29.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q18547",
+      "imagen": {
+        "archivo": "datos/imagenes/Q18547.jpg",
+        "nombre": "Shanghai_Tower_in_2015_(2).jpg",
+        "autor": "https://www.pxfuel.com/en/free-photo-ovozr",
+        "licencia": "CC BY-SA 4.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Shanghai_Tower_in_2015_(2).jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q189476",
+      "nombre": "Torres Abraj Al Bait",
+      "valor": 607,
+      "ciudad": "La Meca",
+      "pais": "Arabia Saudí",
+      "anio": 2011,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Abraj-al-Bait-Towers.JPG",
+      "fuente": "https://www.wikidata.org/wiki/Q189476",
+      "imagen": {
+        "archivo": "datos/imagenes/Q189476.jpg",
+        "nombre": "Abraj-al-Bait-Towers.JPG",
+        "autor": "King Eliot",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Abraj-al-Bait-Towers.JPG"
+      },
+      "video": null
+    },
+    {
+      "id": "Q1077308",
+      "nombre": "Ping An Finance Centre",
+      "valor": 599.05,
+      "ciudad": "Q14340362",
+      "pais": "República Popular China",
+      "anio": 2017,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Pingan%20International%20Finance%20Center2020.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q1077308",
+      "imagen": {
+        "archivo": "datos/imagenes/Q1077308.jpg",
+        "nombre": "Pingan_International_Finance_Center2020.jpg",
+        "autor": "Charlie fong",
+        "licencia": "CC BY-SA 4.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Pingan_International_Finance_Center2020.jpg"
+      },
+      "video": null
+    }
+  ]
+}

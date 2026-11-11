@@ -91,7 +91,7 @@ export default function GeneratorForm({ initial, onGenerate }) {
         </button>
         <p className="hint">
           Esta versión crea una plantilla de guion con los tiempos repartidos. Tú escribes cada
-          dato curioso en el siguiente paso.
+          dato curioso en el siguiente paso y luego creas el video.
         </p>
       </form>
     </section>

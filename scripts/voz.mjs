@@ -1,0 +1,145 @@
+// Prepara el texto para la voz (números en palabras, símbolos) y genera el audio con Piper.
+import { execFileSync } from 'node:child_process';
+
+const UNIDADES = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez',
+  'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte',
+  'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve'];
+const DECENAS = ['', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
+const CENTENAS = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos',
+  'setecientos', 'ochocientos', 'novecientos'];
+
+function menorQueMil(n) {
+  if (n === 100) return 'cien';
+  const c = Math.floor(n / 100);
+  const r = n % 100;
+  let txt = c ? CENTENAS[c] : '';
+  if (r) {
+    const dec = r < 30 ? UNIDADES[r] : `${DECENAS[Math.floor(r / 10)]}${r % 10 ? ` y ${UNIDADES[r % 10]}` : ''}`;
+    txt = txt ? `${txt} ${dec}` : dec;
+  }
+  return txt;
+}
+
+// "uno" se apocopa delante de "mil" y "millones": veintiún mil, un millón.
+const apocope = (t) => t.replace(/veintiuno$/, 'veintiún').replace(/(^|\s)uno$/, '$1un');
+
+/** Número entero en palabras (hasta billones). */
+export function enteroEnPalabras(n) {
+  n = Math.floor(Math.abs(n));
+  if (n === 0) return 'cero';
+  const partes = [];
+  const millones = Math.floor(n / 1e6);
+  const miles = Math.floor((n % 1e6) / 1000);
+  const resto = n % 1000;
+  if (millones) {
+    partes.push(millones === 1 ? 'un millón' : `${apocope(enteroEnPalabras(millones))} millones`);
+  }
+  if (miles) partes.push(miles === 1 ? 'mil' : `${apocope(menorQueMil(miles))} mil`);
+  if (resto) partes.push(menorQueMil(resto));
+  return partes.join(' ');
+}
+
+/** Número escrito en formato español ("8848,86", "1.326", "0,44") a palabras. */
+export function numeroEnPalabras(texto) {
+  const [entero, decimal] = texto.replace(/\./g, '').split(',');
+  let txt = enteroEnPalabras(Number(entero));
+  if (decimal) {
+    const d = decimal.replace(/^0+/, '');
+    const ceros = decimal.length - d.length;
+    txt += ` coma ${'cero '.repeat(ceros)}${d ? enteroEnPalabras(Number(d)) : ''}`.trimEnd();
+  }
+  return txt;
+}
+
+/** Convierte un texto escrito en texto para leer en voz alta. */
+export function textoParaVoz(texto) {
+  return texto
+    .replace(/#(\d+)/g, 'número $1')
+    .replace(/km²/g, 'kilómetros cuadrados')
+    .replace(/\s?%/g, ' por ciento')
+    .replace(/(\d)\s?m\b/g, '$1 metros')
+    .replace(/\d[\d.]*(,\d+)?/g, (m) => numeroEnPalabras(m))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Genera un .wav con Piper y devuelve su duración en segundos. */
+export function sintetizar(texto, modelo, destino, { velocidad = 0.9, hablante = null } = {}) {
+  const extra = hablante != null ? ['-s', String(hablante)] : [];
+  execFileSync('python3', ['-m', 'piper', '-m', modelo, ...extra, '--length-scale', String(velocidad), '--sentence-silence', '0.15', '-f', destino], {
+    input: textoParaVoz(texto),
+    stdio: ['pipe', 'ignore', 'pipe'],
+  });
+  return duracionAudio(destino);
+}
+
+export function duracionAudio(archivo) {
+  const out = execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', archivo]);
+  return Number(String(out).trim());
+}
+
+/**
+ * Genera la voz con ElevenLabs (necesita una clave guardada en el entorno o en ELEVENLABS_API_KEY).
+ * Devuelve la duración en segundos del .wav creado.
+ */
+export async function sintetizarElevenLabs(texto, destino, { voz, modelo = 'eleven_multilingual_v2' } = {}) {
+  if (!voz) throw new Error('Falta el identificador de la voz de ElevenLabs (ELEVENLABS_VOZ).');
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voz)}?output_format=mp3_44100_128`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      // En la nube la clave la añade el proxy del entorno; en local se lee de la variable.
+      'xi-api-key': process.env.ELEVENLABS_API_KEY ?? 'clave-en-el-entorno',
+    },
+    body: JSON.stringify({
+      text: textoParaVoz(texto),
+      model_id: modelo,
+      language_code: 'es',
+      voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.3, use_speaker_boost: true },
+    }),
+  });
+  if (!res.ok) {
+    const detalle = await res.text().catch(() => '');
+    throw new Error(`ElevenLabs respondió ${res.status}: ${detalle.slice(0, 200)}`);
+  }
+  const mp3 = `${destino}.mp3`;
+  const { writeFileSync, rmSync } = await import('node:fs');
+  writeFileSync(mp3, Buffer.from(await res.arrayBuffer()));
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', mp3, destino]);
+  rmSync(mp3);
+  return duracionAudio(destino);
+}
+
+/**
+ * Genera la voz con las voces neuronales gratuitas de Microsoft Edge (paquete edge-tts de Python).
+ * No es una API oficial: Microsoft puede cambiarla o cortarla.
+ */
+export function sintetizarEdge(texto, destino, { voz = 'es-AR-ElenaNeural', velocidad = '+8%', tono = '+0Hz' } = {}) {
+  const mp3 = `${destino}.mp3`;
+  const proxy = process.env.HTTPS_PROXY ? ['--proxy', process.env.HTTPS_PROXY] : [];
+  execFileSync('edge-tts', [...proxy, '--voice', voz, `--rate=${velocidad}`, `--pitch=${tono}`, '--text', textoParaVoz(texto), '--write-media', mp3], {
+    stdio: ['ignore', 'ignore', 'pipe'],
+  });
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', mp3, destino]);
+  execFileSync('rm', ['-f', mp3]);
+  return duracionAudio(destino);
+}
+
+/**
+ * Reparte el tiempo del audio entre las palabras según lo que tarda en decirse cada una.
+ * Piper no da tiempos por palabra, así que es una estimación.
+ */
+export function tiemposPalabras(texto, duracion) {
+  const palabras = texto.split(/\s+/).filter(Boolean);
+  const pesos = palabras.map((w) => textoParaVoz(w).replace(/[^\p{L}]/gu, '').length + 1 + (/[.,:;?!]$/.test(w) ? 4 : 0));
+  const total = pesos.reduce((a, b) => a + b, 0);
+  const util = Math.max(duracion - 0.15, 0.1);
+  let t = 0.05;
+  return palabras.map((w, i) => {
+    const d = (pesos[i] / total) * util;
+    const item = { w, start: t, end: t + d };
+    t += d;
+    return item;
+  });
+}

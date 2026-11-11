@@ -1,0 +1,910 @@
+{
+  "licencia": "CC BY 4.0 — hay que poner la atribución en la descripción del video",
+  "fuente": "https://incompetech.com/music/royalty-free/",
+  "elementos": [
+    {
+      "titulo": "Sauropod Spotting",
+      "duracion": "00:03:45",
+      "bpm": 105,
+      "sensaciones": [
+        "Action",
+        "Driving",
+        "Grooving"
+      ],
+      "instrumentos": "Drums, Shakers, Marimba, Log Drums",
+      "descripcion": "This piece is one of three pieces that was inspired by a trip to a dinosaur-themed roadside attraction that had \"dinosaur music\". That music was recorded in the early 1990s, and sounds a bit cheesy today, so I tried to update it. This piece is a hybrid of triggered samples and live recordings.",
+      "archivo": "biblioteca/musica/incompetech/sauropod-spotting.mp3",
+      "atribucion": "\"Sauropod Spotting\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Mesmerizing Galaxy",
+      "duracion": "00:01:33",
+      "bpm": 124,
+      "sensaciones": [
+        "Grooving",
+        "Mysterious"
+      ],
+      "instrumentos": "Synths",
+      "descripcion": "This piece was written for a 2d-bullet-hell space shooter. It loops seamlessly to allow variable-length gameplay. There is no percussion because of all the explosions in the game itself. The piece probably has some utility beyond bullet-hell; paranormal investigation comes to mind. If you are doing paranormal investigations, I would like to see the following shows: \r\n -\"Ghosts of the Galaxy\"\r\n -\"The Otherworld Unit\"\r\n -\"Whispers from the Unknown\"\r\n -\"Unearthly Encounters\"\r\n -\"Phantom Photons\"\r\nThese would also make excellent science/astronomy shows.",
+      "archivo": "biblioteca/musica/incompetech/mesmerizing-galaxy.mp3",
+      "atribucion": "\"Mesmerizing Galaxy\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Lord of the Rangs",
+      "duracion": "00:01:32",
+      "bpm": 104,
+      "sensaciones": [
+        "Grooving",
+        "Relaxed"
+      ],
+      "instrumentos": "Didgeridoo, Marimba, Flute, Percussion",
+      "descripcion": "It's all about Australia! Bop along with this cheery piece from down under. It was designed for the Australian-themed level of a tower defense game. There are a lot of boomerangs flying around when you upgrade your towers to level 3.",
+      "archivo": "biblioteca/musica/incompetech/lord-of-the-rangs.mp3",
+      "atribucion": "\"Lord of the Rangs\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Galactic Rap",
+      "duracion": "00:02:22",
+      "bpm": 120,
+      "sensaciones": [
+        "Grooving",
+        "Mysterious",
+        "Relaxed"
+      ],
+      "instrumentos": "Synths, Percussion",
+      "descripcion": "The cool thing about these kinds of pieces is that they leave a lot of room for your own creativity. It is 98% voice-over friendly! Talk all you want over the top of this piece! But watch out for the key change at 1:34... it will steal attention.",
+      "archivo": "biblioteca/musica/incompetech/galactic-rap.mp3",
+      "atribucion": "\"Galactic Rap\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Cloud Dancer",
+      "duracion": "00:03:40",
+      "bpm": 214,
+      "sensaciones": [
+        "Grooving",
+        "Bouncy",
+        "Bright"
+      ],
+      "instrumentos": "Synths",
+      "descripcion": "Upbeat EDM track with a fast tempo and modern vibe. It is joyful, optimistic, and playful. Good for dynamic, high-energy sequences. A straightforward, mood-lifting piece that adds excitement and movement.\r\n\r\n\r\nSynthwave textures weave an intricate matrix around you, leaving you entangled in its cybernetic allure. Deck in, chummer, and let the futuristic soundscape rewrite your reality. Wait... what universe is this set in?",
+      "archivo": "biblioteca/musica/incompetech/cloud-dancer.mp3",
+      "atribucion": "\"Cloud Dancer\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Brain Dance",
+      "duracion": "00:03:35",
+      "bpm": 124,
+      "sensaciones": [
+        "Grooving",
+        "Driving"
+      ],
+      "instrumentos": "Synths, Percussion",
+      "descripcion": "Immerse yourself in the pulsating beats of \"Brain Dance,\" a sonic experience that plunges you deep into the heart of the Sixth World. Conjured amidst the neon glow and astral currents of a dystopian Seattle, this track is the essence of a Decker's paradise.\r\n\r\nSynthwave textures weave an intricate matrix around you, leaving you entangled in its cybernetic allure. Deck in, chummer, and let the futuristic soundscape rewrite your reality. Wait... what universe is this set in?",
+      "archivo": "biblioteca/musica/incompetech/brain-dance.mp3",
+      "atribucion": "\"Brain Dance\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Southern Gothic",
+      "duracion": "00:02:27",
+      "bpm": 126,
+      "sensaciones": [
+        "Dark",
+        "Grooving",
+        "Mysterious"
+      ],
+      "instrumentos": "Banjos, Percussion, 12 String Guitar, Choir",
+      "descripcion": "Are you cool? Cool like a vampire planking in a graveyard in Alabama? \r\nPlanking is uncool... so, you gotta be really, REALLY cool to pull off this vibe.\r\nStomp and clap along to the cooperating banjos!",
+      "archivo": "biblioteca/musica/incompetech/southern-gothic.mp3",
+      "atribucion": "\"Southern Gothic\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Goblin Tinker Soldier Spy",
+      "duracion": "00:02:16",
+      "bpm": 101,
+      "sensaciones": [
+        "Grooving",
+        "Bouncy",
+        "Humorous"
+      ],
+      "instrumentos": "Tuba, Percussion, Bass, Melodica, Drums, Marimba",
+      "descripcion": "\"Ya wants ta make things? Piles of things? Make things wit us Goblins! We got sticks and hammers and pokies. You get ta hit things wit udder things. If ya hit a rat, ya gets more stew! If ya hits da stew, ya get hit with rats.\"   Teamwork! Steady Progress! Shinies! Work with Goblins today!",
+      "archivo": "biblioteca/musica/incompetech/goblin-tinker-soldier-spy.mp3",
+      "atribucion": "\"Goblin Tinker Soldier Spy\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Equatorial Complex",
+      "duracion": "00:04:00",
+      "bpm": null,
+      "sensaciones": [
+        "Bright",
+        "Mystical",
+        "Relaxed"
+      ],
+      "instrumentos": "Synths, Vocal Pad",
+      "descripcion": "Enjoy a serene sanctuary where time stands still. Envelop yourself in a warm, nostalgic embrace, evoking the feeling of a sun-drenched afternoon in a hidden garden. The air is filled with the echoes of a distant, yet familiar, world, inviting you to lose yourself in the comforting simplicity of the moment...\r\n\r\n\r\nSynthwave textures weave an intricate matrix around you, leaving you entangled in its cybernetic allure. Deck in, chummer, and let the futuristic soundscape rewrite your reality. Wait... what universe is this set in?",
+      "archivo": "biblioteca/musica/incompetech/equatorial-complex.mp3",
+      "atribucion": "\"Equatorial Complex\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Morning",
+      "duracion": "00:02:33",
+      "bpm": 60,
+      "sensaciones": [
+        "Bright",
+        "Calming",
+        "Relaxed"
+      ],
+      "instrumentos": "Classical Guitar, Harp, Flutes",
+      "descripcion": "Morning. The time of day when you can’t figure out how to get to your drive-thru coffee place because there’s new construction and the sun is super low, so you’re squinting at the signs, trying to figure out if you are supposed to turn left here or if you definitely should NOT turn left here, because you will get three tires shredded by sharp, metal chunks before you fall in a hole. \r\n\r\nThis piece of music is based on the old-timey concept of calm, beautiful, renewing mornings.",
+      "archivo": "biblioteca/musica/incompetech/morning.mp3",
+      "atribucion": "\"Morning\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Evening",
+      "duracion": "00:03:06",
+      "bpm": 101,
+      "sensaciones": [
+        "Bright",
+        "Calming",
+        "Relaxed"
+      ],
+      "instrumentos": "Guitar, Cello, Oboe",
+      "descripcion": "Hey Music Supervisors! Are you sick of choosing Claude Debussy's \"Clair de Lune\" or Ravel's \"Pavane for a Dead Princess\" when you're placing music for that one scene at the end of Act II where there is a sunset and an overall sense of relief? I got ya, friend!",
+      "archivo": "biblioteca/musica/incompetech/evening.mp3",
+      "atribucion": "\"Evening\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Paradise Found",
+      "duracion": "00:03:07",
+      "bpm": 105,
+      "sensaciones": [
+        "Bright",
+        "Grooving",
+        "Bouncy"
+      ],
+      "instrumentos": "Steel Drum, Synths, Percussion",
+      "descripcion": "This piece of music never stops smiling. It is a happy, dancy, and never over-the-top party opener! The bass will move people. I found the \"Tropical House\" genre on some AI music site, and put this together. Overall, I'm a fan!",
+      "archivo": "biblioteca/musica/incompetech/paradise-found.mp3",
+      "atribucion": "\"Paradise Found\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Guzheng City",
+      "duracion": "00:01:54",
+      "bpm": 104,
+      "sensaciones": [
+        "Bright",
+        "Calming",
+        "Relaxed"
+      ],
+      "instrumentos": "Guzheng, Percussion (Dhol)",
+      "descripcion": "Welcome to \"Hotel Lobbies Around the World\"! Here in Guzheng City, this hotel lobby features flaming brasiers offset the triple 10 meter waterfalls.  An innovative clock made of animatronic dolphins sets the tone, while telling the time! 6 Artist alcoves on the opposite wall provide guests with entertainment while providing the artists customers! Next week, we will take a look at a very special taxidermy-themed lobby in Cudahy, Wisconsin.",
+      "archivo": "biblioteca/musica/incompetech/guzheng-city.mp3",
+      "atribucion": "\"Guzheng City\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Voxel Revolution",
+      "duracion": "00:02:10",
+      "bpm": 122,
+      "sensaciones": [
+        "Grooving",
+        "Bright",
+        "Bouncy"
+      ],
+      "instrumentos": "Synths, Percussion",
+      "descripcion": "Is it chiptunes? Nope. Is it 80s? Nope. We had to wait 40 years for this stupid fusion! 40 Years!!! It is really happy, though. Like when an underdog video game character is doing a level-up montage, or that song that plays in a 13 year old's head when they get an extra mozzarella stick.",
+      "archivo": "biblioteca/musica/incompetech/voxel-revolution.mp3",
+      "atribucion": "\"Voxel Revolution\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Newer Wave",
+      "duracion": "00:02:55",
+      "bpm": 110,
+      "sensaciones": [
+        "Grooving",
+        "Bright",
+        "Uplifting"
+      ],
+      "instrumentos": "Synths, Drums",
+      "descripcion": "The 80s Gallop, a rhythmic motive heard in this piece, was popularized by many synth pop bands of yesteryear. Legend has it, some of those bands may still exist - wandering the countryside in search of slap bracelets.",
+      "archivo": "biblioteca/musica/incompetech/newer-wave.mp3",
+      "atribucion": "\"Newer Wave\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Sergio's Magic Dustbin",
+      "duracion": "00:02:31",
+      "bpm": 204,
+      "sensaciones": [
+        "Bouncy",
+        "Driving",
+        "Humorous"
+      ],
+      "instrumentos": "Drums, Tuba, Marimba, Percussion, Clarinets, Flutes, Trumpet, French Horns, Trombones, Glockenspiel, Bassoons, Chimes, Whistles, Cymbals",
+      "descripcion": "This piece starts very slow and builds... like Bolero. Unlike Bolero, this piece builds beyond the safety limit and gets crazy. I recommend you check out the piece from 1 minute 48 seconds in. There are several break points you can start from to get to the crazy payoff faster, or use the whole thing!",
+      "archivo": "biblioteca/musica/incompetech/sergio-s-magic-dustbin.mp3",
+      "atribucion": "\"Sergio's Magic Dustbin\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Island Meet and Greet",
+      "duracion": "00:03:37",
+      "bpm": 100,
+      "sensaciones": [
+        "Bouncy",
+        "Bright",
+        "Grooving"
+      ],
+      "instrumentos": "Steel Drum, Marimba, Ukulele, Bass, Percussion",
+      "descripcion": "While this is a party, we caution all the lemmings out there against the formation of conga lines. Things can, and have, taken a turn for the tragic out by the cliffs, volcanos, quicksand pits, coconut groves, tidal pools, and most tragic of all… the gift shop.",
+      "archivo": "biblioteca/musica/incompetech/island-meet-and-greet.mp3",
+      "atribucion": "\"Island Meet and Greet\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "The Entertainer",
+      "duracion": "00:03:13",
+      "bpm": 184,
+      "sensaciones": [
+        "Bright",
+        "Bouncy"
+      ],
+      "instrumentos": "Piano",
+      "descripcion": "Scott Joplin composition.",
+      "archivo": "biblioteca/musica/incompetech/the-entertainer.mp3",
+      "atribucion": "\"The Entertainer\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Maple Leaf Rag",
+      "duracion": "00:02:59",
+      "bpm": 200,
+      "sensaciones": [
+        "Bright",
+        "Bouncy"
+      ],
+      "instrumentos": "Piano",
+      "descripcion": "Scott Joplin composition.",
+      "archivo": "biblioteca/musica/incompetech/maple-leaf-rag.mp3",
+      "atribucion": "\"Maple Leaf Rag\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Neon Laser Horizon",
+      "duracion": "00:02:59",
+      "bpm": 160,
+      "sensaciones": [
+        "Grooving",
+        "Bright",
+        "Uplifting"
+      ],
+      "instrumentos": "Synths",
+      "descripcion": "Build your pyramid in Five easy steps! 1) Level the intended build site 2) Get your GED in architecture 3) Quarry 100 million tons of limestone from a local quarry (cubits?) 4) Learn to be a charismatic leader 5) Synergize your assets from steps 3 and 4. Congratulations, you are on your way to pyramid success! Ask about our supplementary obelisk pamphlet!",
+      "archivo": "biblioteca/musica/incompetech/neon-laser-horizon.mp3",
+      "atribucion": "\"Neon Laser Horizon\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Adding the Sun",
+      "duracion": "00:02:56",
+      "bpm": 90,
+      "sensaciones": [
+        "Calming",
+        "Grooving",
+        "Uplifting"
+      ],
+      "instrumentos": "Choir, Percussion, Bass",
+      "descripcion": "Energizing and uplifting!",
+      "archivo": "biblioteca/musica/incompetech/adding-the-sun.mp3",
+      "atribucion": "\"Adding the Sun\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Angel Share",
+      "duracion": "00:03:21",
+      "bpm": 85,
+      "sensaciones": [
+        "Bright",
+        "Relaxed",
+        "Uplifting"
+      ],
+      "instrumentos": "Drums, Bass, Guitar, Choir",
+      "descripcion": "Starts slow and builds to an ecstasy the likes of which are almost guaranteed to garner donations from your flock! Bonus track comes with a everything except the drums in case you need a smoother feel.",
+      "archivo": "biblioteca/musica/incompetech/angel-share.mp3",
+      "atribucion": "\"Angel Share\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Salty Ditty",
+      "duracion": "00:02:08",
+      "bpm": 90,
+      "sensaciones": [
+        "Bouncy",
+        "Humorous",
+        "Uplifting"
+      ],
+      "instrumentos": "Synth, Percussion",
+      "descripcion": "Avast ye maties! All your boat are belong to us! Super chipper piratey-like 8bit tune. I mean, it could be used for non-nautical things, but the audience will probably be all like \"Hey! Why is there an 8-bit pirate shanty going on here!?\" Perfectly loopable for all your casual seafaring games. Or game reviews. Or actual voyages. Or voyage reviews.",
+      "archivo": "biblioteca/musica/incompetech/salty-ditty.mp3",
+      "atribucion": "\"Salty Ditty\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Nowhere Land",
+      "duracion": "00:02:12",
+      "bpm": 120,
+      "sensaciones": [
+        "Bright",
+        "Uplifting"
+      ],
+      "instrumentos": "Synths, Percussion",
+      "descripcion": "Fun fact: Working title was \"Arpeggiator Rock From the 80s 1\". Fun fact: This piece consist entirely of single notes being passed to a stack 5 different synths at the same time. Each synth has a different program running on it that triggers more notes. Fun fact: Scotland isn't a nation. It is technically an empire that claims sovereignty over Paraguay's 400k sheep and also Neptune's \"shepherd\" moon Despina.",
+      "archivo": "biblioteca/musica/incompetech/nowhere-land.mp3",
+      "atribucion": "\"Nowhere Land\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Airship Serenity",
+      "duracion": "00:04:00",
+      "bpm": 74,
+      "sensaciones": [
+        "Calming",
+        "Uplifting"
+      ],
+      "instrumentos": "Synths",
+      "descripcion": "This is the first slow 8-bit piece I ever tried. There was some skepticism going in, but holy man! This turned out great! You can use it for your game credits, or more chill parts of your game. Maybe at the Healing Shack, or the Abe Vigoda Memorial Pagoda and Koi Pond. The uncompressed download has a bonus  percussion track.",
+      "archivo": "biblioteca/musica/incompetech/airship-serenity.mp3",
+      "atribucion": "\"Airship Serenity\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Nonstop",
+      "duracion": "00:03:11",
+      "bpm": 128,
+      "sensaciones": [
+        "Driving",
+        "Grooving",
+        "Uplifting"
+      ],
+      "instrumentos": "Guitar, Percussion, Synths",
+      "descripcion": "From what I can tell, this piece has no genre... it is an odd mix of a few things, but not enough of any one of them to be considered a member of that group. So, when you find a new critter which is certainly a new species... likely a new genus... probably a new family... and seriously might be a order. It has an exoskeleton, gives birth to live young (asexually somehow?), has a beak... We recognize all those parts, but it doesn't fit anything. Might be a new phylum.",
+      "archivo": "biblioteca/musica/incompetech/nonstop.mp3",
+      "atribucion": "\"Nonstop\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Starting Out Waltz Vivace",
+      "duracion": "00:02:55",
+      "bpm": 186,
+      "sensaciones": [
+        "Relaxed",
+        "Calming",
+        "Grooving"
+      ],
+      "instrumentos": "Piano, Bass, Drum Kit",
+      "descripcion": "This is more for practicing dance than anything else. It never changes, it never gets interesting. This is important if you don't want to trip over your feet while drilling a dance step.",
+      "archivo": "biblioteca/musica/incompetech/starting-out-waltz-vivace.mp3",
+      "atribucion": "\"Starting Out Waltz Vivace\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Adeste Fideles (Shorter)",
+      "duracion": "00:01:25",
+      "bpm": 105,
+      "sensaciones": [
+        "Relaxed",
+        "Calming",
+        "Grooving"
+      ],
+      "instrumentos": "Music Box, Cello, Trumpet",
+      "descripcion": "We start with a repeating music box theme. The cello recontextualizes the simple music boxes providing a surprising and comforting bed for the low trumpet to sing over. [/musicologist ramblings] HELLO, HOLIDAY DANCE RECITALS!  There is a shorter version of this available... because holiday dance recitals.",
+      "archivo": "biblioteca/musica/incompetech/adeste-fideles-shorter.mp3",
+      "atribucion": "\"Adeste Fideles (Shorter)\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Adeste Fideles Waltz",
+      "duracion": "00:02:20",
+      "bpm": 105,
+      "sensaciones": [
+        "Relaxed",
+        "Calming",
+        "Grooving"
+      ],
+      "instrumentos": "Music Box, Cello, Trumpet",
+      "descripcion": "We start with a repeating music box theme. The cello recontextualizes the simple music boxes providing a surprising and comforting bed for the low trumpet to sing over. [/musicologist ramblings] HELLO, HOLIDAY DANCE RECITALS!  There is a shorter version of this available... because holiday dance recitals.",
+      "archivo": "biblioteca/musica/incompetech/adeste-fideles-waltz.mp3",
+      "atribucion": "\"Adeste Fideles Waltz\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Grand Dark Waltz Trio Vivace",
+      "duracion": "00:02:52",
+      "bpm": 140,
+      "sensaciones": [
+        "Relaxed",
+        "Calming",
+        "Grooving"
+      ],
+      "instrumentos": "Piano, Drum Kit, Bass",
+      "descripcion": "Whilst learning to waltz, I noticed that the music wasn't flowing exactly with the explanations of how to move - so I fixed it. This piece overemphasizes the first beat with a hard slide in on the downbeat. Should make it easier for beginners to understand what is going on. The are 3 tempos to practice different styles of waltz, or just work up to the fast one!",
+      "archivo": "biblioteca/musica/incompetech/grand-dark-waltz-trio-vivace.mp3",
+      "atribucion": "\"Grand Dark Waltz Trio Vivace\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Grand Dark Waltz Trio Allegro",
+      "duracion": "00:03:15",
+      "bpm": 124,
+      "sensaciones": [
+        "Relaxed",
+        "Calming",
+        "Grooving"
+      ],
+      "instrumentos": "Piano, Drum Kit, Bass",
+      "descripcion": "Whilst learning to waltz, I noticed that the music wasn't flowing exactly with the explanations of how to move - so I fixed it. This piece overemphasizes the first beat with a hard slide in on the downbeat. Should make it easier for beginners to understand what is going on. The are 3 tempos to practice different styles of waltz, or just work up to the fast one!",
+      "archivo": "biblioteca/musica/incompetech/grand-dark-waltz-trio-allegro.mp3",
+      "atribucion": "\"Grand Dark Waltz Trio Allegro\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Pleasant Porridge",
+      "duracion": "00:02:51",
+      "bpm": 119,
+      "sensaciones": [
+        "Calming",
+        "Grooving",
+        "Relaxed"
+      ],
+      "instrumentos": "Electric Piano, Guitar, Bass, Drums",
+      "descripcion": "Attention in the lobby: The show will begin shortly. Please find your seat.  Souvenir programs are available for purchase at every entrance. Remember to set your bleeping devices to non-bleepie mode. This show features flashing lights, live bats, and almond butter.  If you have a condition  that may cause problems, please see us at the ticket counter for further information. The show will begin shortly!",
+      "archivo": "biblioteca/musica/incompetech/pleasant-porridge.mp3",
+      "atribucion": "\"Pleasant Porridge\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Ancient Mystery Waltz (Presto)",
+      "duracion": "00:03:18",
+      "bpm": 182,
+      "sensaciones": [
+        "Grooving",
+        "Mysterious"
+      ],
+      "instrumentos": "Marimba, Percussion, Choir, Voice",
+      "descripcion": "Whilst out walking and practicing the waltz down my block, this was the song that was going through my head. It isn't super-waltzy sounding, but it is super easy to waltz to. Comes in 3 varieties, Chill, Spritely, and HANG ON, THIS IS VIENNESE!!!",
+      "archivo": "biblioteca/musica/incompetech/ancient-mystery-waltz-presto.mp3",
+      "atribucion": "\"Ancient Mystery Waltz (Presto)\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "SCP-x7x (6th Floor)",
+      "duracion": "00:02:42",
+      "bpm": 124,
+      "sensaciones": [
+        "Dark",
+        "Mysterious"
+      ],
+      "instrumentos": "Piano",
+      "descripcion": "Somewhat urgent music for storytelling. Winding staircase that leads to nowhere... like your liberal arts degree. Melodic enough to hold your interest. Repetitive enough for you to lose interest.",
+      "archivo": "biblioteca/musica/incompetech/scp-x7x-6th-floor.mp3",
+      "atribucion": "\"SCP-x7x (6th Floor)\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "SCP-x6x (Hopes)",
+      "duracion": "00:03:30",
+      "bpm": 66,
+      "sensaciones": [
+        "Dark",
+        "Mysterious",
+        "Somber"
+      ],
+      "instrumentos": "Piano, Cello",
+      "descripcion": "Haunting music for storytelling; With a cello. Cello, bassoon, and piano are known to be expert haunters. This piece has no bassoon, but 2 out of 3 does get pretty haunting!",
+      "archivo": "biblioteca/musica/incompetech/scp-x6x-hopes.mp3",
+      "atribucion": "\"SCP-x6x (Hopes)\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "SCP-x5x (Outer Thoughts)",
+      "duracion": "00:03:36",
+      "bpm": 102,
+      "sensaciones": [
+        "Dark",
+        "Mysterious",
+        "Somber"
+      ],
+      "instrumentos": "Piano",
+      "descripcion": "Nice, but creepy music for storytelling. Simple melodies played on that old piano your grandma had in her basement. It was once great, but has since become a spider and dust motel. I'm sure the spiders think it is pretty great. Gotta be loud if you're a piano spider, but rent control totally makes it worth it.",
+      "archivo": "biblioteca/musica/incompetech/scp-x5x-outer-thoughts.mp3",
+      "atribucion": "\"SCP-x5x (Outer Thoughts)\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Ancient Rite",
+      "duracion": "00:01:53",
+      "bpm": 70,
+      "sensaciones": [
+        "Calming",
+        "Mysterious",
+        "Somber"
+      ],
+      "instrumentos": "Choir, Percussion, Bass",
+      "descripcion": "A solumn affair. Deep and religious.",
+      "archivo": "biblioteca/musica/incompetech/ancient-rite.mp3",
+      "atribucion": "\"Ancient Rite\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Strength of the Titans",
+      "duracion": "00:01:02",
+      "bpm": 85,
+      "sensaciones": [
+        "Epic",
+        "Driving",
+        "Action"
+      ],
+      "instrumentos": "Hurdy Gurdy, Percussion, French Horns, Trombones, Tubas, Cellos, Basses",
+      "descripcion": "Oh, this is a big one. Short, but big. There's nothing wrong with either of those things.",
+      "archivo": "biblioteca/musica/incompetech/strength-of-the-titans.mp3",
+      "atribucion": "\"Strength of the Titans\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Magistar",
+      "duracion": "00:03:12",
+      "bpm": 79,
+      "sensaciones": [
+        "Driving",
+        "Epic",
+        "Mystical"
+      ],
+      "instrumentos": "Choir, Glockenspiel, Trumpets, Trombones, Tubas, Percussion",
+      "descripcion": "The portal to my wizarding school is at the back of a payday loan place in Windsor, Ontario. It isn't quite as cool as that magic train station, but the loan place is open late. There is also a Tim Hortons across the street. So that's nice.",
+      "archivo": "biblioteca/musica/incompetech/magistar.mp3",
+      "atribucion": "\"Magistar\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Hiding Your Reality",
+      "duracion": "00:03:13",
+      "bpm": 107,
+      "sensaciones": [
+        "Action",
+        "Driving",
+        "Epic"
+      ],
+      "instrumentos": "Percussion, Synths, Brass, Tuba, Euphonium, Bass Trombone, Trombone, French Horn, Trumpet",
+      "descripcion": "It hurts my brain to switch from english words to symbols. Try to read these words and symbols out loud quickly: hyphen-slash-backslash/dash/-\\hyphen//hashtag_octothorpe#- Crazy, right? That had nothing to do with this piece of music. I'm just sharing.",
+      "archivo": "biblioteca/musica/incompetech/hiding-your-reality.mp3",
+      "atribucion": "\"Hiding Your Reality\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Eternal Terminal",
+      "duracion": "00:03:18",
+      "bpm": 140,
+      "sensaciones": [
+        "Dark",
+        "Driving",
+        "Epic"
+      ],
+      "instrumentos": "Percussion, Basses, Bass Clarinet, Tubas, Trombones, Clarinets, Flutes, Oboes, French Horns",
+      "descripcion": "I like the waterphone in this piece. It is a bunch of metal tubes welded together, and played with a bow. It is that creepy high-pitched thing you hear in horror movies all the time.",
+      "archivo": "biblioteca/musica/incompetech/eternal-terminal.mp3",
+      "atribucion": "\"Eternal Terminal\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Rynos Theme",
+      "duracion": "00:03:06",
+      "bpm": 128,
+      "sensaciones": [
+        "Action",
+        "Epic",
+        "Intense",
+        "Suspenseful"
+      ],
+      "instrumentos": "Violins, Violas, Cellos, Basses, Flutes, French Horns, Trombones, Tuba, Percussion, Piano",
+      "descripcion": "Starts small, gets big... then smaller, then REALLY big... then small again. Kind of like a turtle. Actually, it is entirely possible that I just kept seeing different turtles. I mean, they all sort of look like turtles; I wasn't tagging them or marking them with chalk or anything. Chalk will probably just wash off in the pond anyway. Oh! Kind of like a puffer fish! Like a musical puffer fish! Perfect.",
+      "archivo": "biblioteca/musica/incompetech/rynos-theme.mp3",
+      "atribucion": "\"Rynos Theme\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Urban Gauntlet",
+      "duracion": "00:03:29",
+      "bpm": 116,
+      "sensaciones": [
+        "Epic",
+        "Intense"
+      ],
+      "instrumentos": "Percussion, Synths, Strings",
+      "descripcion": "Action-y intense like percussion based piece. Need to defuse a bomb while riding in a pedi-cab? This should work well for that. Or anything where tension needs to be maintained.",
+      "archivo": "biblioteca/musica/incompetech/urban-gauntlet.mp3",
+      "atribucion": "\"Urban Gauntlet\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Undaunted",
+      "duracion": "00:03:33",
+      "bpm": 95,
+      "sensaciones": [
+        "Driving",
+        "Epic",
+        "Action",
+        "Intense"
+      ],
+      "instrumentos": "Percussion, Piano, Synths",
+      "descripcion": "Big big drums pushing a big cinematic feel.",
+      "archivo": "biblioteca/musica/incompetech/undaunted.mp3",
+      "atribucion": "\"Undaunted\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Tempting Secrets",
+      "duracion": "00:03:02",
+      "bpm": null,
+      "sensaciones": [
+        "Dark",
+        "Epic",
+        "Uplifting",
+        "Somber"
+      ],
+      "instrumentos": "Strings, Flute, Choir",
+      "descripcion": "Starts with a big hit, and then a steady string drone with a beautiful flute line on top. Choirs kick in 2/3 of the way to bring up the mood.",
+      "archivo": "biblioteca/musica/incompetech/tempting-secrets.mp3",
+      "atribucion": "\"Tempting Secrets\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Journey To Ascend",
+      "duracion": "00:03:39",
+      "bpm": 116,
+      "sensaciones": [
+        "Driving",
+        "Grooving",
+        "Mystical"
+      ],
+      "instrumentos": "Tongue Drum, Percussion",
+      "descripcion": "Jamming on some cheap percussion with some friends and a click track.  Recommended uses for this track: Tiki bar, Museum exhibit of a bear,  On hold music for an adventure bike tour company, Street festival in Monrovia (Liberia - not California).",
+      "archivo": "biblioteca/musica/incompetech/journey-to-ascend.mp3",
+      "atribucion": "\"Journey To Ascend\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Burn The World Waltz",
+      "duracion": "00:03:20",
+      "bpm": 177,
+      "sensaciones": [
+        "Aggressive",
+        "Driving",
+        "Intense"
+      ],
+      "instrumentos": "Guitars, Drums, Bass",
+      "descripcion": "Featuring the genuine Nordic Metal talents of Alexander Nakarada. This is a thing the Viennese would totally dance to... if they were MUCH more angry than average Wiener. I'm looking at you, Gunther!",
+      "archivo": "biblioteca/musica/incompetech/burn-the-world-waltz.mp3",
+      "atribucion": "\"Burn The World Waltz\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Big Drumming",
+      "duracion": "00:03:42",
+      "bpm": 104,
+      "sensaciones": [
+        "Grooving",
+        "Driving",
+        "Intense"
+      ],
+      "instrumentos": "Percussion",
+      "descripcion": "4 players. 4 big drums. This is more of an ingredient than a stand-alone piece of music. Serving suggestions: \tAdd ambiance to your RPG. \tSpice up your next didgeridoo performance. \tUse as background beats for holiday caroling. \tEntertain with on-hold music for your telecommunications business.",
+      "archivo": "biblioteca/musica/incompetech/big-drumming.mp3",
+      "atribucion": "\"Big Drumming\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Trouble with Tribals",
+      "duracion": "00:02:50",
+      "bpm": 135,
+      "sensaciones": [
+        "Action",
+        "Driving",
+        "Grooving"
+      ],
+      "instrumentos": "Percussion, Drone, Voices",
+      "descripcion": "Another exciting guerrilla warfare planning meeting, and Parker didn't bring the coffee. I'm starting to get annoyed with Parker more and more these days. Sure, the new \"cape cod style\" curtains look great in the mud blinds, but I'm not into the satin obelisk in the middle of our jungle huts.",
+      "archivo": "biblioteca/musica/incompetech/trouble-with-tribals.mp3",
+      "atribucion": "\"Trouble with Tribals\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Man Down",
+      "duracion": "00:03:19",
+      "bpm": 53,
+      "sensaciones": [
+        "Suspenseful",
+        "Dark",
+        "Somber"
+      ],
+      "instrumentos": "Electric Piano, Violas, Cellos, Strings",
+      "descripcion": "This is the Miami Nights main theme motive, but really quite sad. You know what's awesome? This \"string synth\" is 8 actual cellos and 12 violas... multi-tracked 4 times. Technology! So much power, you can't help but abuse it!",
+      "archivo": "biblioteca/musica/incompetech/man-down.mp3",
+      "atribucion": "\"Man Down\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "I Can Feel it Coming",
+      "duracion": "00:03:35",
+      "bpm": 94,
+      "sensaciones": [
+        "Driving",
+        "Suspenseful",
+        "Mysterious"
+      ],
+      "instrumentos": "Guitar, Percussion, Synth",
+      "descripcion": "Just your average, run-of-the-mill tension filler music... Or IS it!? Yeah, it pretty much is. This does feature a poorly played guitar synth, though... so it is a stand-out in that way. If you were here for tension-building music, you already have this piece... Move along.",
+      "archivo": "biblioteca/musica/incompetech/i-can-feel-it-coming.mp3",
+      "atribucion": "\"I Can Feel it Coming\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Thinking Music",
+      "duracion": "00:03:16",
+      "bpm": 125,
+      "sensaciones": [
+        "Dark",
+        "Humorous",
+        "Suspenseful"
+      ],
+      "instrumentos": "Cello, Viola, Violin, Harp",
+      "descripcion": "Comedic \"hard thinking\" music. Chances are you won't need the entire piece if you are making a film. I made it so you can cut it up into different sounding sections of various seriousness. If you're using it for a video game, everything flows together well, or you could loop sections that work best.",
+      "archivo": "biblioteca/musica/incompetech/thinking-music.mp3",
+      "atribucion": "\"Thinking Music\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Professor Umlaut",
+      "duracion": "00:03:32",
+      "bpm": 160,
+      "sensaciones": [
+        "Driving",
+        "Humorous",
+        "Suspenseful"
+      ],
+      "instrumentos": "Guitar, Bass, Drums, Organ",
+      "descripcion": "This piece started its life as a random challenge on a show I do on Twitch.tv called \"The Wheels of Doom!\". The 4 randomized elements that came together here were: Drum Machine, Strings, Xylophone, and Comedic. I think it worked out pretty well!",
+      "archivo": "biblioteca/musica/incompetech/professor-umlaut.mp3",
+      "atribucion": "\"Professor Umlaut\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Crypto",
+      "duracion": "00:03:24",
+      "bpm": 80,
+      "sensaciones": [
+        "Dark",
+        "Eerie",
+        "Unnerving",
+        "Suspenseful"
+      ],
+      "instrumentos": "Flute, Percussion, Synths",
+      "descripcion": "Very moody little piece with some melodic interest. Tension could be high grade or low grade depending on your context. Waiting for a drug deal to go through in Belize? This'll work. Concerned about the health of your hyacinth macaw while waiting at the vet office? This'll work. Waiting for the OSHA all-clear at your box factory? This'll work. It is mainly about waiting for things. Probably not good things.",
+      "archivo": "biblioteca/musica/incompetech/crypto.mp3",
+      "atribucion": "\"Crypto\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Lord of the Land",
+      "duracion": "00:03:06",
+      "bpm": 112,
+      "sensaciones": [
+        "Mysterious",
+        "Mystical",
+        "Suspenseful"
+      ],
+      "instrumentos": "Percussion, Lute, Flute",
+      "descripcion": "Middle of the road sort of medieval music... Also good when not travelling on a road.",
+      "archivo": "biblioteca/musica/incompetech/lord-of-the-land.mp3",
+      "atribucion": "\"Lord of the Land\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Drums of the Deep",
+      "duracion": "00:02:54",
+      "bpm": 77,
+      "sensaciones": [
+        "Dark",
+        "Suspenseful",
+        "Unnerving"
+      ],
+      "instrumentos": "Percussion, Strings",
+      "descripcion": "Moody and atmospheric with a hint of power.",
+      "archivo": "biblioteca/musica/incompetech/drums-of-the-deep.mp3",
+      "atribucion": "\"Drums of the Deep\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Krampus Workshop",
+      "duracion": "00:01:35",
+      "bpm": 120,
+      "sensaciones": [
+        "Dark",
+        "Driving",
+        "Humorous"
+      ],
+      "instrumentos": "Cello, Bassoons, Trumpet, Xylophone, French Horns, Flute, Glockenspiel, Tuba, Trombones, Percussion, Chimes",
+      "descripcion": "Is it looking a little claymation in here, or is it just me?",
+      "archivo": "biblioteca/musica/incompetech/krampus-workshop.mp3",
+      "atribucion": "\"Krampus Workshop\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Holiday Weasel",
+      "duracion": "00:01:25",
+      "bpm": 73,
+      "sensaciones": [
+        "Dark",
+        "Bouncy",
+        "Humorous"
+      ],
+      "instrumentos": "Cello, Bassoon, Xylophone, Flutes, Clarinets, Percussion",
+      "descripcion": "Rhythms are not copyrightable. Don't even start!",
+      "archivo": "biblioteca/musica/incompetech/holiday-weasel.mp3",
+      "atribucion": "\"Holiday Weasel\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Le Grand Chase",
+      "duracion": "00:01:41",
+      "bpm": 166,
+      "sensaciones": [
+        "Action",
+        "Bouncy",
+        "Humorous"
+      ],
+      "instrumentos": "Piano, Percussion, Xylophone, Bari Sax, Tuba, Trumpet, Car Horns",
+      "descripcion": "You never notice how effective a car horn is until you use it. I usually park my car near a sidewalk and alarm 7 year olds on their way to and from school. 7 year olds are your target market for this sort of thing. They jump like antelope! All the kids in my neighborhood are acclimatized, now. It isn't as much fun. You also never notice how effective a Picardy third is until you do it with car horns. You're welcome.",
+      "archivo": "biblioteca/musica/incompetech/le-grand-chase.mp3",
+      "atribucion": "\"Le Grand Chase\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Townie Loop",
+      "duracion": "00:02:35",
+      "bpm": 90,
+      "sensaciones": [
+        "Calming",
+        "Humorous",
+        "Relaxed"
+      ],
+      "instrumentos": "Synths, Drums",
+      "descripcion": "Welcome to the town! If you have anything to sell, just put it in the box. The general store sells seeds. There is a Mountain Totem in the mountains. You can have a drink at the Iridium Bar. I need to tend to my giant melons now. That is not a euphemism. Bye!",
+      "archivo": "biblioteca/musica/incompetech/townie-loop.mp3",
+      "atribucion": "\"Townie Loop\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Captain Scurvy",
+      "duracion": "00:03:47",
+      "bpm": 180,
+      "sensaciones": [
+        "Bouncy",
+        "Driving",
+        "Humorous"
+      ],
+      "instrumentos": "Synths, Drums",
+      "descripcion": "Ahoy thar, and welcome aboard the quirkiest ship in these waters, \"The Breakin' Wind\"! I be Captain Scurvy. Adventure lies in all directions. I'll leave you now. I'm already late to get me horn piped!",
+      "archivo": "biblioteca/musica/incompetech/captain-scurvy.mp3",
+      "atribucion": "\"Captain Scurvy\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Graveyard Shift",
+      "duracion": "00:03:17",
+      "bpm": 140,
+      "sensaciones": [
+        "Dark",
+        "Grooving",
+        "Humorous"
+      ],
+      "instrumentos": "Theremin, Choir, Organ, Percussion, Basses",
+      "descripcion": "SpoooooOOoooky! Nothing says comedically spooky quite like a theramin. I don't actually own a theramin, so I cheated. Like I do. This one was created with the ES2 synth, which everyone I know hates and/or fears. It really is just misunderstood, and is quite lovely at parties.",
+      "archivo": "biblioteca/musica/incompetech/graveyard-shift.mp3",
+      "atribucion": "\"Graveyard Shift\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Hot Pursuit",
+      "duracion": "00:02:49",
+      "bpm": 122,
+      "sensaciones": [
+        "Grooving",
+        "Driving",
+        "Action"
+      ],
+      "instrumentos": "Guitar, Percussion, Strings",
+      "descripcion": "RUN! It is the Hemiola Monster!!!! We just need to get to the bar! It doesn't seem to want to cross the bar! Oh my GOD! It has friends!! No wait, that's just a standard clave pattern...  (no, I'm not explaining this description OR what is wrong with my head.)",
+      "archivo": "biblioteca/musica/incompetech/hot-pursuit.mp3",
+      "atribucion": "\"Hot Pursuit\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Outfoxing the Fox",
+      "duracion": "00:02:55",
+      "bpm": 160,
+      "sensaciones": [
+        "Grooving",
+        "Driving",
+        "Action"
+      ],
+      "instrumentos": "Synths, Percussion, Bass, Strings, Cellos, Violas, Violins",
+      "descripcion": "You threw a golf ball at me. But I saw that coming, so I had a tennis racquet handy. Then you threw a running chainsaw at me. But I saw it coming, so I had a plexiglass safety cage handy. I see that rabid ferret behind your back... I’ll be in the car.",
+      "archivo": "biblioteca/musica/incompetech/outfoxing-the-fox.mp3",
+      "atribucion": "\"Outfoxing the Fox\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "titulo": "Jet Fueled Vixen",
+      "duracion": "00:02:40",
+      "bpm": 100,
+      "sensaciones": [
+        "Grooving",
+        "Action",
+        "Driving"
+      ],
+      "instrumentos": "Guitar, Synths, Percussion, Timbales",
+      "descripcion": "Griggs! I've been poisoned! You gotta get me the antidote! Then you gotta get... like a crane, or something to lift this truck off me! She dropped a truck on me, Griggs!!! Then, if you could find me a decent deal on high speed internet - that would be great! The plans are all too confusing, and I do NOT WANT CABLE TV OR TELEPHONES! Can you believe anyone still has telephones, Griggs? Griggs??!!?",
+      "archivo": "biblioteca/musica/incompetech/jet-fueled-vixen.mp3",
+      "atribucion": "\"Jet Fueled Vixen\" Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

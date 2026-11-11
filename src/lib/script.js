@@ -121,6 +121,17 @@ export function scriptToText(project) {
   return lines.join('\n');
 }
 
+/** Nombre de archivo seguro: sin tildes ni símbolos (Chrome falla con acentos). */
+export function fileSafeName(text, fallback) {
+  const slug = text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return slug || fallback;
+}
+
 export function moveItem(list, fromIndex, toIndex) {
   if (toIndex < 0 || toIndex >= list.length) return list;
   const copy = [...list];

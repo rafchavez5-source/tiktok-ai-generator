@@ -1,0 +1,89 @@
+{
+  "id": "paises-mas-pequenos",
+  "titulo": "Los 5 países más pequeños del mundo",
+  "descargado": "2026-11-10T07:17:10.637Z",
+  "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
+  "referencia": null,
+  "elementos": [
+    {
+      "id": "Q237",
+      "nombre": "Ciudad del Vaticano",
+      "valor": 440000,
+      "poblacion": 466,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/0%20Basilique%20Saint-Pierre%20-%20Rome%20%281%29.JPG",
+      "fuente": "https://www.wikidata.org/wiki/Q237",
+      "imagen": {
+        "archivo": "datos/imagenes/Q237.jpg",
+        "nombre": "0_Basilique_Saint-Pierre_-_Rome_(1).JPG",
+        "autor": "Jean-Pol GRANDMONT",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:0_Basilique_Saint-Pierre_-_Rome_(1).JPG"
+      },
+      "video": null
+    },
+    {
+      "id": "Q235",
+      "nombre": "Mónaco",
+      "valor": 2080000,
+      "poblacion": 38857,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20von%20Monaco-La%20Turbie.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q235",
+      "imagen": {
+        "archivo": "datos/imagenes/Q235.jpg",
+        "nombre": "Panorama_von_Monaco-La_Turbie.jpg",
+        "autor": "Tobi 87",
+        "licencia": "CC BY-SA 3.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Panorama_von_Monaco-La_Turbie.jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q697",
+      "nombre": "Nauru",
+      "valor": 21200000,
+      "poblacion": 13650,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Coral%20reef%20on%20Nauru.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q697",
+      "imagen": {
+        "archivo": "datos/imagenes/Q697.jpg",
+        "nombre": "Coral_reef_on_Nauru.jpg",
+        "autor": "d-online",
+        "licencia": "CC BY-SA 2.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Coral_reef_on_Nauru.jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q672",
+      "nombre": "Tuvalu",
+      "valor": 25630000,
+      "poblacion": 10643,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Nui%20atoll.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q672",
+      "imagen": {
+        "archivo": "datos/imagenes/Q672.jpg",
+        "nombre": "Nui_atoll.jpg",
+        "autor": "NASA",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Nui_atoll.jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q238",
+      "nombre": "San Marino",
+      "valor": 61200000,
+      "poblacion": 34167,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Mount%20Titano%20-%20San%20Marino.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q238",
+      "imagen": {
+        "archivo": "datos/imagenes/Q238.jpg",
+        "nombre": "View_of_Mount_Titano_-_San_Marino.jpg",
+        "autor": "Commonists",
+        "licencia": "CC BY-SA 4.0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:View_of_Mount_Titano_-_San_Marino.jpg"
+      },
+      "video": null
+    }
+  ]
+}

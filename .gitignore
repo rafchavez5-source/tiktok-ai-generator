@@ -2,3 +2,14 @@ node_modules/
 dist/
 .DS_Store
 *.log
+videos/
+datos/imagenes/
+remotion/public/
+voces/*.onnx
+# Biblioteca: solo se guardan los catálogos, no los archivos pesados
+biblioteca/**/*.mp3
+biblioteca/**/*.jpg
+biblioteca/**/*.png
+biblioteca/**/*.mp4
+biblioteca/animaciones/noto-emoji/*.json
+!biblioteca/animaciones/noto-emoji/catalogo.json

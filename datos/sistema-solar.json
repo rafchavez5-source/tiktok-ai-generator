@@ -1,0 +1,110 @@
+{
+  "id": "sistema-solar",
+  "titulo": "5 datos curiosos del sistema solar",
+  "descargado": "2026-11-10T07:17:23.084Z",
+  "fuente": "Wikidata (CC0) e imágenes de Wikimedia Commons",
+  "referencia": {
+    "id": "Q2",
+    "nombre": "Tierra",
+    "valor": 6378137,
+    "periodo": 31558149.7635456,
+    "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Meteosat-12-fci-march-equinox-2025-noon.jpg",
+    "fuente": "https://www.wikidata.org/wiki/Q2"
+  },
+  "elementos": [
+    {
+      "id": "Q308",
+      "nombre": "Mercurio",
+      "valor": 2440000,
+      "periodo": 7600521.6,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Mercury%20in%20color%20-%20Prockter07%20centered.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q308",
+      "imagen": {
+        "archivo": "datos/imagenes/Q308.jpg",
+        "nombre": "Mercury_in_color_-_Prockter07_centered.jpg",
+        "autor": "NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institutio",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Mercury_in_color_-_Prockter07_centered.jpg"
+      },
+      "video": null
+    },
+    {
+      "id": "Q313",
+      "nombre": "Venus",
+      "valor": 6052000,
+      "periodo": 19414148,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/PIA23791-Venus-RealAndEnhancedContrastViews-20200608%20%28cropped%29.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q313",
+      "imagen": {
+        "archivo": "datos/imagenes/Q313.jpg",
+        "nombre": "PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg",
+        "autor": "NASA/JPL-Caltech",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg"
+      },
+      "video": {
+        "archivo": "datos/videos/Q313.mp4",
+        "duracion": 3.2,
+        "nombre": "2004_Venus_transit_UV.ogv",
+        "autor": "NASA/LMSAL",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:2004_Venus_transit_UV.ogv"
+      }
+    },
+    {
+      "id": "Q319",
+      "nombre": "Júpiter",
+      "valor": 69911000,
+      "periodo": 374335689.6,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20OPAL%202024.png",
+      "fuente": "https://www.wikidata.org/wiki/Q319",
+      "imagen": {
+        "archivo": "datos/imagenes/Q319.jpg",
+        "nombre": "Jupiter_OPAL_2024.png",
+        "autor": "NASA/STSCI (S.T.A.R.S)",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Jupiter_OPAL_2024.png"
+      },
+      "video": null
+    },
+    {
+      "id": "Q193",
+      "nombre": "Saturno",
+      "valor": 54360000,
+      "periodo": 929468433.6,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/8423%2020181%201saturn2016.jpg",
+      "fuente": "https://www.wikidata.org/wiki/Q193",
+      "imagen": {
+        "archivo": "datos/imagenes/Q193.jpg",
+        "nombre": "8423_20181_1saturn2016.jpg",
+        "autor": "Credit: NASA/JPL-Caltech/SSI",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:8423_20181_1saturn2016.jpg"
+      },
+      "video": {
+        "archivo": "datos/videos/Q193.mp4",
+        "duracion": 2.833333,
+        "nombre": "Looking_saturn_in_the_eye.ogv",
+        "autor": "NASA",
+        "licencia": "Dominio público",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Looking_saturn_in_the_eye.ogv"
+      }
+    },
+    {
+      "id": "Q332",
+      "nombre": "Neptuno",
+      "valor": 24340000,
+      "periodo": 5200692480,
+      "imagenUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Neptune%20Voyager2%20color%20calibrated.png",
+      "fuente": "https://www.wikidata.org/wiki/Q332",
+      "imagen": {
+        "archivo": "datos/imagenes/Q332.jpg",
+        "nombre": "Neptune_Voyager2_color_calibrated.png",
+        "autor": "NASA / Voyager 2 / PDS / OPUS / Ardenau4",
+        "licencia": "CC0",
+        "pagina": "https://commons.wikimedia.org/wiki/File:Neptune_Voyager2_color_calibrated.png"
+      },
+      "video": null
+    }
+  ]
+}

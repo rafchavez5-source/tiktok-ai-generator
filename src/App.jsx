@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import GeneratorForm from './components/GeneratorForm.jsx';
 import ScriptEditor from './components/ScriptEditor.jsx';
 import SceneBoard from './components/SceneBoard.jsx';
+import VideoMaker from './components/VideoMaker.jsx';
+import GuionesView from './components/GuionesView.jsx';
 import { generateScript } from './lib/script.js';
 import { loadProject, saveProject } from './lib/storage.js';
 
 export default function App() {
   const [project, setProject] = useState(() => loadProject());
+  const [vista, setVista] = useState('editor'); // editor | guiones
 
   useEffect(() => {
     saveProject(project);
@@ -28,6 +31,13 @@ export default function App() {
     }
   }
 
+  function handleUsarGuion(nuevo) {
+    if (project && !window.confirm('Esto reemplaza el proyecto que tienes en el editor. ¿Continuar?')) return;
+    setProject(nuevo);
+    setVista('editor');
+    window.scrollTo({ top: 0 });
+  }
+
   function updateScenes(updater) {
     setProject((prev) => ({ ...prev, scenes: updater(prev.scenes) }));
   }
@@ -42,15 +52,28 @@ export default function App() {
             <p>Guiones de datos curiosos para videos verticales</p>
           </div>
         </div>
-        {project && (
+        {project && vista === 'editor' && (
           <button type="button" className="btn btn-ghost" onClick={handleReset}>
             Nuevo proyecto
           </button>
         )}
       </header>
 
+      <nav className="tabs" aria-label="Secciones">
+        <button type="button" className={`tab ${vista === 'editor' ? 'is-active' : ''}`} aria-pressed={vista === 'editor'} onClick={() => setVista('editor')}>
+          Editor
+        </button>
+        <button type="button" className={`tab ${vista === 'guiones' ? 'is-active' : ''}`} aria-pressed={vista === 'guiones'} onClick={() => setVista('guiones')}>
+          Guiones con IA
+        </button>
+      </nav>
+
       <main className="content">
-        <GeneratorForm initial={project} onGenerate={handleGenerate} />
+        {vista === 'guiones' ? (
+          <GuionesView onUsar={handleUsarGuion} />
+        ) : (
+        <>
+        <GeneratorForm key={project?.title ?? 'nuevo'} initial={project} onGenerate={handleGenerate} />
 
         {project ? (
           <>
@@ -60,6 +83,7 @@ export default function App() {
               onScenesChange={updateScenes}
             />
             <SceneBoard project={project} onScenesChange={updateScenes} />
+            <VideoMaker project={project} />
           </>
         ) : (
           <section className="card empty-state">
@@ -69,6 +93,8 @@ export default function App() {
               <strong> Generar guion</strong> para crear la estructura con sus escenas.
             </p>
           </section>
+        )}
+        </>
         )}
       </main>
 
